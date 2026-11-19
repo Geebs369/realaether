@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methods · Cosmic Ray Randomness Detector · RealAether</title>
+<style>
+body{margin:0;font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#e6e3d6;background:radial-gradient(ellipse at top,#141a3a 0%,#05060c 60%) fixed,#05060c;line-height:1.6}
+header{padding:18px 24px;border-bottom:1px solid #262a44;background:#000a}h1{margin:0;font-size:22px;letter-spacing:3px;color:#d4af37;text-transform:uppercase;font-weight:600}
+h1 small{display:block;font-size:11px;letter-spacing:2px;color:#8d8aa0;font-weight:400;margin-top:4px}
+main{max-width:900px;margin:0 auto;padding:10px 24px 40px}h2{color:#d4af37;font-size:15px;letter-spacing:2px;text-transform:uppercase;margin-top:28px;border-bottom:1px solid #262a44;padding-bottom:4px}
+a{color:#f3d36b}code{color:#5ad1ff}li{margin:4px 0}.box{background:#0d1020;border:1px solid #262a44;border-radius:10px;padding:12px 16px}
+</style></head><body>
+<header><h1>Methods &amp; License<small>RealAether · Hosted by Raspberry Pi 5, Built By Geebs · dark-frame particle &amp; noise observatory</small></h1></header>
+<main>
+<p><a href="./">&#8592; Back to the detector</a></p>
+
+<h2>What this is</h2>
+<p>A Raspberry Pi Camera Module 3 (Sony IMX708, 4608×2592 pixels, 1.4 µm pitch) is sealed completely light-tight and left taking one-second exposures, around the clock, on a Raspberry Pi 5 in South Carolina. With no light reaching it, almost every pixel just shows electronic noise. Occasionally a charged particle (mostly cosmic-ray muons, plus electrons from gamma rays emitted by natural radioactivity in the surroundings) passes through the silicon and leaves a bright dot or short streak. The same noise that hides in the dark pixels is also harvested as a source of random bits.</p>
+
+<h2>Capture</h2>
+<ul>
+<li>Raw 10-bit Bayer data straight from the sensor (no image processing, no denoising), 1 s exposure, fixed analogue gain 8, auto-exposure and white balance off.</li>
+<li>About one frame per second. Full frames are never stored; only measurements and a tiny 33×33 crop around each hit.</li>
+</ul>
+
+<h2>Calibration &amp; hot-pixel masking</h2>
+<ul>
+<li>At start-up and every 12 hours, 20 dark frames are combined into a per-pixel median "dark" image, which is subtracted from every new frame.</li>
+<li>Pixels are masked as <b>hot</b> if their dark level is abnormally high, if they light up in 3 or more of the 20 calibration frames, or if their frame-to-frame noise is unusually large.</li>
+<li>While running, a pixel that keeps producing hits (a third time) is masked, and any 16×16 pixel block that produces three hits is treated as a flickering defect: it is masked and its earlier hits are removed. Real particles essentially never strike the same spot repeatedly.</li>
+<li>Frames that look illuminated (light leak) are flagged and excluded.</li>
+</ul>
+
+<h2>Hit detection &amp; track geometry</h2>
+<ul>
+<li>Pixels more than max(4σ, 6 DN) above the dark level are grouped into 8-connected clusters; a cluster counts as a hit if its brightest pixel exceeds max(6σ, 20 DN). The absolute floors exist because 10-bit dark noise is quantized (σ ≈ 1 DN) with a non-Gaussian tail.</li>
+<li>For each hit: time, centroid, pixel count, total and peak signal, and a brightness-weighted principal-axis fit giving elongation, length, and track angle (0–180°, 0° along sensor rows). Angles are only recorded for clusters of ≥3 pixels with elongation ≥1.5.</li>
+<li>Hit rate is reported per hour of exposure and compared with the planetary Kp index, GOES X-ray flux, solar wind (NOAA SWPC) and the Oulu neutron monitor (NMDB).</li>
+</ul>
+
+<h2>The "pixelation" test, and its honest null</h2>
+<div class="box">
+<p>The playful question: if reality were rendered on a grid, would particle tracks prefer certain directions? The test is a length-weighted Rayleigh test on the 8th harmonic of the axial track angle (a 4-fold signal peaking at 0°, 45°, 90° and 135°), plus a 2-fold and a single-direction harmonic and a χ² test against a uniform distribution.</p>
+<p><b>Expected result: the sensor itself is a square pixel grid behind a Bayer colour filter, so short tracks will cluster at grid angles.</b> That is a measurement artefact, not new physics. Only long tracks carry meaningful angle information, so they are reported separately. Cosmic muons also arrive mostly from overhead, so a single preferred direction just reflects how the camera is mounted. A genuine anomaly would need to appear in long tracks, persist for weeks, and stay fixed in space when the camera is rotated. We fully expect a null result, and that is a perfectly good result.</p>
+</div>
+
+<h2>Randomness</h2>
+<ul>
+<li><b>Raw:</b> least-significant bits of quiet, non-hot pixels. These are biased (about 45% ones) because the quantized dark noise sits asymmetrically around the black level. That is expected and harmless.</li>
+<li><b>Debiased:</b> temporal von Neumann extraction, comparing each pixel's LSB with the same pixel one frame later (01→0, 10→1, equal pairs discarded). Each pair of frames yields a 10,000-bit trial sampled across the whole sensor and converted to a z-score; z-scores are combined each minute (Stouffer).</li>
+<li><b>Cumulative deviation:</b> the running sum of (Z²−1), the "netvar" statistic used by the Global Consciousness Project. Under chance it behaves like a random walk around zero; the chart shows a ±2√(2N) guide band. <b>The expected result is chance-level behaviour</b>, and short excursions outside the band happen by luck about 5% of the time.</li>
+<li><b>Whitened:</b> debiased bits conditioned with SHA-256 for a random byte pool. Whitening hides any structure, so it is never used for the statistics. Bytes shown on the public page are public and must never be used as secrets.</li>
+<li>World events are logged by the operator for after-the-fact comparison. Correlations found by looking at charts are exploratory, not evidence.</li>
+</ul>
+
+<h2>Publishing</h2>
+<p>Every 15 minutes the Pi exports a static snapshot (JSON summaries, the 50 most recent hit crops, and one CSV per completed day) to this GitHub Pages site. Nothing on the site connects back to the Pi. Times are stored as Unix seconds (UTC) and shown in your browser's local time.</p>
+<p>Data files: <code>data/latest.json</code>, <code>data/series.json</code> (hourly, last 30 days), <code>data/angles.json</code>, <code>data/hits_recent.json</code>, <code>data/events.json</code>, <code>data/daily/YYYY-MM-DD_hits.csv</code> and <code>_rng.csv</code>.</p>
+
+<h2>License &amp; credit</h2>
+<ul>
+<li>Code: <b>MIT License</b> (see <a href="https://github.com/Geebs369/realaether">the repository</a>).</li>
+<li>Data and charts: <b><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a></b>. Please credit <b>"RealAether (Geebs369)"</b>.</li>
+<li>Space-weather data: NOAA Space Weather Prediction Center (public domain). Neutron monitor data: Oulu station via NMDB (www.nmdb.eu); please acknowledge NMDB and the Sodankylä Geophysical Observatory if you reuse it.</li>
+</ul>
+</main></body></html>

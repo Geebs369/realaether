@@ -1,1 +1,123 @@
-<!doctype html><title>CRRD</title><p>RealAether Cosmic Ray Randomness Detector - coming online. Built By Geebs.</p>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmic Ray Randomness Detector · RealAether</title>
+<meta name="description" content="Live snapshots from a covered Raspberry Pi camera used as a cosmic-ray detector and noise-based random number source.">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<style>
+:root{--bg:#05060c;--panel:#0d1020;--line:#262a44;--gold:#d4af37;--gold2:#f3d36b;--txt:#e6e3d6;--dim:#8d8aa0;--cyan:#5ad1ff;--red:#ff6b6b;--green:#6bff9e}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--txt);
+background:radial-gradient(ellipse at top,#141a3a 0%,#05060c 60%) fixed,#05060c;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 20% 30%,#fff8,transparent),radial-gradient(1px 1px at 70% 80%,#fff6,transparent),radial-gradient(1px 1px at 40% 70%,#fff5,transparent),radial-gradient(1.5px 1.5px at 85% 20%,#ffd96b88,transparent),radial-gradient(1px 1px at 10% 90%,#fff6,transparent);background-size:400px 400px;opacity:.6}
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:18px 24px;border-bottom:1px solid var(--line);background:#000a}
+h1{margin:0;font-size:22px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-weight:600}
+h1 small{display:block;font-size:11px;letter-spacing:2px;color:var(--dim);font-weight:400;margin-top:4px}
+a{color:var(--gold2)}nav a{margin-left:14px;text-decoration:none;border:1px solid var(--gold);padding:6px 12px;border-radius:18px;font-size:13px}
+nav a:hover{background:var(--gold);color:#000}
+main{padding:18px 24px;display:grid;gap:16px;grid-template-columns:repeat(12,1fr);position:relative}
+.card{background:linear-gradient(180deg,#11152b,#0a0d1b);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:0 0 18px #0008}
+.card h2{margin:0 0 10px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.span12{grid-column:span 12}.span8{grid-column:span 8}.span6{grid-column:span 6}.span4{grid-column:span 4}
+@media(max-width:1000px){.span8,.span6,.span4{grid-column:span 12}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.stat{background:#070915;border:1px solid var(--line);border-radius:10px;padding:10px}
+.stat b{display:block;font-size:22px;color:var(--gold2);font-weight:600}.stat span{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.note{font-size:12px;color:var(--dim);line-height:1.5}
+table{width:100%;border-collapse:collapse;font-size:12px}th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--gold);font-weight:500}
+td img{width:48px;height:48px;image-rendering:pixelated;border:1px solid var(--line);background:#000}
+input,textarea,button,select{background:#070915;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:7px;font:inherit}
+button{border-color:var(--gold);color:var(--gold2);cursor:pointer}button:hover{background:var(--gold);color:#000}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px}.kv div:nth-child(odd){color:var(--dim)}
+.sig{color:var(--red)}.ok{color:var(--green)}
+canvas{max-height:300px}
+</style></head><body>
+<header><h1>Cosmic Ray Randomness Detector<small>RealAether · Hosted by Raspberry Pi 5, Built By Geebs · dark-frame particle &amp; noise observatory</small></h1>
+<nav><select id="range"><option value="24">24 h</option><option value="48" selected>48 h</option><option value="168">7 days</option><option value="720">30 days</option></select>
+<a href="methods.html">Methods &amp; license</a><a href="data/">Data</a></nav></header>
+<main>
+<section class="card span12"><h2><span id="alive" class="dot"></span>Detector status</h2><p class="note" style="margin-top:-4px">Live data from a Raspberry Pi 5 in South Carolina · <span id="snap">Snapshot updated …</span> · refreshes every 15 minutes</p><div class="stats" id="stats"></div></section>
+
+<section class="card span8"><h2>Particle hit rate vs geomagnetic activity</h2><canvas id="cRate"></canvas>
+<p class="note">Hits per hour of exposure (bars) against the planetary Kp index and the Oulu neutron monitor. Expect only a few to a few dozen hits per hour on a sensor this small: muons, gamma rays from natural radioactivity, and the occasional secondary shower. Strong Forbush decreases (after big solar storms) lower galactic cosmic rays by a few percent; months of data are needed to see that against counting noise.</p></section>
+<section class="card span4"><h2>Space weather now</h2><div class="kv" id="sw"></div></section>
+
+<section class="card span12"><h2>Sun &amp; solar wind</h2><canvas id="cSun"></canvas></section>
+
+<section class="card span8"><h2>Randomness: cumulative deviation (GCP style)</h2><canvas id="cRng"></canvas>
+<p class="note">Each pair of consecutive frames contributes a 10,000-bit trial of sensor-noise bits, debiased by comparing each pixel with itself one frame later (temporal von Neumann) and sampled across the whole sensor; frame z-scores are combined (Stouffer) into a minute Z. The line is the cumulative sum of (Z²−1), the Global Consciousness Project "netvar" statistic: chance wanders around zero like a random walk, so only a sustained trend (well beyond ±2√(2N)) is interesting. Gold vertical lines mark notable world events logged by the operator.</p></section>
+<section class="card span4"><h2>Randomness stats</h2><div class="kv" id="rngk"></div>
+<p class="note">"Raw" is the sensor-noise LSB before any processing; tiny biases there are expected from the ADC and are statistically huge with millions of bits. The debiased stream is what the GCP test uses. SHA-256 whitening hides everything, so it is only used for the random byte pool.</p></section>
+
+<section class="card span4"><h2>Track angle rose</h2><canvas id="cRose"></canvas>
+<p class="note">Angle of elongated tracks (0° = along sensor rows, 90° = columns), mirrored to a full circle.</p></section>
+<section class="card span8"><h2>Pixelation test</h2><div id="pix"></div>
+<p class="note"><b>Honest null hypothesis:</b> the sensor is itself a square pixel grid behind a Bayer filter, so short tracks <i>will</i> cluster at 0°, 45°, 90° and 135°: that's an artifact of how we measure, not evidence of a pixelated universe. The interesting quantity is the 4-fold (grid) signal in <b>long</b> tracks, weighted by length, compared with what the short-track artifact predicts. A real "simulation grid" would have to show up in long tracks, stay put when the camera is rotated, and survive many weeks of data. Muons arrive mostly from overhead, so a 2-fold (single-direction) signal reflects how the camera is mounted, not new physics.</p></section>
+
+<section class="card span8"><h2>Recent hits</h2><div style="max-height:420px;overflow:auto"><table id="hits"></table></div></section>
+<section class="card span4"><h2>World events</h2>
+<p class="note">Events logged by the operator, shown as gold markers on the charts.</p>
+<div style="max-height:260px;overflow:auto;margin-top:10px"><table id="evs"></table></div></section>
+
+<section class="card span12"><h2>Fresh randomness</h2><code id="rand" style="word-break:break-all;color:var(--cyan)"></code> 
+<p class="note">32 bytes from the cosmic noise pool at snapshot time (SHA-256-conditioned). Published publicly, so never use them as a secret. Next stage: a Hailo AI accelerator learns what "normal" frames and statistics look like and flags anomalies.</p></section>
+</main>
+<footer style="padding:14px 24px 30px;color:#8d8aa0;font-size:12px;position:relative">Code MIT · Data &amp; charts CC BY 4.0, credit "RealAether (Geebs369)" · <a href="methods.html">Methods</a> · <a href="https://github.com/Geebs369/realaether">GitHub</a></footer>
+<script>
+const $=id=>document.getElementById(id);let events=[];const charts={};
+Chart.defaults.color='#8d8aa0';Chart.defaults.borderColor='#262a44';Chart.defaults.font.size=11;
+const fmt=(v,d=2)=>v==null||isNaN(v)?'—':Number(v).toFixed(d);
+const ago=t=>{if(!t)return'—';const s=Date.now()/1000-t;return s<90?Math.round(s)+'s ago':s<5400?Math.round(s/60)+'m ago':s<172800?(s/3600).toFixed(1)+'h ago':(s/86400).toFixed(1)+'d ago'};
+const pfmt=p=>p==null?'—':p<1e-4?p.toExponential(1):p.toFixed(4);
+const evPlugin={id:'ev',afterDatasetsDraw(c){const x=c.scales.x;if(!x||x.type!=='time')return;const ctx=c.ctx;ctx.save();ctx.strokeStyle='#d4af37';ctx.fillStyle='#f3d36b';ctx.setLineDash([4,3]);
+ for(const e of events){const px=x.getPixelForValue(e.ts*1000);if(px<x.left||px>x.right)continue;ctx.beginPath();ctx.moveTo(px,c.chartArea.top);ctx.lineTo(px,c.chartArea.bottom);ctx.stroke();ctx.fillText(e.title.slice(0,24),px+3,c.chartArea.top+10)}ctx.restore()}};
+Chart.register(evPlugin);
+function mk(id,cfg){if(charts[id]){charts[id].data=cfg.data;charts[id].options=cfg.options;charts[id].update('none');return}charts[id]=new Chart($(id),cfg)}
+const tx=h=>({type:'time',min:D.st.generated*1000-h*3600e3,max:D.st.generated*1000,time:{tooltipFormat:'MMM d HH:mm',displayFormats:{hour:'HH:mm',minute:'HH:mm',day:'MMM d'}},grid:{color:'#1a1d33'}});
+async function j(u){const r=await fetch(u);return r.json()}
+let D=null;
+async function fetchAll(){const q='?v='+Math.floor(Date.now()/60000);const [st,se,ang,hits,ev]=await Promise.all([j('data/latest.json'+q),j('data/series.json'+q),j('data/angles.json'+q),j('data/hits_recent.json'+q),j('data/events.json'+q)]);D={st,se,ang,hits,ev}}
+async function load(refetch){
+ if(refetch||!D)await fetchAll();
+ const h=+$('range').value;const NOW=D.st.generated*1000,t0=D.st.generated-h*3600,t1=D.st.generated-Math.max(h,24)*3600;
+ const {st,ang,hits,ev}=D;const se=D.se;
+ const hr=se.hitrate.filter(r=>r.t>=t0);
+ const sw={kp:se.kp.filter(r=>r.t>=t1),xray:se.xray.filter(r=>r.t>=t1),wind:se.wind.filter(r=>r.t>=t1),neutron:se.neutron.filter(r=>r.t>=t1)};
+ let cum=0,cumz=0;const rng=se.rng.filter(r=>r.t>=t0).map(r=>{cum+=r.netvar;cumz+=r.zsum;return {...r,cum_netvar:cum,cum_z:cumz}});
+ $('snap').textContent='Snapshot updated '+st.generated_et;
+ events=ev;
+ $('alive').style.background=st.collector_alive?'#6bff9e':'#ff6b6b';
+ const S=[['Collector',st.collector_alive?'<span class=ok>running</span>':'<span class=sig>offline</span>'],['Frames',st.frames_total?.toLocaleString()],['Frames / hr',st.frames_hour],['Exposure',fmt(st.exposure_hours,2)+' h'],['Hits total',st.hits_total],['Hits last hr',st.hits_hour],['Tracks (angled)',st.tracks_total],['Last hit',st.last_hit?new Date(st.last_hit*1000).toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}):'—'],['Hot px masked',st.hot_pixels?.toLocaleString()],['Noise σ',fmt(st.sigma,2)+' DN'],['Sensor / SoC',(st.sensor_temp??'—')+'° / '+fmt(st.soc_temp,1)+'°C'],['Proc / frame',fmt(st.proc_ms,0)+' ms'],['Running since',st.started?new Date(st.started*1000).toLocaleString([],{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}):'—']];
+ $('stats').innerHTML=S.map(s=>`<div class=stat><span>${s[0]}</span><b>${s[1]??'—'}</b></div>`).join('');
+ mk('cRate',{data:{datasets:[{type:'bar',label:'Hits / exposure-hour',data:hr.map(r=>({x:r.t*1000,y:r.rate})),backgroundColor:'#d4af37aa',yAxisID:'y'},
+  {type:'line',label:'Kp',data:sw.kp.map(r=>({x:r.t*1000,y:r.kp})),borderColor:'#5ad1ff',stepped:true,pointRadius:0,yAxisID:'y1'},
+  {type:'line',label:'Oulu neutrons (cts/s)',data:sw.neutron.map(r=>({x:r.t*1000,y:r.rate})),borderColor:'#c58cff',pointRadius:0,yAxisID:'y2'}]},
+  options:{animation:false,interaction:{mode:'nearest',intersect:false},scales:{x:tx(h),y:{title:{display:true,text:'hits/h'},beginAtZero:true},y1:{position:'right',min:0,max:9,grid:{display:false},title:{display:true,text:'Kp'}},y2:{position:'right',grid:{display:false},display:'auto'}}}});
+ mk('cSun',{data:{datasets:[{type:'line',label:'GOES X-ray 0.1–0.8 nm (W/m²)',data:sw.xray.map(r=>({x:r.t*1000,y:r.long})),borderColor:'#ff9f43',pointRadius:0,yAxisID:'y'},
+  {type:'line',label:'Solar wind speed (km/s)',data:sw.wind.map(r=>({x:r.t*1000,y:r.speed})),borderColor:'#5ad1ff',pointRadius:0,yAxisID:'y1'},
+  {type:'line',label:'Bz (nT)',data:sw.wind.map(r=>({x:r.t*1000,y:r.bz})),borderColor:'#ff6b6b',pointRadius:0,borderWidth:1,yAxisID:'y2'}]},
+  options:{animation:false,interaction:{mode:'nearest',intersect:false},scales:{x:tx(Math.max(h,24)),y:{type:'logarithmic',min:1e-9,max:1e-3,title:{display:true,text:'X-ray'}},y1:{position:'right',grid:{display:false},title:{display:true,text:'km/s'}},y2:{position:'right',grid:{display:false}}}}});
+ const lk=sw.kp.at(-1),lx=sw.xray.at(-1),lw=sw.wind.filter(r=>r.speed!=null).at(-1),ln=sw.neutron.at(-1);
+ const xcls=f=>!f?'—':f>=1e-4?'X'+(f/1e-4).toFixed(1):f>=1e-5?'M'+(f/1e-5).toFixed(1):f>=1e-6?'C'+(f/1e-6).toFixed(1):f>=1e-7?'B'+(f/1e-7).toFixed(1):'A'+(f/1e-8).toFixed(1);
+ $('sw').innerHTML=`<div>Kp</div><div>${fmt(lk?.kp,2)}</div><div>X-ray class</div><div>${xcls(lx?.long)}</div><div>Solar wind</div><div>${fmt(lw?.speed,0)} km/s</div><div>Density</div><div>${fmt(lw?.density,1)} p/cm³</div><div>Bz</div><div>${fmt(lw?.bz,1)} nT</div><div>Oulu neutrons</div><div>${fmt(ln?.rate,1)} cts/s</div><div>Source</div><div>NOAA SWPC · NMDB</div>`;
+ const N=rng.reduce((a,r)=>a+(r.nmin||0),0),env=2*Math.sqrt(2*Math.max(N,1));
+ mk('cRng',{type:'line',data:{datasets:[{label:'Cumulative Σ(Z²−1)',data:rng.map(r=>({x:r.t*1000,y:r.cum_netvar})),borderColor:'#f3d36b',pointRadius:0,borderWidth:1.5},
+  {label:'Cumulative ΣZ (bit bias walk)',data:rng.map(r=>({x:r.t*1000,y:r.cum_z})),borderColor:'#5ad1ff55',pointRadius:0,borderWidth:1}]},
+  options:{animation:false,interaction:{mode:'nearest',intersect:false},scales:{x:tx(h),y:{suggestedMin:-env,suggestedMax:env}}}});
+ const last=rng.at(-1)||{};let rb=0,ro=0,vb=0,vo=0;for(const r of rng){rb+=r.raw_n||0;ro+=(r.raw_n||0)*(r.raw_ones_frac||0);vb+=r.vn_n||0;vo+=(r.vn_n||0)*(r.vn_ones_frac||0)}
+ const zall=vb?(2*vo-vb)/Math.sqrt(vb):null, cum=rng.at(-1)?.cum_netvar;
+ $('rngk').innerHTML=`<div>Minutes</div><div>${N}</div><div>Raw LSB bits</div><div>${(rb/1e6).toFixed(1)} M</div><div>Raw ones fraction</div><div>${fmt(rb?ro/rb:null,6)}</div><div>Debiased bits</div><div>${(vb/1e6).toFixed(1)} M</div><div>Debiased ones</div><div>${fmt(vb?vo/vb:null,6)} (z ${fmt(zall,2)})</div><div>Last hour Z</div><div>${fmt(last.z,2)}</div><div>Last hour runs z</div><div>${fmt(last.runs_z,2)}</div><div>Whitened byte χ² (255 dof, avg/min)</div><div>${fmt(last.white_byte_chi2,0)}</div><div>Netvar vs 2σ band</div><div>${fmt(cum,1)} / ±${fmt(env,1)} ${Math.abs(cum||0)>env?'<span class=sig>outside</span>':'<span class=ok>inside</span>'}</div><div>Global ones (all time)</div><div>${fmt(st.rng_vn_ones,6)}</div>`;
+ const hist=ang.hist,full=[...hist,...hist];const rev=[];for(let i=0;i<72;i++)rev.push(full[(72-i)%72]);
+ mk('cRose',{type:'polarArea',data:{labels:rev.map((_,i)=>((360-i*5)%360)+'°'),datasets:[{data:rev,backgroundColor:rev.map((_,i)=>{const a=(360-i*5)%45;return a===0?'#d4af37cc':'#5ad1ff66'}),borderColor:'#05060c',borderWidth:1}]},
+  options:{animation:false,startAngle:90,plugins:{legend:{display:false}},scales:{r:{ticks:{display:false},grid:{color:'#262a44'}}}}});
+ const row=(n,s)=>s&&s.n?`<tr><td>${n}</td><td>${s.n}</td><td>${fmt(s.grid4?.Z,2)}</td><td class="${s.grid4?.p<0.01?'sig':''}">${pfmt(s.grid4?.p)}</td><td>${fmt(s.grid4?.peak_deg,1)}°</td><td>${fmt(s.axis2?.Z,2)} / ${pfmt(s.axis2?.p)}</td><td>${fmt(s.aniso?.Z,2)} / ${pfmt(s.aniso?.p)}</td><td>${fmt(s.chi2,1)} / ${pfmt(s.chi2_p)}</td><td>${fmt(100*s.near_grid_frac,1)}% (22.2%)</td></tr>`:`<tr><td>${n}</td><td colspan=8>no tracks yet</td></tr>`;
+ $('pix').innerHTML=`<table><tr><th>Set</th><th>Tracks</th><th>4-fold Z</th><th>4-fold p</th><th>Grid phase</th><th>2-fold Z / p</th><th>Direction Z / p</th><th>χ² (11 dof) / p</th><th>Within ±5° of grid</th></tr>${row('All elongated (≥3 px)',ang.all)}${row('Long (≥'+ang.minlen+' px)',ang.long)}</table>
+ <p class=note>4-fold = length-weighted Rayleigh test on the 8th harmonic of the axial angle (peaks at 0/45/90/135° give grid phase ≈0°; phase ≈22.5° means excess between grid lines). p&lt;0.01 is highlighted. Short-track grid signal is expected; watch the long-track row.</p>`;
+ $('hits').innerHTML='<tr><th></th><th>Time</th><th>px</th><th>Peak</th><th>Energy (DN)</th><th>Length</th><th>Angle</th><th>Where</th></tr>'+hits.map(r=>`<tr><td>${r.crop?`<img src="data/crops/${r.crop}" loading="lazy">`:''}</td><td>${new Date(r.ts*1000).toLocaleString([], {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false})}</td><td>${r.npx}</td><td>${fmt(r.peak,0)}</td><td>${fmt(r.total,0)}</td><td>${fmt(r.length,1)}</td><td>${r.angle==null?'—':fmt(r.angle,0)+'°'}</td><td>${fmt(r.x,0)}, ${fmt(r.y,0)}</td></tr>`).join('');
+ $('evs').innerHTML=ev.map(e=>`<tr><td>${new Date(e.ts*1000).toLocaleString([], {hour12:false})}</td><td><b>${esc(e.title)}</b><br><span class=note>${esc(e.notes||'')}</span></td></tr>`).join('')||'<tr><td class=note>No events logged yet.</td></tr>';
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+$('range').onchange=()=>load(false);
+load(true).then(()=>{$('rand').textContent=D.st.random_hex||'—'});setInterval(()=>load(true),300000);
+</script></body></html>
