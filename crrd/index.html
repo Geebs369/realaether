@@ -83,7 +83,7 @@ async function load(refetch){
  const {st,ang,hits,ev}=D;const se=D.se;
  const hr=se.hitrate.filter(r=>r.t>=t0);
  const sw={kp:se.kp.filter(r=>r.t>=t1),xray:se.xray.filter(r=>r.t>=t1),wind:se.wind.filter(r=>r.t>=t1),neutron:se.neutron.filter(r=>r.t>=t1)};
- let cum=0,cumz=0;const rng=se.rng.filter(r=>r.t>=t0).map(r=>{cum+=r.netvar;cumz+=r.zsum;return {...r,cum_netvar:cum,cum_z:cumz}});
+ let cA=0,cZ=0;const rng=se.rng.filter(r=>r.t>=t0).map(r=>{cA+=r.netvar;cZ+=r.zsum;return {...r,cum_netvar:cA,cum_z:cZ}});
  $('snap').textContent='Snapshot updated '+st.generated_et;
  events=ev;
  $('alive').style.background=st.collector_alive?'#6bff9e':'#ff6b6b';
