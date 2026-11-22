@@ -11,7 +11,7 @@
   <meta property="og:description" content="Solar wind speed spikes next to USGS volcano alert changes, tallied against chance. Testing, not proof.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="ra-bg">
   <header>
     <h1>Solar Wind × Volcano Log
       <small>RealAether · Forged in the Aether · NOAA SWPC solar wind next to USGS volcano alerts</small>
@@ -20,7 +20,7 @@
       <a href="../">← AetherWeather</a>
       <a href="../crrd/">Cosmic Ray Detector</a>
       <a href="../impact/">NEO Tracker</a>
-      <a href="#method">Method</a>
+      <a href="methods.html">Method</a>
       <a href="../mission/">Mission</a>
       <a class="support-top" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support</a>
     </nav>
@@ -60,10 +60,7 @@
 
     <section class="card span12" id="method">
       <h2>Method</h2>
-      <p class="note" id="rule"></p>
-      <p class="note">Solar wind: NOAA SWPC real-time solar wind, 1-minute proton speed from whichever spacecraft is active, reduced to hourly medians (hours with fewer than 20 good minutes are skipped). The record before this logger started comes from the RealAether Cosmic Ray Detector, which logs the same feed.
-        Volcanoes: USGS Hazard Notification System. Each Volcano Activity Notice or VONA is read for its current and previous Alert Level and Aviation Color Code, and logged once if either changed. Changes outside the solar wind record are listed but not counted.
-        Chance: the share of the record that sits within ±48 h of any spike is the probability a randomly timed alert change would match. Expected matches = tested changes × that share; the p-value is a one-sided binomial tail. Alert changes at the same volcano are not independent, so treat the p-value as rough.</p>
+      <p class="note">Spike rule, match window and chance calculation are fixed in advance. <a href="methods.html">See full method →</a></p>
       <p class="note">Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> · <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/summary.json">summary.json</a></p>
       <p class="note" id="gen"></p>
     </section>

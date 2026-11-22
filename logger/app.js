@@ -41,7 +41,8 @@
       `<tr><td>${fmt(p.start)}</td><td>${p.baseline} km/s</td><td>${p.speed} km/s</td><td>+${p.rise} km/s</td><td>${p.peak24} km/s</td><td>${p.rule === 'jump' ? 'jump ≥ ' + s.rule.jump_kms : 'crossed ' + s.rule.fast_kms}</td></tr>`
     ).join('') || '<tr><td colspan="6">No spikes in the record yet.</td></tr>';
     const r = s.rule;
-    document.getElementById('rule').textContent = `Spike rule (fixed in advance): an hour whose median speed is at least ${r.jump_kms} km/s above the median of hours ${r.baseline_hours[0]} to ${r.baseline_hours[1]} before it, or an hour that crosses up through ${r.fast_kms} km/s. A new spike needs ${r.refractory_h} h since the previous one. Match window: ±${r.window_h} h from a spike start.`;
+    const ruleEl = document.getElementById('rule');
+    if (ruleEl) ruleEl.textContent = `Spike rule (fixed in advance): an hour whose median speed is at least ${r.jump_kms} km/s above the median of hours ${r.baseline_hours[0]} to ${r.baseline_hours[1]} before it, or an hour that crosses up through ${r.fast_kms} km/s. A new spike needs ${r.refractory_h} h since the previous one. Match window: ±${r.window_h} h from a spike start.`;
     document.getElementById('gen').textContent = `Updated ${s.generated_et}. Solar wind record: ${fmt(s.wind.first)} to ${fmt(s.wind.last)} ET (${s.wind.hours} hours).`;
 
     // chart
