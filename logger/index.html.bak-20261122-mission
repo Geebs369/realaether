@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar Wind × Volcano Alert Log · RealAether</title>
+  <meta name="description" content="A public log of solar wind speed spikes (NOAA SWPC) next to USGS volcano alert-level changes, tallied against chance. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RealAether">
+  <meta property="og:title" content="Solar Wind × Volcano Alert Log — RealAether">
+  <meta property="og:description" content="Solar wind speed spikes next to USGS volcano alert changes, tallied against chance. Testing, not proof.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Solar Wind × Volcano Log
+      <small>RealAether · Forged in the Aether · NOAA SWPC solar wind next to USGS volcano alerts</small>
+    </h1>
+    <nav>
+      <a href="../">← AetherWeather</a>
+      <a href="../crrd/">Cosmic Ray Detector</a>
+      <a href="../impact/">NEO Tracker</a>
+      <a href="#method">Method</a>
+      <a class="support-top" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card span12">
+      <p class="proof-note"><b>Testing, not proof.</b> This page logs every solar wind speed spike and every U.S. volcano alert-level change,
+        using a rule fixed before looking at the results. A match only means the two happened within <span id="win">48</span> hours of each other.
+        Spikes and alert changes are both common, so some matches happen by pure chance. The tally below shows how many matches chance alone
+        would give. Only a long record that beats chance by a wide margin would be worth a closer look, and even then it would not show cause.</p>
+    </section>
+
+    <section class="card span8">
+      <h2>Timeline</h2>
+      <div class="chart-box"><canvas id="chart"></canvas></div>
+      <p class="note">Line: hourly median solar wind speed (km/s). Gold diamonds: spike starts. Triangles: volcano alert changes, colored by the new aviation color code (pointing up = raised, down = lowered). Times are Eastern (24-hour).</p>
+    </section>
+
+    <section class="card span4">
+      <h2>Running tally</h2>
+      <div class="stats" id="tally"></div>
+      <p class="note" id="tally-note"></p>
+      <h2 style="margin-top:16px">Elevated now (USGS)</h2>
+      <div id="elevated" class="note">Loading…</div>
+    </section>
+
+    <section class="card span12">
+      <h2>Volcano alert changes</h2>
+      <div class="table-wrap"><table id="changes"><thead><tr><th>When (ET)</th><th>Volcano</th><th>Observatory</th><th>Change</th><th>Nearest spike</th><th>Match (±<span class="winh">48</span> h)</th><th>Notice</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section class="card span12">
+      <h2>Solar wind spikes</h2>
+      <div class="table-wrap"><table id="spikes"><thead><tr><th>Start (ET)</th><th>Baseline</th><th>Speed</th><th>Rise</th><th>24 h peak</th><th>Rule</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section class="card span12" id="method">
+      <h2>Method</h2>
+      <p class="note" id="rule"></p>
+      <p class="note">Solar wind: NOAA SWPC real-time solar wind, 1-minute proton speed from whichever spacecraft is active, reduced to hourly medians (hours with fewer than 20 good minutes are skipped). The record before this logger started comes from the RealAether Cosmic Ray Detector, which logs the same feed.
+        Volcanoes: USGS Hazard Notification System. Each Volcano Activity Notice or VONA is read for its current and previous Alert Level and Aviation Color Code, and logged once if either changed. Changes outside the solar wind record are listed but not counted.
+        Chance: the share of the record that sits within ±48 h of any spike is the probability a randomly timed alert change would match. Expected matches = tested changes × that share; the p-value is a one-sided binomial tail. Alert changes at the same volcano are not independent, so treat the p-value as rough.</p>
+      <p class="note">Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> · <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/summary.json">summary.json</a></p>
+      <p class="note" id="gen"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="credit">Geebs &amp; 3TH3R3AL1 — RealAether</div>
+    Data: <a href="https://www.swpc.noaa.gov/products/real-time-solar-wind">NOAA SWPC real-time solar wind</a> ·
+    <a href="https://volcanoes.usgs.gov/hans-public/">USGS Volcano Hazards Program (HANS)</a> ·
+    <a href="../">AetherWeather</a> ·
+    <a href="../crrd/">CRRD</a> ·
+    <a href="../impact/">NEO Tracker</a>
+    <div class="support">
+      <a class="donate" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support the Research</a>
+      <p class="support-note">RealAether is self-funded citizen science. Donations cover hardware, electricity, internet, and computing time, and every purchase is posted publicly. Donations are not tax-deductible.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
