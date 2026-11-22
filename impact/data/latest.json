@@ -1,9 +1,9 @@
 {
   "counts": {
-    "sbdb_neos": 43368,
-    "upcoming_earth": 1448,
+    "sbdb_neos": 43370,
+    "upcoming_earth": 1445,
     "upcoming_mars": 333,
-    "upcoming_moon": 113,
+    "upcoming_moon": 112,
     "validation_error": 0,
     "validation_ok": 470,
     "validation_selected": 470
@@ -16,55 +16,55 @@
     "cad": {
       "Earth": {
         "body": "Earth",
-        "bytes": 318697,
-        "count": 1451,
-        "date_max": "2036-11-21",
-        "date_min": "2026-11-21",
+        "bytes": 317587,
+        "count": 1446,
+        "date_max": "2036-11-22",
+        "date_min": "2026-11-22",
         "dist_max_au": 0.05,
         "docs": "https://ssd-api.jpl.nasa.gov/doc/cad.html",
-        "file": "/workspace/impact-project/data/cad/cad_earth.json",
+        "file": "/home/dwayne/impact-project/data/cad/cad_earth.json",
         "signature": {
           "source": "NASA/JPL SBDB Close Approach Data API",
           "version": "1.5"
         },
-        "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2026-11-21&date-max=2036-11-21&dist-max=0.05&neo=true&diameter=true&fullname=true&sort=date&body=Earth"
+        "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2026-11-22&date-max=2036-11-22&dist-max=0.05&neo=true&diameter=true&fullname=true&sort=date&body=Earth"
       },
       "Mars": {
         "body": "Mars",
         "bytes": 73329,
         "count": 333,
-        "date_max": "2036-11-21",
-        "date_min": "2026-11-21",
+        "date_max": "2036-11-22",
+        "date_min": "2026-11-22",
         "dist_max_au": 0.05,
         "docs": "https://ssd-api.jpl.nasa.gov/doc/cad.html",
-        "file": "/workspace/impact-project/data/cad/cad_mars.json",
+        "file": "/home/dwayne/impact-project/data/cad/cad_mars.json",
         "signature": {
           "source": "NASA/JPL SBDB Close Approach Data API",
           "version": "1.5"
         },
-        "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2026-11-21&date-max=2036-11-21&dist-max=0.05&neo=true&diameter=true&fullname=true&sort=date&body=Mars"
+        "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2026-11-22&date-max=2036-11-22&dist-max=0.05&neo=true&diameter=true&fullname=true&sort=date&body=Mars"
       },
       "Moon": {
         "body": "Moon",
-        "bytes": 25725,
-        "count": 115,
-        "date_max": "2036-11-21",
-        "date_min": "2026-11-21",
+        "bytes": 25060,
+        "count": 112,
+        "date_max": "2036-11-22",
+        "date_min": "2026-11-22",
         "dist_max_au": 0.05,
         "docs": "https://ssd-api.jpl.nasa.gov/doc/cad.html",
-        "file": "/workspace/impact-project/data/cad/cad_moon.json",
+        "file": "/home/dwayne/impact-project/data/cad/cad_moon.json",
         "signature": {
           "source": "NASA/JPL SBDB Close Approach Data API",
           "version": "1.5"
         },
-        "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2026-11-21&date-max=2036-11-21&dist-max=0.05&neo=true&diameter=true&fullname=true&sort=date&body=Moon"
+        "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2026-11-22&date-max=2036-11-22&dist-max=0.05&neo=true&diameter=true&fullname=true&sort=date&body=Moon"
       }
     },
     "sbdb": {
-      "bytes": 23136337,
-      "count": 43368,
+      "bytes": 23137430,
+      "count": 43370,
       "docs": "https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html",
-      "file": "/workspace/impact-project/data/sbdb/neo_elements.json",
+      "file": "/home/dwayne/impact-project/data/sbdb/neo_elements.json",
       "signature": {
         "source": "NASA/JPL SBDB (Small-Body DataBase) Query API",
         "version": "1.0"
@@ -72,10 +72,10 @@
       "url": "https://ssd-api.jpl.nasa.gov/sbdb_query.api?fields=spkid%2Cfull_name%2Cpdes%2Cname%2Ckind%2Cprefix%2Cclass%2Cneo%2Cpha%2CH%2Cdiameter%2Calbedo%2Cepoch%2Cepoch_cal%2Cequinox%2Ce%2Ca%2Cq%2Ci%2Com%2Cw%2Cma%2Ctp%2Ctp_cal%2Cper%2Cn%2Cad%2Cmoid%2Cmoid_ld%2Ct_jup%2Corbit_id%2Ccondition_code%2Cdata_arc%2Cfirst_obs%2Clast_obs%2Cn_obs_used%2Crms%2Cproducer%2Csoln_date&sb-group=neo&full-prec=true&sort=pdes"
     },
     "sentry": {
-      "bytes": 654075,
-      "count": 2256,
+      "bytes": 654368,
+      "count": 2257,
       "docs": "https://ssd-api.jpl.nasa.gov/doc/sentry.html",
-      "file": "/workspace/impact-project/data/sentry/sentry_summary.json",
+      "file": "/home/dwayne/impact-project/data/sentry/sentry_summary.json",
       "signature": {
         "source": "NASA/JPL Sentry Data API",
         "version": "2.0"
@@ -83,65 +83,65 @@
       "url": "https://ssd-api.jpl.nasa.gov/sentry.api"
     },
     "window": {
-      "date_max": "2036-11-21",
-      "date_min": "2026-11-21"
+      "date_max": "2036-11-22",
+      "date_min": "2026-11-22"
     }
   },
-  "generated_et": "2026-11-21T15:03:13-05:00",
-  "generated_et_label": "2026-11-21 15:03:13 EST",
-  "generated_utc": "2026-11-21T20:03:13+00:00",
+  "generated_et": "2026-11-22T14:12:02-05:00",
+  "generated_et_label": "2026-11-22 14:12:02 EST",
+  "generated_utc": "2026-11-22T19:12:02+00:00",
   "next_earth": {
     "albedo": null,
     "albedo_assumed": 0.154,
     "body": "Earth",
-    "cad_orbit_id": "9",
-    "cd_tdb": "2026-Nov-21 21:15",
-    "condition_code": 6,
-    "data_arc_days": 14.0,
-    "datetime_et": "2026-11-21 16:13",
-    "days_from_now": 0.04870663397014141,
-    "des": "2026 VD9",
-    "diameter_km": 0.030099870043328314,
-    "diameter_km_high": 0.05282505753906739,
-    "diameter_km_low": 0.023624083914538487,
+    "cad_orbit_id": "2",
+    "cd_tdb": "2026-Nov-22 23:54",
+    "condition_code": 9,
+    "data_arc_days": 1.0,
+    "datetime_et": "2026-11-22 18:53",
+    "days_from_now": 0.19482172979041934,
+    "des": "2026 WC1",
+    "diameter_km": 0.014968029158619363,
+    "diameter_km_high": 0.026268784563266357,
+    "diameter_km_low": 0.01174775759395214,
     "diameter_sigma_km": null,
     "diameter_source": "H_assumed_pV_0.154",
-    "dist_au": 0.0261075179281008,
-    "dist_km": 3905629.0913059553,
-    "dist_ld": 10.160325419630476,
-    "dist_max_au": 0.0261523947570084,
-    "dist_min_au": 0.0260626396695353,
-    "fullname": "(2026 VD9)",
-    "h": 25.256,
-    "iso_et": "2026-11-21T16:13:25-05:00",
-    "jd_tdb": 2461366.38512266,
+    "dist_au": 0.015095395861493,
+    "dist_km": 2258239.0782529446,
+    "dist_ld": 5.8747114418651005,
+    "dist_max_au": 0.0157054693138467,
+    "dist_min_au": 0.0144853006046918,
+    "fullname": "(2026 WC1)",
+    "h": 26.773,
+    "iso_et": "2026-11-22T18:52:39-05:00",
+    "jd_tdb": 2461367.495705732,
     "name": null,
     "neo_class": "APO",
-    "on_sentry": false,
-    "orbit_id": "JPL 9",
-    "pdes": "2026 VD9",
+    "on_sentry": true,
+    "orbit_id": "JPL 2",
+    "pdes": "2026 WC1",
     "pha": false,
-    "sbdb_url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20VD9",
-    "sentry_ip": null,
-    "sentry_ps_cum": null,
-    "sentry_ts_max": null,
-    "sentry_year_range": null,
-    "spkid": 54670234,
-    "t_sigma_f": "< 00:01",
+    "sbdb_url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WC1",
+    "sentry_ip": 1.86018e-08,
+    "sentry_ps_cum": -8.59,
+    "sentry_ts_max": "0",
+    "sentry_year_range": "2103-2120",
+    "spkid": 54672273,
+    "t_sigma_f": "00:35",
     "tzname": "EST",
-    "v_inf_kms": 4.65004007897637,
-    "v_rel_kms": 4.67193627993996,
+    "v_inf_kms": 19.6717264016653,
+    "v_rel_kms": 19.6806971022749,
     "validation_reasons": []
   },
   "runtime": {
-    "nice": 10,
+    "nice": 19,
     "skip_fetch": false,
     "skip_validate": false,
     "timings_s": {
-      "build_upcoming_s": 0.926472085993737,
-      "fetch_s": 3.7740725070179906,
-      "total_s": 30.795475968014216,
-      "validate_s": 26.092551909008762
+      "build_upcoming_s": 1.6519190709805116,
+      "fetch_s": 5.146851777972188,
+      "total_s": 88.40126072702697,
+      "validate_s": 81.59885845798999
     },
     "workers": 2
   },
@@ -196,7 +196,7 @@
     "close_au": 0.01,
     "include_condition_code_0": true,
     "n_closest": 200,
-    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43368 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
+    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43370 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
   },
   "validation_summary": {
     "abs_ddist_au_max": 1.2071944193866105e-05,
@@ -220,7 +220,7 @@
   },
   "window": {
     "dist_max_au": 0.05,
-    "from_et": "2026-11-21T15:03:13-05:00",
+    "from_et": "2026-11-22T14:12:02-05:00",
     "note": "CNEOS close approaches of NEOs to Earth, the Moon, and Mars within 0.05 au, from the generation time through 10 years. CNEOS is authoritative; our REBOUND engine is an independent check of a subset.",
     "years": 10
   }
