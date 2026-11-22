@@ -293,7 +293,7 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
                         <p class="hud-label mb-1">Orbital weather desk</p>
                         <p class="font-hud text-xs sm:text-sm text-white/85">Geebs • watching the Sun, the sky and the sensor</p>
                     </div>
-                    <p class="font-hud text-[10px] sm:text-xs text-white/60 sm:text-right max-w-md">Boiling Springs, SC • 35.05°N 81.98°W</p>
+                    <p class="font-hud text-[10px] sm:text-xs text-white/60 sm:text-right max-w-md">Boiling Springs, SC</p>
                 </div>
             </div>
         </div>
@@ -511,7 +511,7 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
         const TZ = "America/New_York";
         const TIME_OPTS = { timeZone: TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" };
         const DATE_OPTS = { timeZone: TZ, month: "short", day: "numeric" };
-        const HOME = { name: "Boiling Springs, SC", lat: 35.05, lon: -81.98, auroraKp: 7 };
+        const HOME = { name: "Boiling Springs, SC", lat: 35, lon: -82, auroraKp: 7 };
 
         const lastGood = { kp: null, wind: null, bt: null, bz: null, source: null };
 
@@ -784,7 +784,7 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
                 status.textContent = "Unlikely tonight";
                 status.className = "text-xl font-semibold leading-tight text-white";
             }
-            detail.textContent = `From Boiling Springs (${HOME.lat.toFixed(2)}°N), a visible aurora usually needs Kp ${threshold}+. Current Kp is ${Number.isFinite(kpNow) ? kpNow.toFixed(1) : "unavailable"}.`;
+            detail.textContent = `From Boiling Springs, a visible aurora usually needs Kp ${threshold}+. Current Kp is ${Number.isFinite(kpNow) ? kpNow.toFixed(1) : "unavailable"}.`;
             if (Number.isFinite(peak)) {
                 forecastEl.textContent = `Forecast peak Kp ${peak.toFixed(1)} over the next 3 days.`;
             } else {
