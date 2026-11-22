@@ -30,6 +30,8 @@ h1{margin:0;font-size:22px;letter-spacing:3px;color:var(--gold);text-transform:u
 h1 small{display:block;font-size:11px;letter-spacing:2px;color:var(--dim);font-weight:400;margin-top:4px}
 a{color:var(--gold2)}nav a{margin-left:14px;text-decoration:none;border:1px solid var(--gold);padding:6px 12px;border-radius:18px;font-size:13px}
 nav a:hover{background:var(--gold);color:#000}
+nav a.support-top{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#000;font-weight:700}nav a.support-top:hover{filter:brightness(1.1)}
+.support{margin-top:18px;text-align:center}.donate{display:inline-block;padding:10px 22px;border:1px solid var(--gold);border-radius:999px;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#000 !important;font-weight:700;text-decoration:none;letter-spacing:.5px;box-shadow:0 0 14px rgba(212,175,55,.35)}.donate:hover{filter:brightness(1.1);box-shadow:0 0 22px rgba(212,175,55,.6)}.support-note{max-width:560px;margin:10px auto 0;font-size:12px;opacity:.75}
 main{padding:18px 24px;display:grid;gap:16px;grid-template-columns:repeat(12,1fr);position:relative}
 .card{background:linear-gradient(180deg,#11152b,#0a0d1b);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:0 0 18px #0008}
 .card h2{margin:0 0 10px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
@@ -50,7 +52,7 @@ canvas{max-height:300px}
 </style></head><body>
 <header><h1>Cosmic Ray Randomness Detector<small>RealAether · Hosted by Raspberry Pi 5, Built By Geebs · dark-frame particle &amp; noise observatory</small></h1>
 <nav><select id="range"><option value="24">24 h</option><option value="48" selected>48 h</option><option value="168">7 days</option><option value="720">30 days</option></select>
-<a href="../">&#8592; AetherWeather</a><a href="methods.html">Methods &amp; license</a><a href="data/">Data</a></nav></header>
+<a href="../">&#8592; AetherWeather</a><a href="methods.html">Methods &amp; license</a><a href="data/">Data</a><a href="../impact/">NEO Tracker</a><a class="support-top" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support</a></nav></header>
 <main>
 <section class="card span12"><h2><span id="alive" class="dot"></span>Detector status</h2><p class="note" style="margin-top:-4px">Live data from a Raspberry Pi 5 in South Carolina · <span id="snap">Snapshot updated …</span> · refreshes every 15 minutes</p><div class="stats" id="stats"></div></section>
 
@@ -78,7 +80,11 @@ canvas{max-height:300px}
 <section class="card span12"><h2>Fresh randomness</h2><code id="rand" style="word-break:break-all;color:var(--cyan)"></code> 
 <p class="note">32 bytes from the cosmic noise pool at snapshot time (SHA-256-conditioned). Published publicly, so never use them as a secret. Next stage: a Hailo AI accelerator learns what "normal" frames and statistics look like and flags anomalies.</p></section>
 </main>
-<footer style="padding:14px 24px 30px;color:#8d8aa0;font-size:12px;position:relative">Code MIT · Data &amp; charts CC BY 4.0, credit "RealAether (Geebs369)" · <a href="methods.html">Methods</a> · <a href="https://github.com/Geebs369/realaether">GitHub</a></footer>
+<footer style="padding:14px 24px 30px;color:#8d8aa0;font-size:12px;position:relative">Code MIT · Data &amp; charts CC BY 4.0, credit "RealAether (Geebs369)" · <a href="methods.html">Methods</a> · <a href="https://github.com/Geebs369/realaether">GitHub</a>
+<div class="support">
+  <a class="donate" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support the Research</a>
+  <p class="support-note">RealAether is self-funded citizen science. Donations cover hardware, electricity, internet, and computing time, and every purchase is posted publicly. Donations are not tax-deductible.</p>
+</div></footer>
 <script>
 const $=id=>document.getElementById(id);let events=[];const charts={};
 Chart.defaults.color='#8d8aa0';Chart.defaults.borderColor='#262a44';Chart.defaults.font.size=11;

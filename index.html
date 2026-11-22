@@ -173,6 +173,13 @@
             min-height: 2px;
             transition: height 0.3s ease;
         }
+        /* RealAether support button (matches the NEO tracker) */
+        .ra-gold-pill{display:inline-flex;align-items:center;gap:.35rem;padding:.35rem .9rem;border:1px solid #d4af37;border-radius:999px;background:linear-gradient(180deg,#f3d36b,#d4af37);color:#000 !important;font-weight:700;text-decoration:none}
+        .ra-gold-pill:hover{filter:brightness(1.1)}
+        .support{margin-top:18px;text-align:center}
+        .donate{display:inline-block;padding:10px 22px;border:1px solid #d4af37;border-radius:999px;background:linear-gradient(180deg,#f3d36b,#d4af37);color:#000 !important;font-weight:700;text-decoration:none;letter-spacing:.5px;box-shadow:0 0 14px rgba(212,175,55,.35)}
+        .donate:hover{filter:brightness(1.1);box-shadow:0 0 22px rgba(212,175,55,.6)}
+        .support-note{max-width:560px;margin:10px auto 0;font-size:12px;opacity:.75}
     </style>
 </head>
 <body class="dashboard-bg star-bg text-white min-h-screen">
@@ -203,6 +210,13 @@
                 <a href="./crrd/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Cosmic Ray Randomness Detector">
                     <span aria-hidden="true">☢️</span> COSMIC RAY DETECTOR (CRRD)
                 </a>
+                <a href="https://geebs369.github.io/realaether/impact/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Near-Earth object close-approach tracker">
+                    <span aria-hidden="true">🛰️</span> NEO TRACKER
+                </a>
+                <a href="https://geebs369.github.io/realaether/logger/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Solar wind spikes vs. USGS volcano alert changes (testing, not proof)">
+                    <span aria-hidden="true">🌋</span> WIND × VOLCANO LOG
+                </a>
+                <a class="support-top ra-gold-pill" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support</a>
             </div>
 
             <div class="flex flex-wrap items-center gap-3 min-w-0">
@@ -442,6 +456,10 @@
                 Data refreshes every 5 minutes • Times in Eastern Time (24-hour)<br>
                 <span class="text-white/60">Background: in-game screenshot of the RSI Galaxy in quantum travel by 3Th3R3AL1 in Star Citizen®</span>
             </div>
+        </div>
+        <div class="support">
+            <a class="donate" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support the Research</a>
+            <p class="support-note">RealAether is self-funded citizen science. Donations cover hardware, electricity, internet, and computing time, and every purchase is posted publicly. Donations are not tax-deductible.</p>
         </div>
     </footer>
 
