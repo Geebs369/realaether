@@ -457,6 +457,13 @@
       .then(([latest, upcoming, validation, orbits]) => {
         state.latest = latest;
         state.upcoming = upcoming.approaches || [];
+        // If the daily snapshot's "next approach" has already passed, roll forward to the next future Earth flyby.
+        const nowMs = Date.now();
+        if (latest.next_earth && new Date(latest.next_earth.iso_et).getTime() <= nowMs) {
+          const nxt = state.upcoming.filter((r) => r.body === "Earth" && r.iso_et && new Date(r.iso_et).getTime() > nowMs)
+            .sort((x, y) => new Date(x.iso_et) - new Date(y.iso_et))[0];
+          if (nxt) latest.next_earth = nxt;
+        }
         state.orbits = (orbits && orbits.objects) || {};
         renderNext(latest);
         renderSnap(latest);
