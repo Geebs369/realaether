@@ -1,0 +1,74 @@
+time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
+2026-11-18T03:23:58Z,1794972238,4.8,mb,10.0,-2.991,136.658,"134 km ENE of Nabire, Indonesia",us7000tywx,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tywx
+2026-11-18T03:42:34Z,1794973354,5.8,mww,52.3,-5.701,146.548,"99 km ESE of Madang, Papua New Guinea",us7000tyx2,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyx2
+2026-11-18T04:21:35Z,1794975695,5.2,mb,10.0,-8.151,120.649,"54 km NNE of Ruteng, Indonesia",us7000tyxc,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyxc
+2026-11-18T04:41:32Z,1794976892,5.8,mww,10.0,-8.25,120.528,"40 km N of Ruteng, Indonesia",us7000tyxi,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyxi
+2026-11-18T05:24:55Z,1794979495,4.8,mb,10.0,-8.03,120.648,"67 km NNE of Ruteng, Indonesia",us7000tyy2,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyy2
+2026-11-18T05:25:43Z,1794979543,5.2,mb,10.0,0.435,-103.084,Galapagos Triple Junction region,us7000tyxz,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyxz
+2026-11-18T06:07:42Z,1794982062,5.9,mww,21.9,-15.144,-75.924,"85 km WNW of San Juan, Peru",us7000tyy8,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyy8
+2026-11-18T09:37:00Z,1794994620,5.2,mb,10.0,38.719,137.873,"86 km NW of Ryōtsu-minato, Japan",us7000tyyw,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyyw
+2026-11-18T11:10:57Z,1795000257,4.9,mb,10.0,-39.691,-91.503,West Chile Rise,us7000tyza,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyza
+2026-11-18T16:06:51Z,1795018011,5.3,mb,10.0,12.092,143.993,"149 km SSW of Merizo Village, Guam",us7000tz1a,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz1a
+2026-11-18T17:22:23Z,1795022543,5.3,mww,10.0,32.28,130.467,"4 km N of Tsunagi, Japan",us7000tz1n,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz1n
+2026-11-18T18:08:01Z,1795025281,4.8,mww,10.0,-5.413,35.082,"46 km SE of Ikungi, Tanzania",us7000tz2w,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz2w
+2026-11-18T18:46:53Z,1795027613,4.5,mb,129.4,-21.41,-68.298,"20 km SSW of Ollagüe, Chile",us7000tz33,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz33
+2026-11-18T19:14:23Z,1795029263,6.0,mww,10.0,-57.519,-146.874,Pacific-Antarctic Ridge,us7000tz37,https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz37
+2026-11-18T19:21:15Z,1795029675,5.2,mb,10.0,-57.955,-146.526,Pacific-Antarctic Ridge,us6000uc01,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc01
+2026-11-18T20:38:39Z,1795034319,4.7,mb,16.9,-2.942,146.469,"134 km SW of Lorengau, Papua New Guinea",us6000ubvu,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubvu
+2026-11-18T21:28:47Z,1795037327,5.2,mww,10.0,51.338,172.86,"169 km S of Attu Station, Alaska",us6000ubw3,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubw3
+2026-11-18T22:06:52Z,1795039612,4.8,mb,35.0,15.962,-95.427,"11 km SSW of Santa Gertrudis Miramar, Mexico",us6000ubwa,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubwa
+2026-11-19T01:29:33Z,1795051773,4.8,mww,10.0,-5.511,35.09,"40 km NNE of Kilimatinde, Tanzania",us6000ubxa,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubxa
+2026-11-19T01:34:48Z,1795052088,5.2,mww,10.0,0.503,96.632,"130 km W of Teluk Dalam, Indonesia",us6000ubxb,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubxb
+2026-11-19T02:11:23Z,1795054283,4.9,mb,10.0,-5.543,35.081,"36 km NNE of Kilimatinde, Tanzania",us6000ubxg,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubxg
+2026-11-19T05:49:26Z,1795067366,4.8,mww,69.5,-2.402,-79.82,"23 km SSE of Guayaquil, Ecuador",us6000uby4,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uby4
+2026-11-19T09:08:13Z,1795079293,4.7,mb,10.0,-15.384,-76.025,"92 km W of San Juan, Peru",us6000ubyt,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubyt
+2026-11-19T10:53:07Z,1795085587,5.0,mb,194.8,-4.296,151.894,"31 km WSW of Rabaul, Papua New Guinea",us6000ubz1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubz1
+2026-11-19T13:04:33Z,1795093473,4.7,mb,35.0,-55.596,-28.303,South Sandwich Islands region,us6000ubzn,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubzn
+2026-11-19T13:05:22Z,1795093522,4.9,mb,46.1,51.68,-174.66,"65 km SSW of Atka, Alaska",us6000ubzm,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ubzm
+2026-11-19T18:09:46Z,1795111786,5.1,mww,10.0,-31.846,-72.184,"99 km WSW of Illapel, Chile",us6000uc1x,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc1x
+2026-11-19T18:41:19Z,1795113679,4.9,mb,10.0,27.935,102.133,"13 km WNW of Xichang, China",us6000uc26,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc26
+2026-11-19T20:07:09Z,1795118829,5.0,mb,10.0,-9.189,-109.913,central East Pacific Rise,us6000uc2t,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc2t
+2026-11-19T20:07:49Z,1795118869,5.3,mb,10.0,-55.004,-33.507,South Georgia Island region,us6000uc2q,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc2q
+2026-11-19T21:49:33Z,1795124973,4.5,mb,124.8,-6.026,130.65,"236 km W of Tual, Indonesia",us6000uc3v,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc3v
+2026-11-20T00:49:14Z,1795135754,5.6,mww,10.0,-24.7,171.233,southeast of the Loyalty Islands,us6000uc4v,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc4v
+2026-11-20T02:57:18Z,1795143438,4.8,mb,113.9,-31.43,-69.188,"24 km ESE of Calingasta, Argentina",us6000uc5s,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc5s
+2026-11-20T05:17:45Z,1795151865,4.9,mb,97.6,-5.219,145.297,"54 km W of Madang, Papua New Guinea",us6000uc6c,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc6c
+2026-11-20T06:49:16Z,1795157356,5.0,mw,6.4,36.607,-121.208,"10 km NW of Pinnacles, CA",nc75468702,https://earthquake.usgs.gov/earthquakes/eventpage/nc75468702
+2026-11-20T08:42:54Z,1795164174,4.7,mb,10.0,9.753,57.841,Carlsberg Ridge,us6000uc81,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc81
+2026-11-20T08:44:11Z,1795164251,5.4,mww,10.0,9.795,57.748,Carlsberg Ridge,us6000uc82,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc82
+2026-11-20T10:16:14Z,1795169774,4.6,mb,42.0,36.441,22.082,"40 km SSE of Koróni, Greece",us6000uc8d,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc8d
+2026-11-20T10:30:01Z,1795170601,5.0,mww,10.0,-24.746,171.433,southeast of the Loyalty Islands,us6000uc8g,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc8g
+2026-11-20T10:48:44Z,1795171724,4.7,mb,10.0,-24.661,171.191,southeast of the Loyalty Islands,us6000uc8k,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc8k
+2026-11-20T13:09:04Z,1795180144,5.1,mb,73.4,5.444,125.299,"15 km SSW of Balangonan, Philippines",us6000uc96,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc96
+2026-11-20T14:16:15Z,1795184175,4.7,mb,10.0,-31.784,-72.148,"94 km W of Illapel, Chile",us6000uc9c,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc9c
+2026-11-20T17:53:15Z,1795197195,5.1,mb,94.5,-14.835,167.29,"32 km NE of Port-Olry, Vanuatu",us6000ucd6,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucd6
+2026-11-20T22:34:39Z,1795214079,4.9,mb,10.0,-20.32,-173.41,"113 km ESE of Pangai, Tonga",us6000ucf0,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucf0
+2026-11-21T00:09:19Z,1795219759,6.7,mww,108.0,-10.855,-75.978,"9 km NE of Carhuamayo, Peru",us6000ucfm,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm
+2026-11-21T01:24:09Z,1795224249,4.7,mwr,120.0,-22.231,-68.641,"38 km NE of Calama, Chile",us6000ucg8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucg8
+2026-11-21T01:26:19Z,1795224379,4.9,mb,10.0,58.302,-31.761,Reykjanes Ridge,us6000ucga,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucga
+2026-11-21T02:24:37Z,1795227877,4.9,mb,10.0,58.546,-31.857,Reykjanes Ridge,us6000ucgj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucgj
+2026-11-21T05:12:04Z,1795237924,5.0,mb,110.9,-10.913,-76.031,"0 km NE of Carhuamayo, Peru",us6000uchd,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uchd
+2026-11-21T07:20:44Z,1795245644,4.9,mb,43.2,-17.179,168.1,"65 km NNW of Port-Vila, Vanuatu",us6000uci2,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uci2
+2026-11-21T09:42:09Z,1795254129,6.8,mww,132.1,-7.732,127.541,"105 km NE of Lospalos, Timor Leste",us6000ucij,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij
+2026-11-21T10:09:05Z,1795255745,5.2,mb,10.0,34.011,140.211,"112 km SSE of Tateyama, Japan",us6000ucky,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucky
+2026-11-21T10:45:33Z,1795257933,5.9,mb,10.0,37.196,96.64,"238 km SW of Yanglong, China",us6000ucly,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly
+2026-11-21T15:00:13Z,1795273213,4.6,md,104.0,18.342,-68.826,"18 km ESE of La Romana, Dominican Republic",pr2026325000,https://earthquake.usgs.gov/earthquakes/eventpage/pr2026325000
+2026-11-21T17:14:21Z,1795281261,4.5,mb,10.0,8.009,-80.988,"0 km SSW of La Colorada, Panama",us6000ucn2,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucn2
+2026-11-21T17:30:44Z,1795282244,4.6,mb,65.5,34.409,140.131,"68 km SSE of Tateyama, Japan",us6000ucn8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucn8
+2026-11-21T19:03:04Z,1795287784,4.9,mb,209.8,-23.029,-66.519,"88 km WNW of El Aguilar, Argentina",us6000ucni,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucni
+2026-11-21T21:25:54Z,1795296354,4.5,mb,10.0,38.775,44.756,"26 km WSW of Qarah Ẕīā’ od Dīn, Iran",us6000ucp5,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucp5
+2026-11-21T23:16:05Z,1795302965,4.6,mb,31.1,-2.442,140.113,"60 km WNW of Abepura, Indonesia",us6000ucpj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucpj
+2026-11-22T05:51:58Z,1795326718,5.0,mww,108.1,-10.796,-75.963,"15 km NNE of Carhuamayo, Peru",us6000ucqu,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucqu
+2026-11-22T07:06:58Z,1795331218,4.9,mb,5.6,4.56,127.516,"246 km ESE of Sarangani, Philippines",us6000ucr3,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucr3
+2026-11-22T07:54:40Z,1795334080,5.4,mb,43.7,3.031,126.386,"224 km NE of Bitung, Indonesia",us6000ucrb,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucrb
+2026-11-22T09:08:28Z,1795338508,5.1,mb,10.0,43.474,87.938,"45 km SE of Ürümqi, China",us6000ucrp,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucrp
+2026-11-22T10:46:07Z,1795344367,4.9,mb,82.9,-24.332,-176.381,south of the Fiji Islands,us6000ucs1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucs1
+2026-11-22T15:05:46Z,1795359946,4.6,mb,10.0,28.778,56.81,"55 km S of Kūh Sefīd, Iran",us6000uct0,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uct0
+2026-11-22T18:03:24Z,1795370604,4.6,mb,534.0,-24.826,179.665,south of the Fiji Islands,us6000uctj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uctj
+2026-11-22T20:54:52Z,1795380892,4.7,mb,115.4,-19.642,169.059,"25 km WSW of Isangel, Vanuatu",us6000ucu7,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucu7
+2026-11-22T20:59:41Z,1795381181,4.5,mb,381.8,-22.078,-178.177,south of the Fiji Islands,us6000ucu8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucu8
+2026-11-22T21:35:31Z,1795383331,5.4,mb,117.4,-10.835,-76.017,"9 km N of Carhuamayo, Peru",us6000ucuf,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucuf
+2026-11-22T21:47:32Z,1795384052,4.5,mb,123.3,-21.997,-68.731,"54 km NNE of Calama, Chile",us6000ucuj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucuj
+2026-11-22T21:58:15Z,1795384695,4.9,mb,10.0,-14.195,165.756,"170 km WNW of Port-Olry, Vanuatu",us6000ucuk,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucuk
+2026-11-22T23:50:44Z,1795391444,4.7,mb,40.0,3.064,126.468,"226 km NW of Tobelo, Indonesia",us6000ucv2,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucv2
+2026-11-23T00:08:00Z,1795392480,4.7,mb,50.2,2.977,126.408,"221 km NE of Bitung, Indonesia",us6000ucv4,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucv4
