@@ -77,3 +77,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-23T03:07:52Z,1795403272,4.9,mb,596.0,-13.563,172.224,Vanuatu region,us6000ucw1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucw1
 2026-11-23T04:18:19Z,1795407499,5.0,mb,98.9,-4.759,153.647,"159 km ESE of Kokopo, Papua New Guinea",us6000ucwd,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucwd
 2026-11-23T07:36:21Z,1795419381,5.4,mww,119.3,-7.441,128.241,"181 km NE of Lospalos, Timor Leste",us6000ucx6,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucx6
+2026-11-23T08:01:26Z,1795420886,5.5,mww,10.0,-60.632,153.848,west of Macquarie Island,us6000ucxi,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucxi
