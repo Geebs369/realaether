@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Method · Solar Wind × Volcano &amp; Earthquake Log · RealAether</title>
-  <meta name="description" content="How the RealAether log tests solar wind spikes against USGS volcano alert changes and M4.5+ earthquakes, including a 20-year superposed epoch test. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
+  <meta name="description" content="How the RealAether log tests solar wind spikes and lulls against USGS volcano alert changes and M4.5+ earthquakes, including 20-year superposed epoch tests. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RealAether">
   <meta property="og:title" content="Method: Solar Wind × Volcano &amp; Earthquake Log — RealAether">
-  <meta property="og:description" content="Solar wind spikes vs. volcano alert changes and earthquakes, tallied against chance. Testing, not proof.">
+  <meta property="og:description" content="Solar wind spikes and lulls vs. volcano alert changes and earthquakes, tallied against chance. Testing, not proof.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="ra-bg">
@@ -31,7 +31,7 @@
   <main>
     <section class="card span12">
       <p class="proof-note"><b>Testing, not proof.</b> The rules below were fixed before the results came in, so they can't be tuned
-        to make a pattern appear. A match only means two things happened within 48 hours of each other. Earthquakes are tested the same way, plus a 20-year historical test.</p>
+        to make a pattern appear. A spike match only means two things happened within 48 hours of each other. Lulls are flagged in the 0–48 hour and 2–7 day windows after the lull. Earthquakes are tested both ways, plus 20-year historical tests of upticks and downticks.</p>
     </section>
     <section class="card span12">
       <h2>Solar wind spikes</h2>
@@ -46,6 +46,23 @@
       <p class="note">Source: USGS Hazard Notification System (HANS). Each Volcano Activity Notice or VONA is read for its current and previous
         Alert Level and Aviation Color Code, and logged once if either changed. A snapshot of all monitored U.S. volcanoes is compared run to run as a safety net.
         The time used is the notice's sent time.</p>
+    </section>
+    <section class="card span12">
+      <h2>Solar wind lulls</h2>
+      <p class="note">The live log also records <b>lulls</b>, using the same definitions as the 20-year downtick test (thresholds frozen from that study, not retuned on the short live record):</p>
+      <ul class="note">
+        <li><b>Speed drop:</b> the first hour whose 24-hour change in hourly median speed is −100 km/s or more (the same 100 km/s size as the upward spike rule; also about the 5th percentile of 24-hour changes in the 20-year ACE record). A new speed drop needs 12 hours since the previous one, and the condition has to start fresh.</li>
+        <li><b>Dynamic-pressure drop:</b> the first hour whose 24-hour change in proton dynamic pressure, P = 1.67×10⁻⁶ n V² nPa, is at or below −1.4212 nPa (the 5th percentile of those 24-hour changes in the 20-year record). Same 12-hour refractory rule. Density comes from the same NOAA SWPC real-time solar wind feed; hours back-filled from the Cosmic Ray Detector have speed only, so pressure drops can be logged only after density is on the record.</li>
+        <li><b>Storm-end lull:</b> the first 3-hour Kp of 2 or less after the current episode has reached Kp of 5 or more (G1+). The live log uses NOAA SWPC’s 3-hour planetary K-index (the same Kp scale). The 20-year test used definitive GFZ Kp.</li>
+        <li><b>Charge then release:</b> a speed drop whose mean speed over the 72 hours ending 24 hours earlier (the three days before the drop day itself) is at or above 464.9 km/s, the 75th percentile of those 72-hour means in the 20-year record. It is a tag on a speed drop, not a separate event, so the same hour is not counted twice.</li>
+      </ul>
+      <p class="note"><b>Geological flags (fixed in advance):</b> each lull is checked in two windows after it, the same ones used in the 20-year test: <b>0–48 hours</b> and <b>48–168 hours (days 2–7)</b>. A window is only scored once it has fully elapsed. A lull is flagged in a window if any of these happened in that window:</p>
+      <ul class="note">
+        <li>an earthquake of <b>M6 or larger</b>, or</li>
+        <li>a U.S. volcano alert level or aviation color going <b>up</b> (the logger’s stand-in for an eruption; this is an alert change, not a verified eruption catalogue), or</li>
+        <li>an <b>M4.5+ cluster</b>: the declustered M4.5+ count in that window has a one-sided Poisson p below 0.05 against the 20-year mean rate of 12.47 declustered quakes per 48 hours (about 20 or more in 48 hours, or about 41 or more in days 2–7).</li>
+      </ul>
+      <p class="note">Worldwide M4.5+ quakes happen every few hours, so a flag is reserved for a real uptick (or an M6+, or a raised volcano alert), not for the everyday background. The live record is still short, so the running flag counts will jump around; the 20-year test is the one to read for whether downticks come before more quakes.</p>
     </section>
     <section class="card span12">
       <h2>Matches and chance</h2>
@@ -86,10 +103,17 @@
       <p class="note">Results file: <a href="data/quake_baseline.json">quake_baseline.json</a>. Code: <code>quake_baseline.py</code> (Python + NumPy), rebuilt by hand when the archives grow.</p>
     </section>
     <section class="card span12">
+      <h2>20-year test: downticks and lulls</h2>
+      <p class="note">A follow-up, also fixed before looking at the quake associations, asked whether <i>drops</i> and the quiet after a high-activity period come before more earthquakes — a weather analogy (energy builds up, then a lull or release). Same archives, same Gardner–Knopoff declustering, same 10,000 circular-shift permutation test, January 2006 to November 2026. The primary outcome is again the declustered M4.5+ count. Four triggers (speed drop, dynamic-pressure drop, storm-end lull, charge-then-release) times two windows (0–48 hours and days 2–7) give eight tests. The bar is p &lt; 0.00625 (0.05 ÷ 8).</p>
+      <p class="note">Main result: after 920 speed drops of at least 100 km/s in 24 hours there were <b>12.52</b> declustered M4.5+ quakes per 48 hours, versus <b>12.47</b> at random times (ratio 1.004, p = 0.38). The closest of the eight was storm-end lulls in days 2–7 (31.75 vs 31.16, ratio 1.019, p = 0.093). None passed the bar. A sensitivity check on M6+ counts, not included in the correction, also found no pass. Dst (a storm-recovery index) was not in the cached inputs, so storm recovery was defined from Kp only.</p>
+      <p class="note"><b>Volcanoes:</b> the logger’s volcano list is the live USGS HANS alert-level changes, only a handful of recent notices. That is far too sparse for a 20-year superposed-epoch test, and no historical eruption catalogue was on hand, so volcanoes were not included in the historical test. The live log still flags a raised U.S. volcano alert after a lull, going forward.</p>
+      <p class="note">Results file: <a href="data/quake_downticks.json">quake_downticks.json</a>. Code: <code>quake_downticks.py</code> (Python + NumPy), run on the same ACE, Kp and USGS archives as the spike test.</p>
+    </section>
+    <section class="card span12">
       <h2>Schedule and data</h2>
       <p class="note">The logger runs every 30 minutes at the lowest priority on a Raspberry Pi 5 and publishes static files only.
-        Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> ·
-        <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/quakes.csv">quakes.csv</a> · <a href="data/quake_baseline.json">quake_baseline.json</a> · <a href="data/summary.json">summary.json</a></p>
+        Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> · <a href="data/lulls.csv">lulls.csv</a> · <a href="data/kp.csv">kp.csv</a> ·
+        <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/quakes.csv">quakes.csv</a> · <a href="data/quake_baseline.json">quake_baseline.json</a> · <a href="data/quake_downticks.json">quake_downticks.json</a> · <a href="data/summary.json">summary.json</a></p>
       <p class="note"><a href="./">← Back to the log</a></p>
     </section>
   </main>
@@ -97,9 +121,10 @@
   <footer>
     <div class="credit">Geebs &amp; 3TH3R3AL1 — RealAether</div>
     Data: <a href="https://www.swpc.noaa.gov/products/real-time-solar-wind">NOAA SWPC real-time solar wind</a> ·
+    <a href="https://www.swpc.noaa.gov/products/planetary-k-index">NOAA SWPC Kp</a> ·
     <a href="https://volcanoes.usgs.gov/hans-public/">USGS Volcano Hazards Program (HANS)</a> ·
     <a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS earthquake catalog</a> ·
-    <a href="https://kp.gfz.de/">GFZ Kp</a> ·
+    <a href="https://kp.gfz.de/">GFZ Kp</a> (20-year test) ·
     <a href="https://sohoftp.nascom.nasa.gov/sdb/goes/ace/monthly/">NOAA ACE hourly archive</a> ·
     <a href="../">AetherWeather</a> ·
     <a href="../crrd/">CRRD</a> ·

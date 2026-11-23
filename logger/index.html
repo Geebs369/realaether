@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solar Wind × Volcano &amp; Earthquake Log · RealAether</title>
-  <meta name="description" content="A public log of solar wind speed spikes (NOAA SWPC) next to USGS volcano alert-level changes and M4.5+ earthquakes, tallied against chance, with a 20-year test. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
+  <meta name="description" content="A public log of solar wind speed spikes and lulls (NOAA SWPC) next to USGS volcano alert-level changes and M4.5+ earthquakes, tallied against chance, with a 20-year test. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RealAether">
   <meta property="og:title" content="Solar Wind × Volcano &amp; Earthquake Log — RealAether">
-  <meta property="og:description" content="Solar wind speed spikes next to USGS volcano alert changes and earthquakes, tallied against chance. Testing, not proof.">
+  <meta property="og:description" content="Solar wind speed spikes and lulls next to USGS volcano alert changes and earthquakes, tallied against chance. Testing, not proof.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="ra-bg">
@@ -29,16 +29,17 @@
 
   <main>
     <section class="card span12">
-      <p class="proof-note"><b>Testing, not proof.</b> This page logs every solar wind speed spike and every U.S. volcano alert-level change,
-        using a rule fixed before looking at the results. A match only means the two happened within <span id="win">48</span> hours of each other.
-        Spikes and alert changes are both common, so some matches happen by pure chance. The tally below shows how many matches chance alone
-        would give. Only a long record that beats chance by a wide margin would be worth a closer look, and even then it would not show cause.</p>
+      <p class="proof-note"><b>Testing, not proof.</b> This page logs every solar wind speed spike, every solar-wind lull (a sharp drop, or the quiet after a geomagnetic storm),
+        and every U.S. volcano alert-level change, using rules fixed before looking at the results. A spike match only means the two happened within <span id="win">48</span> hours of each other.
+        A lull is flagged if a quake cluster, an M6+, or a raised volcano alert follows in the 0–48 hour or 2–7 day window after it — the same windows used in the 20-year test.
+        These events are common, so some matches happen by pure chance. The tallies below show how many matches chance alone would give.
+        Only a long record that beats chance by a wide margin would be worth a closer look, and even then it would not show cause.</p>
     </section>
 
     <section class="card span8">
       <h2>Timeline</h2>
       <div class="chart-box"><canvas id="chart"></canvas></div>
-      <p class="note">Line: hourly median solar wind speed (km/s). Gold diamonds: spike starts. Triangles: volcano alert changes, colored by the new aviation color code (pointing up = raised, down = lowered). Red dots: M6+ earthquakes worldwide. Times are Eastern (24-hour).</p>
+      <p class="note">Line: hourly median solar wind speed (km/s). Gold diamonds: spike starts. Cyan diamonds: lull starts (speed or pressure drops, or a post-storm quiet). Triangles: volcano alert changes, colored by the new aviation color code (pointing up = raised, down = lowered). Red dots: M6+ earthquakes worldwide. Times are Eastern (24-hour).</p>
     </section>
 
     <section class="card span4">
@@ -51,12 +52,23 @@
 
     <section class="card span12">
       <h2>Volcano alert changes</h2>
-      <div class="table-wrap"><table id="changes"><thead><tr><th>When (ET)</th><th>Volcano</th><th>Observatory</th><th>Change</th><th>Nearest spike</th><th>Match (±<span class="winh">48</span> h)</th><th>Notice</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="changes"><thead><tr><th>When (ET)</th><th>Volcano</th><th>Observatory</th><th>Change</th><th>Nearest spike</th><th>Match (±<span class="winh">48</span> h)</th><th>Lull in the 7 d before?</th><th>Notice</th></tr></thead><tbody></tbody></table></div>
     </section>
 
     <section class="card span12">
       <h2>Solar wind spikes</h2>
       <div class="table-wrap"><table id="spikes"><thead><tr><th>Start (ET)</th><th>Baseline</th><th>Speed</th><th>Rise</th><th>24 h peak</th><th>Rule</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section class="card span12" id="lulls">
+      <h2>Solar wind lulls</h2>
+      <p class="note">A lull is a sharp 24-hour drop in solar wind speed or dynamic pressure, or the first quiet (Kp ≤ 2) after a geomagnetic storm (Kp ≥ 5). The thresholds are the same ones used in the 20-year downtick test below, frozen in advance. A lull is <b>flagged</b> only after a window has fully elapsed, and only if a declustered M4.5+ quake cluster, an M6+, or a raised U.S. volcano alert falls in that window. Charge-then-release is a speed drop that followed three days of unusually fast wind.</p>
+      <div class="stats" id="lull-stats"></div>
+      <p class="note" id="lull-note"></p>
+      <div class="table-wrap"><table id="lull-table"><thead><tr>
+        <th>Start (ET)</th><th>Kind</th><th>Details</th>
+        <th>0–48 h</th><th>Days 2–7</th>
+      </tr></thead><tbody></tbody></table></div>
     </section>
 
     <section class="card span12" id="quakes">
@@ -74,11 +86,20 @@
         Shaded band: the range (2.5–97.5%) you get by sliding the same triggers to random times 1,000 times. A real effect would show as a bump above the band just after day 0.</p>
       <div class="table-wrap"><table id="qb-table"><thead><tr><th>Trigger</th><th>Quakes counted</th><th>Triggers</th><th>Per 48 h after trigger</th><th>Random-time average</th><th>Ratio</th><th>p (one-sided)</th></tr></thead><tbody></tbody></table></div>
       <p class="note" id="qb-foot"></p>
+      <h2 style="margin-top:16px">20-year test: downticks and lulls (<span id="dt-period">2006–2026</span>)</h2>
+      <p class="proof-note"><b>Do drops, or the quiet after a storm, come before more earthquakes?</b> The idea is a weather analogy: energy builds up, then a lull or release might trigger events. We tested four pre-set triggers (a 24-hour speed drop of at least 100 km/s, a sharp dynamic-pressure drop, the first Kp ≤ 2 after a Kp ≥ 5 storm, and a speed drop after three fast days) in two windows (0–48 hours and days 2–7). Eight tests, Bonferroni bar p &lt; 0.00625. The main numbers are in the table; none passed the bar.</p>
+      <div class="stats" id="dt-stats"></div>
+      <p class="note" id="dt-note"></p>
+      <div class="filters" id="dt-btns" style="margin:10px 0 6px"></div>
+      <div class="chart-box"><canvas id="dchart"></canvas></div>
+      <p class="note">Same superposed-epoch view as above, now lined up on downticks and storm-end lulls (spikes are included so you can compare). A real effect would show as a bump above the band just after day 0, or in days 2–7.</p>
+      <div class="table-wrap"><table id="dt-table"><thead><tr><th>Trigger</th><th>Window</th><th>Triggers</th><th>Declustered M4.5+ after</th><th>Random-time average</th><th>Ratio</th><th>p (one-sided)</th></tr></thead><tbody></tbody></table></div>
+      <p class="note" id="dt-foot"></p>
       <h2 style="margin-top:16px">Live record (since this logger started)</h2>
       <div class="stats" id="ql-stats"></div>
       <p class="note" id="ql-note"></p>
       <h2 style="margin-top:16px">Recent M6+ earthquakes</h2>
-      <div class="table-wrap"><table id="qbig"><thead><tr><th>When (ET)</th><th>Magnitude</th><th>Depth</th><th>Where</th><th>Spike in the 48 h before?</th><th>USGS</th></tr></thead><tbody></tbody></table></div>
+      <div class="table-wrap"><table id="qbig"><thead><tr><th>When (ET)</th><th>Magnitude</th><th>Depth</th><th>Where</th><th>Spike in the 48 h before?</th><th>Lull in the 7 d before?</th><th>USGS</th></tr></thead><tbody></tbody></table></div>
       <p class="note"><b>About the AI:</b> the Hailo AI hat on our Pi runs an image model that sorts cosmic-ray hit pictures for the Cosmic Ray Detector.
         It is not used here. This test is plain statistics on public catalogs, and every number can be checked from the raw data below.</p>
     </section>
@@ -86,7 +107,7 @@
     <section class="card span12" id="method">
       <h2>Method</h2>
       <p class="note">Spike rule, match window and chance calculation are fixed in advance. <a href="methods.html">See full method →</a></p>
-      <p class="note">Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> · <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/quakes.csv">quakes.csv</a> · <a href="data/quake_baseline.json">quake_baseline.json</a> · <a href="data/summary.json">summary.json</a></p>
+      <p class="note">Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> · <a href="data/lulls.csv">lulls.csv</a> · <a href="data/kp.csv">kp.csv</a> · <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/quakes.csv">quakes.csv</a> · <a href="data/quake_baseline.json">quake_baseline.json</a> · <a href="data/quake_downticks.json">quake_downticks.json</a> · <a href="data/summary.json">summary.json</a></p>
       <p class="note" id="gen"></p>
     </section>
   </main>
@@ -94,9 +115,10 @@
   <footer>
     <div class="credit">Geebs &amp; 3TH3R3AL1 — RealAether</div>
     Data: <a href="https://www.swpc.noaa.gov/products/real-time-solar-wind">NOAA SWPC real-time solar wind</a> ·
+    <a href="https://www.swpc.noaa.gov/products/planetary-k-index">NOAA SWPC Kp</a> ·
     <a href="https://volcanoes.usgs.gov/hans-public/">USGS Volcano Hazards Program (HANS)</a> ·
     <a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS earthquake catalog</a> ·
-    <a href="https://kp.gfz.de/">GFZ Kp</a> ·
+    <a href="https://kp.gfz.de/">GFZ Kp</a> (20-year test) ·
     <a href="../">AetherWeather</a> ·
     <a href="../crrd/">CRRD</a> ·
     <a href="../impact/">NEO Tracker</a>

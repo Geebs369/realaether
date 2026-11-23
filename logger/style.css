@@ -215,5 +215,5 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
     linear-gradient(180deg, #070a1a 0%, #05060c 70%); }
 
 /* earthquake section */
-#qb-btns { display: flex; flex-wrap: wrap; gap: 8px; }
-#qb-btns button.on { background: var(--gold); color: #000; }
+#qb-btns, #dt-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+#qb-btns button.on, #dt-btns button.on { background: var(--gold); color: #000; }

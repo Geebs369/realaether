@@ -2,6 +2,12 @@
  "_how_to_add": "Add a new object at the TOP of 'updates' (newest first) or of 'equipment_changes', then run: python3 build_updates.py index.html. Dates are YYYY-MM-DD (US Eastern). 'when' is optional display text, e.g. 'Nov 18-19'. tag is one of: crrd, tracker, log, ai, site, support, privacy, hardware, project. Real events only.",
  "updates": [
   {
+   "date": "2026-11-23",
+   "tag": "log",
+   "title": "Solar-wind lulls added to the log, and a 20-year downtick test",
+   "text": "We asked whether a drop in the solar wind, or the quiet after a geomagnetic storm, comes before more earthquakes — the way a charged sky can break into a storm when the heat lets up. Over 20 years, none of the eight pre-set tests passed the multiple-test bar: after sharp speed drops there were 12.52 declustered M4.5+ quakes in 48 hours versus 12.47 at random times (p = 0.38). The log now also records those lulls and flags when a quake cluster, an M6+, or a raised volcano alert follows in the same windows. The volcano record is still too short for a 20-year test."
+  },
+  {
    "date": "2026-11-22",
    "tag": "log",
    "title": "Earthquakes added to the Solar Wind × Volcano log",
