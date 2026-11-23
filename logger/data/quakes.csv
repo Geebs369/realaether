@@ -73,3 +73,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-22T23:50:44Z,1795391444,4.7,mb,40.0,3.064,126.468,"226 km NW of Tobelo, Indonesia",us6000ucv2,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucv2
 2026-11-23T00:08:00Z,1795392480,4.7,mb,50.2,2.977,126.408,"221 km NE of Bitung, Indonesia",us6000ucv4,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucv4
 2026-11-23T02:40:57Z,1795401657,6.5,mww,601.0,-13.661,172.242,Vanuatu region,us6000ucvm,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucvm
+2026-11-23T03:07:52Z,1795403272,4.9,mb,596.0,-13.563,172.224,Vanuatu region,us6000ucw1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucw1
