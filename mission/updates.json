@@ -1,0 +1,92 @@
+{
+ "_how_to_add": "Add a new object at the TOP of 'updates' (newest first) or of 'equipment_changes', then run: python3 build_updates.py index.html. Dates are YYYY-MM-DD (US Eastern). 'when' is optional display text, e.g. 'Nov 18-19'. tag is one of: crrd, tracker, log, ai, site, support, privacy, hardware, project. Real events only.",
+ "updates": [
+  {
+   "date": "2026-11-22",
+   "tag": "project",
+   "title": "New page: The Precession Clock",
+   "text": "An interactive clock of Earth's 25,770-year wobble: which star marks the north pole in any year from 13,000 BC to AD 15,000, the five great pole stars, how far the equinox has drifted, the pre-dawn equinox sky at Giza, Stonehenge and Göbekli Tepe, and Earth's magnetic field strength and day length in each era. Every number is computed from a published long-term precession model and a star catalogue."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "site",
+   "title": "Mission page became Mission & Updates",
+   "text": "The Mission page now also carries this dated updates log, the equipment and software we run, and a public record of every equipment purchase. The menu link on every page was renamed to match."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "privacy",
+   "title": "Map coordinates removed from the public site",
+   "text": "Only the town name is shown now. The location the page uses for sunrise, sunset and the ISS is rounded to whole degrees, which moves sunrise and sunset by less than a minute."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "crrd",
+   "title": "Detector self-mask shrunk to 16×16 blocks",
+   "text": "Blocks of pixels that keep repeating are now blanked in 16×16 patches instead of 32×32. The masked share of the sensor dropped from 10.3% to 2.84%, so more of the sensor counts real hits."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "ai",
+   "title": "Hailo AI classifier running, with a public panel",
+   "text": "A stock image model on the Hailo-10H fingerprints every hit image every 15 minutes, sorts hits into look-alike groups and flags the 1% least like the rest. The panel on the detector page shows the groups and the latest flagged hits. It isn't trained on our data, and flagged doesn't mean exotic."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "tracker",
+   "title": "NEO close-approach tracker live (Impact Hypothesis Phase 1)",
+   "text": "Upcoming near-Earth object flybys from NASA/JPL CNEOS, with 470 close or well-observed approaches re-checked by our own N-body run. It updates daily."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "log",
+   "title": "Solar wind × volcano log live",
+   "text": "Solar wind speed spikes and U.S. volcano alert-level changes are logged every 30 minutes against rules fixed in advance and compared with chance."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "site",
+   "title": "New site design and the Mission page",
+   "text": "A shared look across all pages (pixel grid, particle showers, solar-wind waves), new social preview images, a methods page for the log, and a Mission page explaining what we do and how we test."
+  },
+  {
+   "date": "2026-11-22",
+   "tag": "support",
+   "title": "Ko-fi support opened",
+   "text": "Donations cover hardware, electricity, internet and computing time. Every donation-funded purchase is posted below under Equipment changes. Donations are not tax-deductible."
+  },
+  {
+   "date": "2026-11-21",
+   "tag": "project",
+   "title": "Impact Hypothesis Project started",
+   "text": "Planned the phases (NEO tracker, Taurid stream, Moon and Mars, monuments and sky) and prepared the full NEO data run and the tracker page."
+  },
+  {
+   "date": "2026-11-19",
+   "when": "Nov 18–19",
+   "tag": "site",
+   "title": "Public site launched",
+   "text": "AetherWeather became the public front page, with read-only detector snapshots published every 15 minutes. Code is MIT-licensed and data is CC BY 4.0."
+  },
+  {
+   "date": "2026-11-19",
+   "tag": "crrd",
+   "title": "Detector recalibrated after a power outage",
+   "text": "The hot-pixel map was rebuilt at the warmer working temperature. The detector also recalibrates itself every 12 hours."
+  },
+  {
+   "date": "2026-11-18",
+   "tag": "crrd",
+   "title": "Cosmic Ray Randomness Detector switched on",
+   "text": "A light-sealed Pi camera began taking one-second dark exposures around the clock, logging particle hits and harvesting sensor noise as random bits. No new hardware was bought."
+  }
+ ],
+ "equipment_changes": [
+  {
+   "date": "2026-11-22",
+   "funded": "none",
+   "title": "Baseline recorded",
+   "text": "Everything listed above was already owned before the project started. No donation-funded purchases yet."
+  }
+ ]
+}

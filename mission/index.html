@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mission · RealAether</title>
+  <title>Mission &amp; Updates · RealAether</title>
   <meta name="description" content="RealAether is self-funded citizen science run from home hardware: open data, fixed rules set in advance, and testing, not proof. Built by Geebs &amp; 3TH3R3AL1.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RealAether">
-  <meta property="og:title" content="Our Mission — RealAether">
-  <meta property="og:description" content="Self-funded citizen science run from home hardware. Open data, fixed rules, testing, not proof.">
+  <meta property="og:title" content="Mission &amp; Updates — RealAether">
+  <meta property="og:description" content="Self-funded citizen science run from home hardware: our mission, a dated log of progress, and the equipment we use.">
   <meta property="og:image" content="https://geebs369.github.io/realaether/og-image.jpg">
   <style>
     :root{--bg:#05060c;--panel:#0d1020;--line:#262a44;--gold:#d4af37;--gold2:#f3d36b;--txt:#e6e3d6;--dim:#8d8aa0;--cyan:#5ad1ff}
@@ -87,10 +87,32 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
     radial-gradient(ellipse at 15% 0%, rgba(90,209,255,.08), transparent 55%),
     linear-gradient(180deg, #070a1a 0%, #05060c 70%); }
 </style>
+<style>
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;font-size:13px}
+  .jump a{color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--line)}.jump a:hover{color:var(--gold2)}
+  .jump .latest{margin-left:auto;color:var(--dim)}.jump .latest b{color:var(--cyan);font-weight:600}
+  .timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+  .timeline>li.day{position:relative;margin:0 0 18px}
+  .timeline>li.day::before{content:"";position:absolute;left:-25px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(212,175,55,.55)}
+  .timeline time{display:block;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+  .timeline ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .timeline ul li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px}
+  .timeline ul li b{color:var(--gold2);font-weight:600}.timeline ul li span:last-child{display:block;margin-top:3px;color:var(--txt);opacity:.9}
+  .chip{display:inline-block;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:0 7px;border-radius:999px;border:1px solid var(--cyan);color:var(--cyan);margin-right:6px;vertical-align:2px}
+  .chip-ai{border-color:#b48cff;color:#c9adff}.chip-support,.chip-hardware{border-color:var(--gold);color:var(--gold2)}.chip-privacy{border-color:#7fe0a8;color:#9be8bd}.chip-project{border-color:var(--dim);color:var(--dim)}
+  .spec{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+  .spec td{padding:5px 0;border-bottom:1px solid #ffffff0d;vertical-align:top}.spec td:first-child{color:var(--dim);width:38%;padding-right:10px}
+  .card .role{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:2px}
+  .eqlog{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .eqlog th{text-align:left;color:var(--gold);font-weight:600;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:10px 14px;border-bottom:1px solid var(--line)}
+  .eqlog td{padding:10px 14px;border-bottom:1px solid #ffffff0d;vertical-align:top}.eqlog td:first-child{white-space:nowrap;color:var(--gold2)}.eqlog b{color:var(--gold2)}
+  ul.sw{padding-left:20px;font-size:14px}ul.sw li{margin:6px 0}ul.sw b{color:var(--gold2)}
+  @media (max-width:640px){.jump .latest{margin-left:0;width:100%}.eqlog td,.eqlog th{padding:8px 10px}}
+</style>
 </head>
 <body class="ra-bg">
   <header>
-    <h1>Our Mission
+    <h1>Mission &amp; Updates
       <small>RealAether · Forged in the Aether · self-funded citizen science</small>
     </h1>
     <nav>
@@ -98,16 +120,20 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
       <a href="../crrd/">Cosmic Ray Detector</a>
       <a href="../impact/">NEO Tracker</a>
       <a href="../logger/">Wind × Volcano Log</a>
-      <a class="here" href="./">Mission</a>
+      <a href="../precession/">Precession Clock</a>
+      <a class="here" href="./">Mission &amp; Updates</a>
       <a class="support-top" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support</a>
     </nav>
   </header>
 
   <main>
-    <p class="lead"><b>RealAether is self-funded citizen science run on home hardware.</b>
+    <p class="lead" id="mission"><b>RealAether is self-funded citizen science run on home hardware.</b>
       It's built by Geebs &amp; 3TH3R3AL1 on Raspberry Pi computers in South Carolina. We watch the sky, the Sun and the Earth,
       and we ask questions that are usually dismissed or never tested. Then we test them in public with open data, rules
       we set before we look at the results, and honest reporting, including when the answer is "nothing there."</p>
+    <div class="jump"><a href="#mission">Mission</a> · <a href="#updates">Updates</a> · <a href="#equipment">Equipment &amp; software</a> · <a href="#next">What's next</a> · <a href="#help">How to help</a>
+      <span class="latest">Latest update: <b><span id="upd-latest">Nov 22, 2026</span></b></span></div>
+
 
     <h2>What we're exploring</h2>
     <div class="grid">
@@ -161,7 +187,90 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
       <li><b>Privacy.</b> The site shows no home address or home-network details. The hardware only pushes read-only snapshots out.</li>
     </ul>
 
-    <h2>What's next</h2>
+        <h2 id="updates">Updates</h2>
+    <p class="note">A dated log of what changed, newest first. Real events only; nothing is listed before it happens.</p>
+    <!-- UPDATES:START -->
+    <ol class="timeline">
+      <li class="day"><time datetime="2026-11-22">Nov 22, 2026</time><ul>
+        <li><span class="chip chip-project">Project</span> <b>New page: The Precession Clock</b><span>An interactive clock of Earth&#x27;s 25,770-year wobble: which star marks the north pole in any year from 13,000 BC to AD 15,000, the five great pole stars, how far the equinox has drifted, the pre-dawn equinox sky at Giza, Stonehenge and Göbekli Tepe, and Earth&#x27;s magnetic field strength and day length in each era. Every number is computed from a published long-term precession model and a star catalogue.</span></li>
+        <li><span class="chip chip-site">Site</span> <b>Mission page became Mission &amp; Updates</b><span>The Mission page now also carries this dated updates log, the equipment and software we run, and a public record of every equipment purchase. The menu link on every page was renamed to match.</span></li>
+        <li><span class="chip chip-privacy">Privacy</span> <b>Map coordinates removed from the public site</b><span>Only the town name is shown now. The location the page uses for sunrise, sunset and the ISS is rounded to whole degrees, which moves sunrise and sunset by less than a minute.</span></li>
+        <li><span class="chip chip-crrd">Detector</span> <b>Detector self-mask shrunk to 16×16 blocks</b><span>Blocks of pixels that keep repeating are now blanked in 16×16 patches instead of 32×32. The masked share of the sensor dropped from 10.3% to 2.84%, so more of the sensor counts real hits.</span></li>
+        <li><span class="chip chip-ai">AI</span> <b>Hailo AI classifier running, with a public panel</b><span>A stock image model on the Hailo-10H fingerprints every hit image every 15 minutes, sorts hits into look-alike groups and flags the 1% least like the rest. The panel on the detector page shows the groups and the latest flagged hits. It isn&#x27;t trained on our data, and flagged doesn&#x27;t mean exotic.</span></li>
+        <li><span class="chip chip-tracker">NEO tracker</span> <b>NEO close-approach tracker live (Impact Hypothesis Phase 1)</b><span>Upcoming near-Earth object flybys from NASA/JPL CNEOS, with 470 close or well-observed approaches re-checked by our own N-body run. It updates daily.</span></li>
+        <li><span class="chip chip-log">Wind × volcano</span> <b>Solar wind × volcano log live</b><span>Solar wind speed spikes and U.S. volcano alert-level changes are logged every 30 minutes against rules fixed in advance and compared with chance.</span></li>
+        <li><span class="chip chip-site">Site</span> <b>New site design and the Mission page</b><span>A shared look across all pages (pixel grid, particle showers, solar-wind waves), new social preview images, a methods page for the log, and a Mission page explaining what we do and how we test.</span></li>
+        <li><span class="chip chip-support">Support</span> <b>Ko-fi support opened</b><span>Donations cover hardware, electricity, internet and computing time. Every donation-funded purchase is posted below under Equipment changes. Donations are not tax-deductible.</span></li>
+      </ul></li>
+      <li class="day"><time datetime="2026-11-21">Nov 21, 2026</time><ul>
+        <li><span class="chip chip-project">Project</span> <b>Impact Hypothesis Project started</b><span>Planned the phases (NEO tracker, Taurid stream, Moon and Mars, monuments and sky) and prepared the full NEO data run and the tracker page.</span></li>
+      </ul></li>
+      <li class="day"><time datetime="2026-11-19">Nov 18–19, 2026</time><ul>
+        <li><span class="chip chip-site">Site</span> <b>Public site launched</b><span>AetherWeather became the public front page, with read-only detector snapshots published every 15 minutes. Code is MIT-licensed and data is CC BY 4.0.</span></li>
+      </ul></li>
+      <li class="day"><time datetime="2026-11-19">Nov 19, 2026</time><ul>
+        <li><span class="chip chip-crrd">Detector</span> <b>Detector recalibrated after a power outage</b><span>The hot-pixel map was rebuilt at the warmer working temperature. The detector also recalibrates itself every 12 hours.</span></li>
+      </ul></li>
+      <li class="day"><time datetime="2026-11-18">Nov 18, 2026</time><ul>
+        <li><span class="chip chip-crrd">Detector</span> <b>Cosmic Ray Randomness Detector switched on</b><span>A light-sealed Pi camera began taking one-second dark exposures around the clock, logging particle hits and harvesting sensor noise as random bits. No new hardware was bought.</span></li>
+      </ul></li>
+    </ol>
+    <!-- UPDATES:END -->
+
+    <h2 id="equipment">Equipment &amp; software</h2>
+    <p>Everything runs on hardware we already owned. The two Raspberry Pis run around the clock and publish to this site on their own; the workstation is used for building and setup, and the site keeps running when it is off.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="role">AI &amp; detector node</div>
+        <h3>Raspberry Pi 5</h3>
+        <table class="spec">
+          <tr><td>Processor</td><td>Broadcom BCM2712, quad-core Arm Cortex-A76 @ 2.4 GHz</td></tr>
+          <tr><td>RAM</td><td>8 GB LPDDR4X</td></tr>
+          <tr><td>AI accelerator</td><td>Hailo-10H AI HAT</td></tr>
+          <tr><td>Camera</td><td>Raspberry Pi Camera Module 3 Wide (Sony IMX708 sensor), sealed light-tight with a 3D-printed cap</td></tr>
+          <tr><td>Cooling</td><td>Two cooling fans</td></tr>
+          <tr><td>OS</td><td>Debian 13-based Raspberry Pi OS</td></tr>
+          <tr><td>Runs</td><td>Cosmic Ray Randomness Detector, Hailo classifier, NEO tracker, wind × volcano log, publishing</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <div class="role">Weather &amp; web node</div>
+        <h3>Raspberry Pi 5</h3>
+        <table class="spec">
+          <tr><td>Processor</td><td>Broadcom BCM2712, quad-core Arm Cortex-A76 @ 2.4 GHz</td></tr>
+          <tr><td>RAM</td><td>8 GB LPDDR4X</td></tr>
+          <tr><td>OS</td><td>Debian 12-based Raspberry Pi OS</td></tr>
+          <tr><td>Runs</td><td>The AetherWeather dashboard (source for the public front page)</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <div class="role">Development workstation</div>
+        <h3>Windows desktop workstation</h3>
+        <table class="spec">
+          <tr><td>Processor</td><td>Intel Core i9-14900K</td></tr>
+          <tr><td>Graphics</td><td>NVIDIA GeForce RTX 4070 SUPER</td></tr>
+          <tr><td>RAM</td><td>32 GB DDR5</td></tr>
+          <tr><td>OS</td><td>Windows</td></tr>
+          <tr><td>Used for</td><td>Building, testing and setting up the Pis; not needed for the site to run</td></tr>
+        </table>
+      </div>
+    </div>
+    <h3 style="color:var(--gold2);font-size:15px;margin:22px 0 6px">Software</h3>
+    <ul class="sw">
+      <li><b>Open-source Python.</b> NumPy for frame processing, SQLite for storage, the Raspberry Pi camera library for raw dark frames, REBOUND for N-body orbit checks with the JPL DE440s ephemeris, and Skyfield/Astropy for astronomy.</li>
+      <li><b>AI.</b> Hailo's runtime with a stock CLIP image model from the Hailo model zoo, used as-is and not trained on our data.</li>
+      <li><b>Data sources.</b> NASA/JPL CNEOS, NOAA SWPC, USGS, the Oulu neutron monitor and Where The ISS At.</li>
+      <li><b>Publishing.</b> Scheduled jobs on the Pis push read-only static snapshots to GitHub Pages. Nothing on this site connects back to home hardware.</li>
+    </ul>
+    <h3 id="equipment-changes" style="color:var(--gold2);font-size:15px;margin:22px 0 6px">Equipment changes</h3>
+    <p class="note">Hardware added, replaced or retired, newest first. Every donation-funded purchase is listed here with what it cost and what it is for.</p>
+    <!-- EQUIP:START -->
+    <table class="eqlog"><thead><tr><th>Date</th><th>Change</th><th>Funded by</th></tr></thead><tbody>
+        <tr><td><time datetime="2026-11-22">Nov 22, 2026</time></td><td><b>Baseline recorded</b><br>Everything listed above was already owned before the project started. No donation-funded purchases yet.</td><td>none</td></tr>
+    </tbody></table>
+    <!-- EQUIP:END -->
+
+    <h2 id="next">What's next</h2>
     <div class="grid">
       <div class="card">
         <span class="status plan">Planned · Phase 2</span>
@@ -185,7 +294,7 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
       </div>
     </div>
 
-    <h2>How to help</h2>
+    <h2 id="help">How to help</h2>
     <p>RealAether is paid for out of pocket. Donations cover hardware, electricity, internet and computing time.
       Sharing the pages, checking our methods and telling us where we're wrong helps just as much.</p>
     <div class="support">
