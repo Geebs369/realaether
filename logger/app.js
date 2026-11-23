@@ -49,6 +49,7 @@
     const lo = wind.length ? wind[0].x : Date.now() - 7 * 864e5;
     const ymax = Math.max(600, ...wind.map(p => p.y)) * 1.08;
     const spikePts = s.spikes.map(p => ({ x: p.start * 1000, y: p.speed, p }));
+    const qPts = ((s.quakes && s.quakes.big) || []).filter(q => q.time_unix * 1000 >= lo).map(q => ({ x: q.time_unix * 1000, y: ymax * 0.86, q }));
     const chPts = s.changes.filter(c => +c.event_unix * 1000 >= lo - 864e5).map(c => ({ x: +c.event_unix * 1000, y: ymax * 0.94, c }));
     new Chart(document.getElementById('chart'), {
       data: { datasets: [
@@ -56,13 +57,14 @@
         { type: 'scatter', label: 'Spike start', data: spikePts, pointStyle: 'rectRot', pointRadius: 7, backgroundColor: '#f3d36b', borderColor: '#000' },
         { type: 'scatter', label: 'Volcano alert change', data: chPts, pointStyle: 'triangle', pointRadius: 9,
           rotation: chPts.map(p => p.c.direction === 'down' ? 180 : 0), backgroundColor: chPts.map(p => COL[p.c.color] || '#ccc'), borderColor: '#000' },
+        { type: 'scatter', label: 'M6+ earthquake', data: qPts, pointStyle: 'circle', pointRadius: qPts.map(p => 4 + (p.q.mag - 6) * 4), backgroundColor: '#ff5a5acc', borderColor: '#000' },
       ] },
       options: { responsive: true, maintainAspectRatio: false, animation: false,
         scales: { x: { type: 'time', min: lo, adapters: { date: {} }, time: { tooltipFormat: 'MMM d HH:mm', displayFormats: { hour: 'HH:mm', day: 'MMM d' } }, ticks: { color: '#8d8aa0' }, grid: { color: '#262a44' } },
                   y: { min: 200, max: ymax, title: { display: true, text: 'km/s', color: '#8d8aa0' }, ticks: { color: '#8d8aa0' }, grid: { color: '#262a44' } } },
         plugins: { legend: { labels: { color: '#e6e3d6' } }, tooltip: { callbacks: {
           title: (it) => fmt(it[0].raw.x / 1000) + ' ET',
-          label: (it) => it.raw.c ? `${it.raw.c.volcano}: ${it.raw.c.prev_color} → ${it.raw.c.color} (${it.raw.c.prev_level} → ${it.raw.c.level})`
+          label: (it) => it.raw.q ? `M${it.raw.q.mag} earthquake: ${it.raw.q.place}` : it.raw.c ? `${it.raw.c.volcano}: ${it.raw.c.prev_color} → ${it.raw.c.color} (${it.raw.c.prev_level} → ${it.raw.c.level})`
             : it.raw.p ? `Spike: ${it.raw.p.baseline} → ${it.raw.p.speed} km/s (peak ${it.raw.p.peak24})` : `${it.raw.y} km/s` } } } }
     });
   }).catch(e => { document.getElementById('gen').textContent = 'Could not load data: ' + e; });

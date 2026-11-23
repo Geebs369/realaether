@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Method · Solar Wind × Volcano Log · RealAether</title>
-  <meta name="description" content="A public log of solar wind speed spikes (NOAA SWPC) next to USGS volcano alert-level changes, tallied against chance. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
+  <title>Method · Solar Wind × Volcano &amp; Earthquake Log · RealAether</title>
+  <meta name="description" content="How the RealAether log tests solar wind spikes against USGS volcano alert changes and M4.5+ earthquakes, including a 20-year superposed epoch test. Testing, not proof. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RealAether">
-  <meta property="og:title" content="Solar Wind × Volcano Alert Log — RealAether">
-  <meta property="og:description" content="Solar wind speed spikes next to USGS volcano alert changes, tallied against chance. Testing, not proof.">
+  <meta property="og:title" content="Method: Solar Wind × Volcano &amp; Earthquake Log — RealAether">
+  <meta property="og:description" content="Solar wind spikes vs. volcano alert changes and earthquakes, tallied against chance. Testing, not proof.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="ra-bg">
@@ -31,7 +31,7 @@
   <main>
     <section class="card span12">
       <p class="proof-note"><b>Testing, not proof.</b> The rules below were fixed before the results came in, so they can't be tuned
-        to make a pattern appear. A match only means two things happened within 48 hours of each other.</p>
+        to make a pattern appear. A match only means two things happened within 48 hours of each other. Earthquakes are tested the same way, plus a 20-year historical test.</p>
     </section>
     <section class="card span12">
       <h2>Solar wind spikes</h2>
@@ -55,11 +55,41 @@
         Expected matches = tested changes × that share. The p-value is a one-sided binomial tail. Alert changes at the same volcano are not independent,
         so treat the p-value as rough. Only a long record that beats chance by a wide margin would be worth a closer look, and even that would not show cause.</p>
     </section>
+    <section class="card span12" id="quakes">
+      <h2>Earthquakes</h2>
+      <p class="note">Source: USGS ComCat via the FDSN event service: every earthquake of magnitude <b>4.5 or larger worldwide</b> (the size the global network records fairly completely).
+        Each run re-reads the last three days so magnitude revisions are picked up. Quakes of <b>M6 or larger</b> are highlighted.</p>
+      <p class="note"><b>Aftershocks.</b> One big quake can bring hundreds of aftershocks, which would swamp any count. We report two versions:
+        <b>raw</b> and <b>declustered</b>. Declustering uses the Gardner &amp; Knopoff (1974) space–time windows: working from the largest quake down,
+        any smaller quake within its window (for example about 500 days and 53 km after an M6, or about 990 days and 94 km after an M8) is treated as part of its sequence and removed.
+        It is a blunt, standard tool; it also removes some independent quakes, which is fine for a comparison like this one.</p>
+      <p class="note"><b>Live test (fixed in advance):</b> for every solar wind spike (same rule as above) with a full 48 hours after it, count the M4.5+ quakes in the 48 hours <i>after</i> the spike start.
+        Expected = the logger's average quake rate × 48 h × number of spikes. The p-value is a one-sided Poisson tail. The live record is short, so it is mainly a running log.</p>
+    </section>
+    <section class="card span12">
+      <h2>20-year test</h2>
+      <p class="note">To get a meaningful answer now instead of in a few years, we ran the same test on public archives from January 2006 to November 2026:</p>
+      <ul class="note">
+        <li><b>Solar wind and IMF:</b> NOAA SWPC real-time ACE hourly averages (monthly files, the same NOAA real-time stream family the logger uses). Hours flagged as bad are skipped.</li>
+        <li><b>Geomagnetic storms:</b> GFZ Potsdam Kp index (Matzka et al. 2021, kp.gfz.de). A storm start is the first 3-hour Kp of 5 or more (G1+), with 12 hours between starts.</li>
+        <li><b>Southward IMF:</b> the first hour with Bz ≤ −10 nT, with 12 hours between starts.</li>
+        <li><b>Earthquakes:</b> USGS ComCat, M4.5+ worldwide (about 155,000 quakes).</li>
+      </ul>
+      <p class="note"><b>Superposed epoch analysis:</b> we line up every trigger (spike, storm start or southward-IMF start) and count quakes in the 48 hours after each one, then average.
+        <b>Null:</b> we slide the whole set of triggers by one random offset (wrapping around the 20-year record), which keeps their spacing and clustering, and repeat 10,000 times.
+        The p-value is the share of random shifts that give at least the observed count. The main test, chosen before running anything, is declustered M4.5+ quakes after solar wind spikes.
+        The other 11 rows (raw counts, M6+, seismic energy, storms, southward IMF) are side tests; with 12 tests, a single p below 0.05 is expected by luck about half the time,
+        so the bar for "worth a closer look" is p &lt; 0.0042 (Bonferroni). Seismic energy uses log₁₀E = 1.5M + 4.8 (joules) and is dominated by a few giant quakes.</p>
+      <p class="note"><b>Context:</b> large studies have looked for links between earthquakes and solar or geomagnetic activity and found no robust, repeatable effect;
+        the few positive reports have not held up under independent tests with declustered catalogs. Our test is a public check, not new physics.</p>
+      <p class="note"><b>Not used:</b> the Hailo AI hat. It runs an image model for the Cosmic Ray Detector's hit pictures; there is nothing for it to look at here. This is plain statistics.</p>
+      <p class="note">Results file: <a href="data/quake_baseline.json">quake_baseline.json</a>. Code: <code>quake_baseline.py</code> (Python + NumPy), rebuilt by hand when the archives grow.</p>
+    </section>
     <section class="card span12">
       <h2>Schedule and data</h2>
       <p class="note">The logger runs every 30 minutes at the lowest priority on a Raspberry Pi 5 and publishes static files only.
         Raw data (CC BY 4.0, credit "RealAether (Geebs369)"): <a href="data/wind_hourly.csv">wind_hourly.csv</a> · <a href="data/spikes.csv">spikes.csv</a> ·
-        <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/summary.json">summary.json</a></p>
+        <a href="data/volcano_changes.csv">volcano_changes.csv</a> · <a href="data/quakes.csv">quakes.csv</a> · <a href="data/quake_baseline.json">quake_baseline.json</a> · <a href="data/summary.json">summary.json</a></p>
       <p class="note"><a href="./">← Back to the log</a></p>
     </section>
   </main>
@@ -68,6 +98,9 @@
     <div class="credit">Geebs &amp; 3TH3R3AL1 — RealAether</div>
     Data: <a href="https://www.swpc.noaa.gov/products/real-time-solar-wind">NOAA SWPC real-time solar wind</a> ·
     <a href="https://volcanoes.usgs.gov/hans-public/">USGS Volcano Hazards Program (HANS)</a> ·
+    <a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS earthquake catalog</a> ·
+    <a href="https://kp.gfz.de/">GFZ Kp</a> ·
+    <a href="https://sohoftp.nascom.nasa.gov/sdb/goes/ace/monthly/">NOAA ACE hourly archive</a> ·
     <a href="../">AetherWeather</a> ·
     <a href="../crrd/">CRRD</a> ·
     <a href="../impact/">NEO Tracker</a>
