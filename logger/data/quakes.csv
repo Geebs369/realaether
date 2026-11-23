@@ -43,7 +43,7 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-20T14:16:15Z,1795184175,4.7,mb,10.0,-31.784,-72.148,"94 km W of Illapel, Chile",us6000uc9c,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc9c
 2026-11-20T17:53:15Z,1795197195,5.1,mb,94.5,-14.835,167.29,"32 km NE of Port-Olry, Vanuatu",us6000ucd6,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucd6
 2026-11-20T22:34:39Z,1795214079,4.9,mb,10.0,-20.32,-173.41,"113 km ESE of Pangai, Tonga",us6000ucf0,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucf0
-2026-11-21T00:09:19Z,1795219759,6.7,mww,108.0,-10.855,-75.978,"9 km NE of Carhuamayo, Peru",us6000ucfm,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm
+2026-11-21T00:09:21Z,1795219761,6.7,mww,125.0,-10.889,-75.966,"7 km ENE of Carhuamayo, Peru",us6000ucfm,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm
 2026-11-21T01:24:09Z,1795224249,4.7,mwr,120.0,-22.231,-68.641,"38 km NE of Calama, Chile",us6000ucg8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucg8
 2026-11-21T01:26:19Z,1795224379,4.9,mb,10.0,58.302,-31.761,Reykjanes Ridge,us6000ucga,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucga
 2026-11-21T02:24:37Z,1795227877,4.9,mb,10.0,58.546,-31.857,Reykjanes Ridge,us6000ucgj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucgj
@@ -75,3 +75,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-23T02:14:59Z,1795400099,4.9,mb,10.0,41.926,82.544,"39 km NW of Kuqa, China",us6000ucvh,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucvh
 2026-11-23T02:40:58Z,1795401658,6.5,mww,598.0,-13.585,172.267,Vanuatu region,us6000ucvm,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucvm
 2026-11-23T03:07:52Z,1795403272,4.9,mb,596.0,-13.563,172.224,Vanuatu region,us6000ucw1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucw1
+2026-11-23T04:18:19Z,1795407499,5.0,mb,98.9,-4.759,153.647,"159 km ESE of Kokopo, Papua New Guinea",us6000ucwd,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucwd
