@@ -132,6 +132,7 @@
   }
 
   function rowMatches(rec) {
+    if (rec.iso_et && new Date(rec.iso_et).getTime() < Date.now()) return false;   // hide flybys that have already happened
     const body = $("flt-body").value;
     if (body !== "all" && rec.body !== body) return false;
     const win = $("flt-window").value;

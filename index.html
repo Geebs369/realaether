@@ -255,8 +255,8 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
                 <a href="https://geebs369.github.io/realaether/impact/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Near-Earth object close-approach tracker">
                     <span aria-hidden="true">🛰️</span> NEO TRACKER
                 </a>
-                <a href="https://geebs369.github.io/realaether/logger/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Solar wind spikes vs. USGS volcano alert changes (testing, not proof)">
-                    <span aria-hidden="true">🌋</span> WIND × VOLCANO LOG
+                <a href="https://geebs369.github.io/realaether/logger/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Solar wind spikes vs. USGS volcano alert changes and earthquakes (testing, not proof)">
+                    <span aria-hidden="true">🌋</span> WIND × VOLCANO &amp; QUAKE LOG
                 </a>
                 <a href="https://geebs369.github.io/realaether/precession/" class="hover:text-cyan-400 transition-colors flex items-center gap-x-1" style="color:#f3d36b" title="Earth's 25,800-year wobble and its pole stars">
                     <span aria-hidden="true">🔭</span> PRECESSION CLOCK</a>
@@ -905,7 +905,7 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
                 const bits = [];
                 if (Number.isFinite(alt)) bits.push(`${Math.round(alt)} km alt`);
                 if (Number.isFinite(vel)) bits.push(`${(vel / 3600).toFixed(1)} km/s`);
-                bits.push(`${Math.round(look.dist).toLocaleString("en-US")} km ${bear.dir} of home`);
+                bits.push(`${Math.round(look.dist).toLocaleString("en-US")} km ${bear.dir}`);
                 document.getElementById("iss-meta").textContent = bits.join(" • ");
                 const vis = String(data.visibility || "").toLowerCase();
                 const night = isLocalNight();
