@@ -1,6 +1,6 @@
 {
-  "generated_et": "2026-11-22T14:12:02-05:00",
-  "generated_et_label": "2026-11-22 14:12:02 EST",
+  "generated_et": "2026-11-23T07:20:06-05:00",
+  "generated_et_label": "2026-11-23 07:20:06 EST",
   "method": {
     "elements": "JPL SBDB Query API osculating heliocentric elements, full precision",
     "integrator": "REBOUND IAS15, first-order GR via REBOUNDx when available",
@@ -14389,6 +14389,44 @@
       "status": "ok"
     },
     {
+      "cd_tdb": "2036-Nov-22 22:56",
+      "cneos": {
+        "dist_au": 0.0409032186078689,
+        "dist_km": 6119034.408513805,
+        "jd_tdb": 2465020.45569678,
+        "orbit_id": "169",
+        "v_rel_kms": 21.9991280357018
+      },
+      "condition_code": 0,
+      "data_arc_days": 9158.0,
+      "datetime_et": "2036-11-22 17:55",
+      "des": "381906",
+      "error": null,
+      "fullname": "381906 (2010 CL19)",
+      "iso_et": "2036-11-22T17:55:03-05:00",
+      "predicted": {
+        "dist_au": 0.04090314898803317,
+        "epoch_jd": 2461200.5,
+        "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
+        "grid_seconds": 51.83999240398407,
+        "jd_tdb": 2465020.45569678,
+        "v_rel_kms": 21.999122110900192
+      },
+      "reasons": [
+        "condition_code_0"
+      ],
+      "residual": {
+        "ddist_au": -6.961983572972841e-08,
+        "ddist_km": -10.41497918365115,
+        "dt_days": 0.0,
+        "dt_minutes": 0.0,
+        "dt_seconds": 0.0,
+        "dv_kms": -5.924801609324959e-06
+      },
+      "sbdb_orbit_id": "169",
+      "status": "ok"
+    },
+    {
       "cd_tdb": "2032-May-27 21:01",
       "cneos": {
         "dist_au": 0.0409786140137685,
@@ -18006,19 +18044,19 @@
     "close_au": 0.01,
     "include_condition_code_0": true,
     "n_closest": 200,
-    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43370 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
+    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43371 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
   },
   "summary": {
     "abs_ddist_au_max": 1.2071944193866105e-05,
-    "abs_ddist_au_median": 1.0221318028948156e-08,
+    "abs_ddist_au_median": 1.0236336849336891e-08,
     "abs_ddist_km_max": 1805.9371466115972,
-    "abs_ddist_km_median": 1.529087412878165,
+    "abs_ddist_km_median": 1.5313341964287455,
     "abs_dt_minutes_max": 16.41600027680397,
     "abs_dt_minutes_median": 0.0,
     "errors": [],
     "n_error": 0,
-    "n_ok": 470,
-    "n_selected": 470,
+    "n_ok": 471,
+    "n_selected": 471,
     "skipped": false,
     "worst_ddist": {
       "datetime_et": "2034-10-09 07:07",
