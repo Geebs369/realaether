@@ -94,3 +94,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-24T11:55:13Z,1795521313,5.0,mb,107.6,13.564,144.496,"24 km WNW of Piti Village, Guam",us6000ud73,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud73
 2026-11-24T13:22:38Z,1795526558,4.8,mwr,33.4,-28.612,-71.489,"71 km W of Vallenar, Chile",us6000ud7h,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud7h
 2026-11-24T15:39:43Z,1795534783,4.7,mb,10.0,37.092,27.779,"18 km ESE of Güvercinlik, Turkey",us6000ud7z,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud7z
+2026-11-24T20:27:57Z,1795552077,4.6,mb,50.9,-30.945,-71.521,"49 km SW of Ovalle, Chile",us6000udb8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udb8
