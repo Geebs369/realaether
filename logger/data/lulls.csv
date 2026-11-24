@@ -1,2 +1,2 @@
 start_utc,start_unix,kind,speed_kms,dV_24h,density_pcc,pdyn_nPa,dP_24h,charge_mean_kms,charge,kp,rule,flag_0_48,n_decl_0_48,n_m6_0_48,n_volc_up_0_48,cluster_0_48,status_0_48,flag_2_7,n_decl_2_7,n_m6_2_7,n_volc_up_2_7,cluster_2_7,status_2_7
-2026-11-19T06:00:00Z,1795068000,storm_end,439.6,,,,,,no,1.67,Kp>=5 then Kp<=2,yes,20,1,0,yes,complete,no,34,2,1,,in_progress
+2026-11-19T06:00:00Z,1795068000,storm_end,439.6,,,,,,no,1.67,Kp>=5 then Kp<=2,yes,20,1,0,yes,complete,no,35,3,1,,in_progress
