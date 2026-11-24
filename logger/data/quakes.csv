@@ -92,3 +92,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-24T11:06:14Z,1795518374,6.4,mww,10.0,-17.705,65.7,Mauritius - Reunion region,us6000ud6h,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6h
 2026-11-24T11:51:44Z,1795521104,5.2,mb,35.0,14.442,-93.242,"93 km WSW of Puerto Madero, Mexico",us6000ud6z,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6z
 2026-11-24T11:55:13Z,1795521313,5.0,mb,107.6,13.564,144.496,"24 km WNW of Piti Village, Guam",us6000ud73,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud73
+2026-11-24T13:22:38Z,1795526558,4.8,mwr,33.4,-28.612,-71.489,"71 km W of Vallenar, Chile",us6000ud7h,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud7h
