@@ -90,3 +90,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-24T01:32:42Z,1795483962,5.3,mb,10.0,27.833,87.947,"67 km WNW of Mangan, India",us6000ud3i,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud3i
 2026-11-24T01:55:57Z,1795485357,4.5,mb,15.7,7.517,-80.622,"9 km NNW of La Tronosa, Panama",us6000ud3m,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud3m
 2026-11-24T11:06:14Z,1795518374,6.4,mww,10.0,-17.705,65.7,Mauritius - Reunion region,us6000ud6h,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6h
+2026-11-24T11:51:44Z,1795521104,5.2,mb,35.0,14.442,-93.242,"93 km WSW of Puerto Madero, Mexico",us6000ud6z,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6z
