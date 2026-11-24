@@ -1,0 +1,5 @@
+# RealAether — https://geebs369.github.io/realaether/
+User-agent: *
+Allow: /
+
+Sitemap: https://geebs369.github.io/realaether/sitemap.xml
