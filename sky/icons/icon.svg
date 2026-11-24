@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sky Companion">
+  <rect width="512" height="512" rx="112" fill="#05060c"/>
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#d4af37" stroke-width="12"/>
+  <circle cx="112" cy="110" r="6" fill="#f3d36b"/>
+  <circle cx="400" cy="90" r="4" fill="#e6e3d6"/>
+  <circle cx="430" cy="280" r="5" fill="#f3d36b"/>
+  <path d="M70 300 C 140 240, 200 340, 256 300 C 320 250, 380 330, 442 290" fill="none" stroke="#5ad1ff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M70 328 C 150 270, 210 360, 256 328 C 330 270, 390 350, 442 318" fill="none" stroke="#d4af37" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="256" cy="180" r="66" fill="#f3d36b"/>
+  <circle cx="286" cy="180" r="60" fill="#05060c"/>
+</svg>

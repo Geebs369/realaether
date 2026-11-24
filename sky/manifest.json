@@ -1,0 +1,38 @@
+{
+  "name": "Sky Companion",
+  "short_name": "Sky Companion",
+  "description": "Space weather, aurora chances, ISS passes, and HF band estimates for amateur astronomers and radio operators.",
+  "start_url": "/realaether/sky/",
+  "scope": "/realaether/sky/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05060c",
+  "theme_color": "#05060c",
+  "lang": "en",
+  "categories": [
+    "weather",
+    "education",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "/realaether/sky/"
+}

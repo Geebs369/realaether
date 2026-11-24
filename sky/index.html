@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05060c">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Space weather, aurora chances, ISS passes, and HF band estimates for amateur astronomers and radio operators.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sky Companion">
+  <title>Sky Companion</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <h1>Sky Companion</h1>
+        <p>For astronomers &amp; radio operators</p>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="chip unset" id="loc-chip" title="Set location">Set location</button>
+        <button type="button" class="icon-btn" id="refresh-btn" title="Refresh data" aria-label="Refresh">↻</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="view-home" class="view active" data-view="home">
+        <article class="card hero-card" id="card-kp">
+          <h2>Planetary Kp <span class="tag" id="kp-updated">…</span></h2>
+          <div class="row">
+            <div>
+              <div class="metric quiet" id="kp-now">—</div>
+              <p class="sub" id="kp-label">Loading 1-minute Kp…</p>
+            </div>
+            <div class="kpi" style="min-width:42%">
+              <span>3-hour Kp</span>
+              <b id="kp-3h">—</b>
+              <span id="kp-scale">G-scale —</span>
+            </div>
+          </div>
+          <div class="bars" id="kp-bars" aria-hidden="true"></div>
+        </article>
+
+        <article class="card" id="card-aurora">
+          <h2>Aurora chance <span class="tag">at your latitude</span></h2>
+          <div class="metric" id="aurora-metric">—</div>
+          <p class="sub" id="aurora-detail">Set a location to estimate local aurora chances from the OVATION model.</p>
+        </article>
+
+        <article class="card" id="card-wind">
+          <h2>Solar wind</h2>
+          <div class="kpis three">
+            <div class="kpi"><span>Speed</span><b id="wind-speed">—</b></div>
+            <div class="kpi"><span>Bt</span><b id="wind-bt">—</b></div>
+            <div class="kpi"><span>Bz</span><b id="wind-bz">—</b></div>
+          </div>
+          <p class="sub" id="wind-note">Plasma density is not in NOAA’s small summary feed; speed and the magnetic field are shown instead.</p>
+        </article>
+
+        <article class="card" id="card-flare">
+          <h2>X-ray flare level</h2>
+          <div class="row">
+            <div>
+              <div class="metric" id="flare-now" style="font-size:42px">—</div>
+              <p class="sub" id="flare-now-sub">Current GOES long-band class</p>
+            </div>
+            <div class="kpi" style="min-width:48%">
+              <span>Last flare</span>
+              <b id="flare-last">—</b>
+              <span id="flare-last-when">—</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="card-hf">
+          <h2>HF band conditions <span class="tag">estimate</span></h2>
+          <p class="sub" id="hf-meta">Derived from 10.7 cm flux (SFI) and Kp. This is a rule-of-thumb estimate, not a measured ionosonde or VOACAP forecast.</p>
+          <div class="bands" id="hf-grid"></div>
+        </article>
+
+        <article class="card" id="card-moon">
+          <h2>Moon &amp; dark window</h2>
+          <div class="moon-row">
+            <div class="moon-face" id="moon-face" aria-hidden="true"></div>
+            <div>
+              <div class="metric" id="moon-pct" style="font-size:32px">—</div>
+              <p class="sub" id="moon-name">Computing phase locally…</p>
+            </div>
+          </div>
+          <p class="sub" id="dark-window" style="margin-top:8px">Set a location for tonight’s astronomical-dark window.</p>
+        </article>
+
+        <article class="card" id="card-iss">
+          <h2>Next ISS pass</h2>
+          <p class="sub iss-track" id="iss-now">Loading ISS position…</p>
+          <div class="metric" id="iss-next" style="font-size:28px;margin-top:6px">—</div>
+          <p class="sub" id="iss-detail">Set a location to predict visible and daylight passes.</p>
+        </article>
+
+        <article class="card" id="card-neo">
+          <h2>Next NEO flyby <span class="tag">future only</span></h2>
+          <div class="metric" id="neo-name" style="font-size:26px">—</div>
+          <p class="sub" id="neo-detail">Checking NASA/JPL close-approach data…</p>
+        </article>
+
+        <article class="card" id="card-quakes">
+          <h2>Recent M4.5+ quakes</h2>
+          <ul class="list" id="quake-list">
+            <li class="muted">Loading USGS feed…</li>
+          </ul>
+        </article>
+
+        <footer class="site">
+          A free preview from RealAether.
+          <a href="https://geebs369.github.io/realaether/">geebs369.github.io/realaether</a><br>
+          Add this page to your iPhone Home Screen: Share → Add to Home Screen.
+          <div class="sources" id="source-line"></div>
+        </footer>
+      </section>
+
+      <section id="view-sky" class="view" data-view="sky">
+        <article class="card">
+          <h2>Sky tonight</h2>
+          <p class="sub" id="sky-summary">Moon phase, darkness, ISS, and aurora in one place.</p>
+        </article>
+        <article class="card">
+          <h2>Moon</h2>
+          <div class="moon-row">
+            <div class="moon-face" id="moon-face-2" aria-hidden="true"></div>
+            <div>
+              <b id="sky-moon-name">—</b>
+              <p class="sub" id="sky-moon-detail">—</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <h2>Astronomical dark</h2>
+          <p class="sub" id="sky-dark">—</p>
+        </article>
+        <article class="card">
+          <h2>Aurora oval</h2>
+          <p class="sub" id="sky-aurora">—</p>
+        </article>
+        <article class="card">
+          <h2>ISS passes (next 36 hours)</h2>
+          <ul class="list" id="iss-list"><li class="muted">Set a location first.</li></ul>
+        </article>
+        <article class="card">
+          <h2>Upcoming flybys</h2>
+          <ul class="list" id="neo-list"><li class="muted">—</li></ul>
+        </article>
+        <footer class="site">
+          <a href="https://geebs369.github.io/realaether/">Back to RealAether</a>
+        </footer>
+      </section>
+
+      <section id="view-radio" class="view" data-view="radio">
+        <article class="card">
+          <h2>Radio conditions <span class="tag">estimate</span></h2>
+          <div class="kpis three">
+            <div class="kpi"><span>SFI (10.7 cm)</span><b id="radio-sfi">—</b></div>
+            <div class="kpi"><span>Kp now</span><b id="radio-kp">—</b></div>
+            <div class="kpi"><span>Flare</span><b id="radio-flare">—</b></div>
+          </div>
+          <p class="sub" id="radio-blurb" style="margin-top:8px">HF ratings are a simple estimate from solar flux and Kp, split by day and night at your location (or by your clock if no location is set). They are not a substitute for real ionosonde data or a propagation forecast.</p>
+        </article>
+        <article class="card">
+          <h2>HF bands</h2>
+          <div class="bands" id="radio-grid"></div>
+        </article>
+        <article class="card">
+          <h2>Blackout &amp; storm watch</h2>
+          <p class="sub" id="radio-watch">—</p>
+        </article>
+        <article class="card">
+          <h2>GMRS / VHF note</h2>
+          <p class="sub">GMRS, 2 meters, and 70 cm are mostly line-of-sight and are not driven by the 10.7 cm flux. A strong geomagnetic storm can still add noise, and rare aurora can briefly enhance VHF. Use the Kp card as a “storm tonight” heads-up for nets.</p>
+        </article>
+        <footer class="site">
+          <a href="https://geebs369.github.io/realaether/">Back to RealAether</a>
+        </footer>
+      </section>
+
+      <section id="view-alerts" class="view" data-view="alerts">
+        <article class="card">
+          <h2>Alert thresholds</h2>
+          <p class="sub">Stored only in this browser (localStorage). Nothing is sent to a server.</p>
+          <div class="form-grid" style="margin-top:12px">
+            <div class="range-row">
+              <label for="th-kp">Kp at or above <b id="th-kp-val">5</b></label>
+              <input id="th-kp" type="range" min="3" max="9" step="1" value="5">
+            </div>
+            <div class="field">
+              <label for="th-flare">Flare class at or above</label>
+              <select id="th-flare">
+                <option value="C">C1</option>
+                <option value="M" selected>M1</option>
+                <option value="X">X1</option>
+              </select>
+            </div>
+            <div class="range-row">
+              <label for="th-aurora">Aurora chance at or above <b id="th-aurora-val">25</b>%</label>
+              <input id="th-aurora" type="range" min="5" max="80" step="5" value="25">
+            </div>
+            <div class="range-row">
+              <label for="th-quake">Quake magnitude at or above <b id="th-quake-val">6.0</b></label>
+              <input id="th-quake" type="range" min="4.5" max="8" step="0.1" value="6">
+            </div>
+            <label class="toggle">
+              <span>Flag a coming ISS pass (within 45 minutes)</span>
+              <input id="th-iss" type="checkbox" checked>
+            </label>
+            <label class="toggle">
+              <span>Browser notifications (optional)</span>
+              <input id="th-notify" type="checkbox">
+            </label>
+            <div class="actions">
+              <button type="button" class="btn" id="test-notify">Test notification</button>
+              <button type="button" class="btn" id="save-alerts">Save thresholds</button>
+            </div>
+            <p class="sub" id="alert-status">On iPhone, notifications work after you add the app to the Home Screen and grant permission.</p>
+          </div>
+        </article>
+        <article class="card">
+          <h2>Add to Home Screen</h2>
+          <p class="sub">In Safari, tap Share, then Add to Home Screen. The app opens full screen with its own icon. It caches its shell so the layout still loads offline; live data needs a connection.</p>
+        </article>
+        <article class="card">
+          <h2>Data sources</h2>
+          <p class="sub" id="alerts-sources"></p>
+        </article>
+        <footer class="site">
+          <a href="https://geebs369.github.io/realaether/">Back to RealAether</a>
+        </footer>
+      </section>
+    </main>
+
+    <nav class="tabbar" aria-label="Main">
+      <button type="button" class="active" data-go="home"><span class="ic">◉</span>Home</button>
+      <button type="button" data-go="sky"><span class="ic">☾</span>Sky</button>
+      <button type="button" data-go="radio"><span class="ic">//</span>Radio</button>
+      <button type="button" data-go="alerts"><span class="ic">⚑</span>Alerts</button>
+    </nav>
+  </div>
+
+  <div class="modal" id="loc-modal" hidden>
+    <div class="sheet" role="dialog" aria-labelledby="loc-title">
+      <h3 id="loc-title">Your location</h3>
+      <p class="sub">Used only on this device for aurora chance, ISS passes, the dark window, and day/night HF estimates. It is never hardcoded and never uploaded.</p>
+      <div class="actions">
+        <button type="button" class="btn primary" id="use-geo">Use my location</button>
+        <button type="button" class="btn" id="clear-loc">Clear</button>
+      </div>
+      <div class="field">
+        <label for="city-q">City name</label>
+        <input id="city-q" type="text" placeholder="e.g. Denver, Fairbanks, Manchester" autocomplete="off">
+      </div>
+      <div class="results" id="city-results"></div>
+      <div class="field">
+        <label for="coord-q">Or latitude, longitude</label>
+        <input id="coord-q" type="text" placeholder="39.74, -104.99" inputmode="decimal">
+      </div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="use-coords">Use coordinates</button>
+        <button type="button" class="btn" id="close-loc">Close</button>
+      </div>
+      <p class="sub err" id="loc-err" hidden></p>
+    </div>
+  </div>
+
+  <script src="lib/satellite.min.js" defer></script>
+  <script src="astro.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
