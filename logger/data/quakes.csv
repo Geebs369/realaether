@@ -86,3 +86,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-23T10:39:26Z,1795430366,4.6,mb,57.0,-6.753,147.654,"30 km SW of Finschhafen, Papua New Guinea",us6000ucy7,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucy7
 2026-11-23T11:24:31Z,1795433071,4.8,mb,10.0,1.337,132.017,"209 km SSE of Tobi Village, Palau",us6000ucyd,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucyd
 2026-11-23T15:10:57Z,1795446657,4.7,mb,103.3,-57.306,-25.881,South Sandwich Islands region,us6000ucz2,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucz2
+2026-11-23T21:25:33Z,1795469133,4.6,mb,35.0,12.276,144.019,"130 km SSW of Merizo Village, Guam",us6000ud2y,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud2y
