@@ -99,3 +99,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-24T22:36:30Z,1795559790,4.5,mb,10.0,-15.384,-75.766,"64 km W of San Juan, Peru",us6000udcc,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udcc
 2026-11-24T23:29:55Z,1795562995,4.7,mb,35.8,10.904,122.48,"2 km NNW of Cabatuan, Philippines",us6000udck,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udck
 2026-11-25T01:38:45Z,1795570725,5.9,mww,10.0,-63.092,170.937,Balleny Islands region,us6000udd1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udd1
+2026-11-25T04:30:32Z,1795581032,4.7,mb,10.0,-6.354,151.538,"178 km ESE of Kimbe, Papua New Guinea",us6000uddj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uddj
