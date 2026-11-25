@@ -102,3 +102,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-25T04:30:32Z,1795581032,4.7,mb,10.0,-6.354,151.538,"178 km ESE of Kimbe, Papua New Guinea",us6000uddj,https://earthquake.usgs.gov/earthquakes/eventpage/us6000uddj
 2026-11-25T06:34:08Z,1795588448,5.2,mww,25.3,-36.019,178.369,"175 km N of Hicks Bay, New Zealand",us6000ude3,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ude3
 2026-11-25T08:47:16Z,1795596436,5.3,mww,10.0,21.816,121.524,"83 km ESE of Hengchun, Taiwan",us6000udef,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udef
+2026-11-25T12:08:12Z,1795608492,5.0,mb,106.4,-0.385,123.002,"67 km NNE of Luwuk, Indonesia",us6000udf2,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udf2
