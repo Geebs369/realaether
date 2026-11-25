@@ -97,4 +97,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-24T20:27:57Z,1795552077,4.6,mb,50.9,-30.945,-71.521,"49 km SW of Ovalle, Chile",us6000udb8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udb8
 2026-11-24T21:11:41Z,1795554701,5.0,mb,10.0,-5.6,153.684,"209 km SE of Kokopo, Papua New Guinea",us6000udbn,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udbn
 2026-11-24T23:29:55Z,1795562995,4.7,mb,35.8,10.904,122.48,"2 km NNW of Cabatuan, Philippines",us6000udck,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udck
-2026-11-25T01:38:44Z,1795570724,5.9,mww,10.0,-63.233,171.054,Balleny Islands region,us6000udd1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udd1
+2026-11-25T01:38:45Z,1795570725,5.9,mww,10.0,-63.092,170.937,Balleny Islands region,us6000udd1,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udd1
