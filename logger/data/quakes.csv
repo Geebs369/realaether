@@ -112,3 +112,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-26T09:08:40Z,1795684120,5.5,mb,15.1,-10.562,117.195,"204 km S of Taliwang, Indonesia",us6000udm8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udm8
 2026-11-26T09:22:45Z,1795684965,5.2,mb,493.9,-20.536,-177.763,"265 km WNW of Houma, Tonga",us6000udmc,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udmc
 2026-11-26T15:26:44Z,1795706804,5.7,mww,10.0,19.814,-109.296,Revilla Gigedo Islands region,us6000udq5,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udq5
+2026-11-26T16:18:00Z,1795709880,4.5,mb,173.3,4.662,125.909,"95 km SSE of Sarangani, Philippines",us6000udqa,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udqa
