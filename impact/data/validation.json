@@ -1,6 +1,6 @@
 {
-  "generated_et": "2026-11-25T07:18:06-05:00",
-  "generated_et_label": "2026-11-25 07:18:06 EST",
+  "generated_et": "2026-11-26T07:16:06-05:00",
+  "generated_et_label": "2026-11-26 07:16:06 EST",
   "method": {
     "elements": "JPL SBDB Query API osculating heliocentric elements, full precision",
     "integrator": "REBOUND IAS15, first-order GR via REBOUNDx when available",
@@ -4348,44 +4348,6 @@
       "status": "ok"
     },
     {
-      "cd_tdb": "2026-Nov-26 10:15",
-      "cneos": {
-        "dist_au": 0.0101245921477465,
-        "dist_km": 1514617.4270088163,
-        "jd_tdb": 2461370.92715466,
-        "orbit_id": "8",
-        "v_rel_kms": 6.77869500077727
-      },
-      "condition_code": 6,
-      "data_arc_days": 9.0,
-      "datetime_et": "2026-11-26 05:14",
-      "des": "2026 VQ19",
-      "error": null,
-      "fullname": "(2026 VQ19)",
-      "iso_et": "2026-11-26T05:13:56-05:00",
-      "predicted": {
-        "dist_au": 0.010124592537361898,
-        "epoch_jd": 2461200.5,
-        "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
-        "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2461370.92715466,
-        "v_rel_kms": 6.778694778135959
-      },
-      "reasons": [
-        "closest_200"
-      ],
-      "residual": {
-        "ddist_au": 3.896153972365868e-10,
-        "ddist_km": 0.05828563381852804,
-        "dt_days": 0.0,
-        "dt_minutes": 0.0,
-        "dt_seconds": 0.0,
-        "dv_kms": -2.2264131072091686e-07
-      },
-      "sbdb_orbit_id": "JPL 8",
-      "status": "ok"
-    },
-    {
       "cd_tdb": "2028-Nov-16 13:34",
       "cneos": {
         "dist_au": 0.0101469172088905,
@@ -6290,44 +6252,6 @@
       "status": "ok"
     },
     {
-      "cd_tdb": "2026-Nov-25 21:21",
-      "cneos": {
-        "dist_au": 0.013432313511248,
-        "dist_km": 2009445.4998575412,
-        "jd_tdb": 2461370.389926419,
-        "orbit_id": "12",
-        "v_rel_kms": 11.689113806817
-      },
-      "condition_code": 7,
-      "data_arc_days": 19.0,
-      "datetime_et": "2026-11-25 16:20",
-      "des": "2026 VQ5",
-      "error": null,
-      "fullname": "(2026 VQ5)",
-      "iso_et": "2026-11-25T16:20:20-05:00",
-      "predicted": {
-        "dist_au": 0.013432313782658132,
-        "epoch_jd": 2461200.5,
-        "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
-        "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2461370.389926419,
-        "v_rel_kms": 11.689113455717855
-      },
-      "reasons": [
-        "closest_200"
-      ],
-      "residual": {
-        "ddist_au": 2.7141013221598786e-10,
-        "ddist_km": 0.04060237786591726,
-        "dt_days": 0.0,
-        "dt_minutes": 0.0,
-        "dt_seconds": 0.0,
-        "dv_kms": -3.5109914442443824e-07
-      },
-      "sbdb_orbit_id": "JPL 12",
-      "status": "ok"
-    },
-    {
       "cd_tdb": "2026-Dec-03 11:08",
       "cneos": {
         "dist_au": 0.0134888539016526,
@@ -7736,6 +7660,82 @@
         "dv_kms": -3.4055693198808967e-07
       },
       "sbdb_orbit_id": "JPL 2",
+      "status": "ok"
+    },
+    {
+      "cd_tdb": "2031-Sep-01 00:46",
+      "cneos": {
+        "dist_au": 0.0149142308344821,
+        "dist_km": 2231137.1759668062,
+        "jd_tdb": 2463110.531783138,
+        "orbit_id": "5",
+        "v_rel_kms": 12.6462193102398
+      },
+      "condition_code": 4,
+      "data_arc_days": 3.0,
+      "datetime_et": "2031-08-31 20:45",
+      "des": "2025 DJ22",
+      "error": null,
+      "fullname": "(2025 DJ22)",
+      "iso_et": "2031-08-31T20:44:36-04:00",
+      "predicted": {
+        "dist_au": 0.014914234455593459,
+        "epoch_jd": 2461200.5,
+        "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
+        "grid_seconds": 51.83999240398407,
+        "jd_tdb": 2463110.531783138,
+        "v_rel_kms": 12.646223407086824
+      },
+      "reasons": [
+        "closest_200"
+      ],
+      "residual": {
+        "ddist_au": 3.6211113586814836e-09,
+        "ddist_km": 0.5417105488263338,
+        "dt_days": 0.0,
+        "dt_minutes": 0.0,
+        "dt_seconds": 0.0,
+        "dv_kms": 4.096847023404848e-06
+      },
+      "sbdb_orbit_id": "5",
+      "status": "ok"
+    },
+    {
+      "cd_tdb": "2030-Apr-02 19:31",
+      "cneos": {
+        "dist_au": 0.0149455266996387,
+        "dist_km": 2235818.9707559478,
+        "jd_tdb": 2462594.313335723,
+        "orbit_id": "5",
+        "v_rel_kms": 14.9412698564121
+      },
+      "condition_code": 7,
+      "data_arc_days": 11.0,
+      "datetime_et": "2030-04-02 15:30",
+      "des": "2021 GE2",
+      "error": null,
+      "fullname": "(2021 GE2)",
+      "iso_et": "2030-04-02T15:30:03-04:00",
+      "predicted": {
+        "dist_au": 0.014945551608920617,
+        "epoch_jd": 2461200.5,
+        "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
+        "grid_seconds": 51.83999240398407,
+        "jd_tdb": 2462594.313335723,
+        "v_rel_kms": 14.94126650931436
+      },
+      "reasons": [
+        "closest_200"
+      ],
+      "residual": {
+        "ddist_au": 2.4909281916632442e-08,
+        "ddist_km": 3.726375535394228,
+        "dt_days": 0.0,
+        "dt_minutes": 0.0,
+        "dt_seconds": 0.0,
+        "dv_kms": -3.347097740302729e-06
+      },
+      "sbdb_orbit_id": "JPL 5",
       "status": "ok"
     },
     {
@@ -13289,39 +13289,39 @@
     {
       "cd_tdb": "2030-Nov-11 12:48",
       "cneos": {
-        "dist_au": 0.0375163451894453,
-        "dist_km": 5612365.356787205,
-        "jd_tdb": 2462817.033126935,
-        "orbit_id": "324",
-        "v_rel_kms": 9.60681488110726
+        "dist_au": 0.0375163451313154,
+        "dist_km": 5612365.348091096,
+        "jd_tdb": 2462817.033126962,
+        "orbit_id": "325",
+        "v_rel_kms": 9.60681505396981
       },
       "condition_code": 0,
-      "data_arc_days": 9753.0,
+      "data_arc_days": 9754.0,
       "datetime_et": "2030-11-11 07:47",
       "des": "138175",
       "error": null,
       "fullname": "138175 (2000 EE104)",
       "iso_et": "2030-11-11T07:46:32-05:00",
       "predicted": {
-        "dist_au": 0.03751631940721734,
+        "dist_au": 0.03751631936108989,
         "epoch_jd": 2461200.5,
         "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
         "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2462817.033126935,
-        "v_rel_kms": 9.606830361134651
+        "jd_tdb": 2462817.033126962,
+        "v_rel_kms": 9.606830528301424
       },
       "reasons": [
         "condition_code_0"
       ],
       "residual": {
-        "ddist_au": -2.578222795673879e-08,
-        "ddist_km": -3.8569664042301346,
+        "ddist_au": -2.5770225509091915e-08,
+        "ddist_km": -3.855170863618974,
         "dt_days": 0.0,
         "dt_minutes": 0.0,
         "dt_seconds": 0.0,
-        "dv_kms": 1.5480027391490125e-05
+        "dv_kms": 1.547433161519507e-05
       },
-      "sbdb_orbit_id": "JPL 324",
+      "sbdb_orbit_id": "JPL 325",
       "status": "ok"
     },
     {
@@ -14239,39 +14239,39 @@
     {
       "cd_tdb": "2031-Nov-12 12:05",
       "cneos": {
-        "dist_au": 0.0406020658582153,
-        "dist_km": 6073982.598410176,
-        "jd_tdb": 2463183.003708045,
-        "orbit_id": "324",
-        "v_rel_kms": 10.1237849156999
+        "dist_au": 0.0406020690240529,
+        "dist_km": 6073983.072012741,
+        "jd_tdb": 2463183.003708989,
+        "orbit_id": "325",
+        "v_rel_kms": 10.1237851511346
       },
       "condition_code": 0,
-      "data_arc_days": 9753.0,
+      "data_arc_days": 9754.0,
       "datetime_et": "2031-11-12 07:04",
       "des": "138175",
       "error": null,
       "fullname": "138175 (2000 EE104)",
       "iso_et": "2031-11-12T07:04:11-05:00",
       "predicted": {
-        "dist_au": 0.040602337143971066,
+        "dist_au": 0.04060234018310732,
         "epoch_jd": 2461200.5,
         "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
         "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2463183.003708045,
-        "v_rel_kms": 10.123802547465022
+        "jd_tdb": 2463183.003708989,
+        "v_rel_kms": 10.123802772834441
       },
       "reasons": [
         "condition_code_0"
       ],
       "residual": {
-        "ddist_au": 2.71285755769346e-07,
-        "ddist_km": 40.5837714143344,
+        "ddist_au": 2.7115905441854604e-07,
+        "ddist_km": 40.56481716203991,
         "dt_days": 0.0,
         "dt_minutes": 0.0,
         "dt_seconds": 0.0,
-        "dv_kms": 1.7631765121706167e-05
+        "dv_kms": 1.7621699841541272e-05
       },
-      "sbdb_orbit_id": "JPL 324",
+      "sbdb_orbit_id": "JPL 325",
       "status": "ok"
     },
     {
@@ -14619,39 +14619,39 @@
     {
       "cd_tdb": "2029-Nov-10 15:19",
       "cneos": {
-        "dist_au": 0.0416175951621308,
-        "dist_km": 6225903.619909389,
-        "jd_tdb": 2462451.13825133,
-        "orbit_id": "324",
-        "v_rel_kms": 9.14982032386927
+        "dist_au": 0.0416175936354165,
+        "dist_km": 6225903.39151618,
+        "jd_tdb": 2462451.13825128,
+        "orbit_id": "325",
+        "v_rel_kms": 9.14982045970571
       },
       "condition_code": 0,
-      "data_arc_days": 9753.0,
+      "data_arc_days": 9754.0,
       "datetime_et": "2029-11-10 10:18",
       "des": "138175",
       "error": null,
       "fullname": "138175 (2000 EE104)",
       "iso_et": "2029-11-10T10:17:55-05:00",
       "predicted": {
-        "dist_au": 0.04161749280674327,
+        "dist_au": 0.04161749132853523,
         "epoch_jd": 2461200.5,
         "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
         "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2462451.13825133,
-        "v_rel_kms": 9.149826032564448
+        "jd_tdb": 2462451.13825128,
+        "v_rel_kms": 9.149826165170298
       },
       "reasons": [
         "condition_code_0"
       ],
       "residual": {
-        "ddist_au": -1.0235538753372575e-07,
-        "ddist_km": -15.312148029718696,
+        "ddist_au": -1.0230688126527943e-07,
+        "ddist_km": -15.304891595243523,
         "dt_days": 0.0,
         "dt_minutes": 0.0,
         "dt_seconds": 0.0,
-        "dv_kms": 5.7086951787965745e-06
+        "dv_kms": 5.705464587890674e-06
       },
-      "sbdb_orbit_id": "JPL 324",
+      "sbdb_orbit_id": "JPL 325",
       "status": "ok"
     },
     {
@@ -14690,6 +14690,44 @@
         "dv_kms": -8.232983077505196e-07
       },
       "sbdb_orbit_id": "JPL 9",
+      "status": "ok"
+    },
+    {
+      "cd_tdb": "2036-Nov-25 02:31",
+      "cneos": {
+        "dist_au": 0.0417008835099793,
+        "dist_km": 6238363.379401646,
+        "jd_tdb": 2465022.604618614,
+        "orbit_id": "37",
+        "v_rel_kms": 18.867802677625
+      },
+      "condition_code": 0,
+      "data_arc_days": 5480.0,
+      "datetime_et": "2036-11-24 21:29",
+      "des": "2009 WB105",
+      "error": null,
+      "fullname": "(2009 WB105)",
+      "iso_et": "2036-11-24T21:29:29-05:00",
+      "predicted": {
+        "dist_au": 0.04169901166328223,
+        "epoch_jd": 2461200.5,
+        "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
+        "grid_seconds": 51.83999240398407,
+        "jd_tdb": 2465022.604618614,
+        "v_rel_kms": 18.867815765884988
+      },
+      "reasons": [
+        "condition_code_0"
+      ],
+      "residual": {
+        "ddist_au": -1.8718466970740755e-06,
+        "ddist_km": -280.0242801591096,
+        "dt_days": 0.0,
+        "dt_minutes": 0.0,
+        "dt_seconds": 0.0,
+        "dv_kms": 1.3088259986915318e-05
+      },
+      "sbdb_orbit_id": "37",
       "status": "ok"
     },
     {
@@ -17811,39 +17849,39 @@
     {
       "cd_tdb": "2029-Nov-26 03:33",
       "cneos": {
-        "dist_au": 0.0495658686982308,
-        "dist_km": 7414948.416651107,
-        "jd_tdb": 2462466.647739855,
-        "orbit_id": "226",
-        "v_rel_kms": 8.49872260333976
+        "dist_au": 0.0495658686920599,
+        "dist_km": 7414948.415727954,
+        "jd_tdb": 2462466.647740199,
+        "orbit_id": "227",
+        "v_rel_kms": 8.49872260747266
       },
       "condition_code": 0,
-      "data_arc_days": 10225.0,
+      "data_arc_days": 10227.0,
       "datetime_et": "2029-11-25 22:32",
       "des": "33342",
       "error": null,
       "fullname": "33342 (1998 WT24)",
       "iso_et": "2029-11-25T22:31:35-05:00",
       "predicted": {
-        "dist_au": 0.049565893465780234,
+        "dist_au": 0.04956589345984732,
         "epoch_jd": 2461200.5,
         "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
         "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2462466.647739855,
-        "v_rel_kms": 8.498721936829936
+        "jd_tdb": 2462466.647740199,
+        "v_rel_kms": 8.498721940966261
       },
       "reasons": [
         "condition_code_0"
       ],
       "residual": {
-        "ddist_au": 2.476754943497861e-08,
-        "ddist_km": 3.7051726579297877,
+        "ddist_au": 2.476778741822283e-08,
+        "ddist_km": 3.7052082597163856,
         "dt_days": 0.0,
         "dt_minutes": 0.0,
         "dt_seconds": 0.0,
-        "dv_kms": -6.665098233327171e-07
+        "dv_kms": -6.665063985167308e-07
       },
-      "sbdb_orbit_id": "JPL 226",
+      "sbdb_orbit_id": "JPL 227",
       "status": "ok"
     },
     {
@@ -18044,19 +18082,19 @@
     "close_au": 0.01,
     "include_condition_code_0": true,
     "n_closest": 200,
-    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43383 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
+    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43391 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
   },
   "summary": {
     "abs_ddist_au_max": 1.2071944193866105e-05,
-    "abs_ddist_au_median": 1.0236336849336891e-08,
+    "abs_ddist_au_median": 1.0384558541201572e-08,
     "abs_ddist_km_max": 1805.9371466115972,
-    "abs_ddist_km_median": 1.5313341964287455,
+    "abs_ddist_km_median": 1.5535078459232532,
     "abs_dt_minutes_max": 16.41600027680397,
     "abs_dt_minutes_median": 0.0,
     "errors": [],
     "n_error": 0,
-    "n_ok": 471,
-    "n_selected": 471,
+    "n_ok": 472,
+    "n_selected": 472,
     "skipped": false,
     "worst_ddist": {
       "datetime_et": "2034-10-09 07:07",
