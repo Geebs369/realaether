@@ -108,3 +108,5 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-26T01:48:44Z,1795657724,5.2,mww,12.7,-35.967,178.643,"183 km N of Hicks Bay, New Zealand",us6000udjx,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udjx
 2026-11-26T02:09:17Z,1795658957,5.0,mww,10.0,-35.934,178.26,"184 km N of Hicks Bay, New Zealand",us6000udjz,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udjz
 2026-11-26T03:30:28Z,1795663828,4.6,mb,10.0,14.164,-93.126,"97 km SW of Puerto Madero, Mexico",us6000udki,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udki
+2026-11-26T09:08:40Z,1795684120,5.5,mb,15.1,-10.562,117.195,"204 km S of Taliwang, Indonesia",us6000udm8,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udm8
+2026-11-26T09:22:45Z,1795684965,5.2,mb,493.9,-20.536,-177.763,"265 km WNW of Houma, Tonga",us6000udmc,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udmc
