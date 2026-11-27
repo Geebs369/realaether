@@ -120,3 +120,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-27T04:44:36Z,1795754676,5.0,mww,10.0,-44.568,-79.761,"Off the coast of Aisen, Chile",us6000udua,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udua
 2026-11-27T11:02:25Z,1795777345,4.8,mb,35.5,51.393,159.366,"183 km SSE of Vilyuchinsk, Russia",us6000udw4,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udw4
 2026-11-27T12:48:16Z,1795783696,4.5,mb,271.6,-18.329,-175.18,"131 km WNW of Neiafu, Tonga",us6000udwh,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udwh
+2026-11-27T21:47:28Z,1795816048,4.5,mb,10.0,31.152,140.331,"Izu Islands, Japan region",us6000ue0a,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue0a
