@@ -117,3 +117,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-27T00:07:00Z,1795738020,5.1,mb,74.1,-9.579,161.236,"107 km SSE of Auki, Solomon Islands",us6000udt9,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udt9
 2026-11-27T02:13:21Z,1795745601,5.0,mww,9.0,-14.625,167.857,"89 km SSE of Sola, Vanuatu",us6000udtu,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udtu
 2026-11-27T04:17:10Z,1795753030,4.6,mb,42.5,2.044,126.646,"155 km WNW of Tobelo, Indonesia",us6000udu6,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udu6
+2026-11-27T04:44:36Z,1795754676,5.0,mww,10.0,-44.568,-79.761,"Off the coast of Aisen, Chile",us6000udua,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udua
