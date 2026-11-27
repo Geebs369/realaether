@@ -115,3 +115,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-26T16:18:00Z,1795709880,4.5,mb,173.3,4.662,125.909,"95 km SSE of Sarangani, Philippines",us6000udqa,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udqa
 2026-11-26T19:33:08Z,1795721588,5.1,mww,84.6,28.366,141.264,"Bonin Islands, Japan region",us6000udry,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udry
 2026-11-27T00:07:00Z,1795738020,5.1,mb,74.1,-9.579,161.236,"107 km SSE of Auki, Solomon Islands",us6000udt9,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udt9
+2026-11-27T02:13:21Z,1795745601,5.0,mww,9.0,-14.625,167.857,"89 km SSE of Sola, Vanuatu",us6000udtu,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udtu
