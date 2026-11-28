@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://geebs369.github.io/realaether/mission/</loc>
-    <lastmod>2026-11-28T02:35:13Z</lastmod>
+    <lastmod>2026-11-28T02:40:44Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -53,5 +53,11 @@
     <lastmod>2026-11-24T02:03:38Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://geebs369.github.io/realaether/timeline/</loc>
+    <lastmod>2026-11-28T02:40:44Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

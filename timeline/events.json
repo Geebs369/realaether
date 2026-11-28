@@ -1,0 +1,1385 @@
+{
+  "title": "RealAether impact and solar timeline",
+  "updated": "2026-11-27",
+  "timezone_note": "Civil dates are in the usual historical (Gregorian/Julian as commonly cited) calendar. Instrumental Dst times are UT from NASA OMNI2 / Kyoto WDC, as used in our Part 2 study.",
+  "credit": "Architect: 3TH3R3AL1 · Builder: Geebs — RealAether",
+  "license": "Code MIT · Data & charts CC BY 4.0, credit RealAether (Geebs369)",
+  "methods": "Craters of the last ~100,000 years, plus a few famous older structures, are taken from the Earth Impact Database as compiled on Wikipedia’s List of impact structures on Earth (the PASSC / passc.net database site was down when this page was built). Historical airbursts and falls are entered only when they are widely documented; Ch’ing-yang is marked unverified. Solar-particle (Miyake) events and geomagnetic storms follow our 27 November 2026 cataclysm study, which used NASA OMNI2 Dst, Kyoto WDC, SILSO sunspot numbers, and NOAA SWPC. Lunar flashes and Encke node crossings come from our Taurid and monument–sky studies. Evidence labels: confirmed = widely accepted with physical or instrumental records; debated = a real event or structure whose cause, age, or interpretation is disputed; unverified = a historical claim without confirming physical evidence; model = a calculated orbital-geometry epoch, not a dated impact.",
+  "counts": {
+    "total": 73,
+    "by_kind": {
+      "impact": 47,
+      "study": 11,
+      "solar": 15
+    },
+    "by_evidence": {
+      "confirmed": 55,
+      "debated": 7,
+      "model": 10,
+      "unverified": 1
+    }
+  },
+  "events": [
+    {
+      "id": "vredefort",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Vredefort",
+      "year_ce": -2022997974.0,
+      "date_label": "2,023 ± 4 million years ago",
+      "place": "Free State, South Africa",
+      "size": "160 km crater",
+      "evidence": "confirmed",
+      "summary": "Earth’s largest confirmed impact structure, and one of the oldest. The original crater has been deeply eroded; the remaining dome is a UNESCO World Heritage site.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (compilation as of 2024)",
+          "url": "https://en.wikipedia.org/wiki/List_of_impact_structures_on_Earth"
+        },
+        {
+          "text": "Kamo et al. ages as compiled there (2,023 ± 4 Ma); diameter 160 km"
+        }
+      ]
+    },
+    {
+      "id": "sudbury",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Sudbury Basin",
+      "year_ce": -1848997974.0,
+      "date_label": "1,849 million years ago",
+      "place": "Ontario, Canada",
+      "size": "130 km crater",
+      "evidence": "confirmed",
+      "summary": "One of the largest confirmed impact structures, later deformed by tectonics. The basin is a major nickel-copper mining district.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 130 km, 1,849 Ma"
+        }
+      ]
+    },
+    {
+      "id": "manicouagan",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Manicouagan",
+      "year_ce": -215557974.0,
+      "date_label": "215.56 ± 0.05 million years ago",
+      "place": "Quebec, Canada",
+      "size": "100 km crater",
+      "evidence": "confirmed",
+      "summary": "A large, well-preserved Late Triassic impact. A ring-shaped reservoir now fills the eroded inner basin. Links to a Late Triassic turnover have been proposed and remain less definitive than the K–Pg case.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 100 km, 215.56 ± 0.05 Ma"
+        }
+      ]
+    },
+    {
+      "id": "chicxulub",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Chicxulub",
+      "year_ce": -66048974.0,
+      "date_label": "66.051 ± 0.031 million years ago",
+      "place": "Yucatán, Mexico",
+      "size": "150 km crater",
+      "evidence": "confirmed",
+      "summary": "The impact most widely accepted as the cause of the Cretaceous–Paleogene mass extinction, including the non-avian dinosaurs. A roughly 10 km asteroid or comet struck shallow tropical seas and produced a global debris and fire-pulse layer.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 150 km, 66.051 ± 0.031 Ma"
+        },
+        {
+          "text": "Alvarez et al. 1980, Science 208:1095; Schulte et al. 2010, Science 327:1214"
+        }
+      ]
+    },
+    {
+      "id": "popigai",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Popigai",
+      "year_ce": -35697974.0,
+      "date_label": "35.7 ± 0.2 million years ago",
+      "place": "Siberia, Russia",
+      "size": "100 km crater",
+      "evidence": "confirmed",
+      "summary": "One of the largest Cenozoic impact structures, formed in the late Eocene. Suggested links to later extinction episodes have been questioned.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 100 km, 35.7 ± 0.2 Ma"
+        }
+      ]
+    },
+    {
+      "id": "chesapeake",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Chesapeake Bay",
+      "year_ce": -34857974.0,
+      "date_label": "34.86 ± 0.23 million years ago",
+      "place": "Virginia, United States",
+      "size": "40 km crater",
+      "evidence": "confirmed",
+      "summary": "A buried late-Eocene marine impact, discovered under Chesapeake Bay. It is close in age to Popigai; a causal link to Eocene extinctions is debated.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 40 km, 34.86 ± 0.23 Ma"
+        }
+      ]
+    },
+    {
+      "id": "ries",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Nördlinger Ries",
+      "year_ce": -14805974.0,
+      "date_label": "14.808 ± 0.038 million years ago",
+      "place": "Bavaria, Germany",
+      "size": "24 km crater",
+      "evidence": "confirmed",
+      "summary": "A well-studied Miocene impact. The town of Nördlingen sits inside the crater. The smaller Steinheim basin nearby is usually treated as a companion impact.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 24 km, 14.808 ± 0.038 Ma"
+        }
+      ]
+    },
+    {
+      "id": "elgygytgyn",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "El’gygytgyn",
+      "year_ce": -3497974.0,
+      "date_label": "3.5 million years ago",
+      "place": "Chukotka, Russia",
+      "size": "18 km crater",
+      "evidence": "confirmed",
+      "summary": "A well-preserved Pliocene crater now occupied by a deep Arctic lake, often used as a paleoclimate archive.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 18 km, 3.5 Ma"
+        }
+      ]
+    },
+    {
+      "id": "tenoumer",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Tenoumer",
+      "year_ce": -1597974.0,
+      "date_label": "1.6 ± 0.1 million years ago",
+      "place": "Sahara, Mauritania",
+      "size": "1.9 km crater",
+      "evidence": "confirmed",
+      "summary": "A sharp-rimmed crater in the Mauritanian Sahara. The age listed in the Wikipedia / EID compilation is 1.6 ± 0.1 Ma; earlier papers also discussed a much younger (~21 ka) age, so the dating has a history of revision.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation), in the 1–10 Ma table: 1.9 km, 1.6 ± 0.1 Ma"
+        }
+      ]
+    },
+    {
+      "id": "pingualuit",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Pingualuit (New Quebec)",
+      "year_ce": -1397974.0,
+      "date_label": "1.4 ± 0.1 million years ago",
+      "place": "Quebec, Canada",
+      "size": "3.4 km crater",
+      "evidence": "confirmed",
+      "summary": "A nearly circular, water-filled crater in northern Quebec, among the visually clearest youngish impact structures on Earth.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 3.4 km, 1.4 ± 0.1 Ma"
+        }
+      ]
+    },
+    {
+      "id": "bosumtwi",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Bosumtwi",
+      "year_ce": -1097974.0,
+      "date_label": "1.1 million years ago",
+      "place": "Ashanti, Ghana",
+      "size": "10 km crater",
+      "evidence": "confirmed",
+      "summary": "A young, lake-filled crater and the source of the Ivory Coast tektites.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 10 km, 1.1 Ma"
+        }
+      ]
+    },
+    {
+      "id": "zhamanshin",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Zhamanshin",
+      "year_ce": -897974.0,
+      "date_label": "900 ± 100 thousand years ago",
+      "place": "Kazakhstan",
+      "size": "14 km crater",
+      "evidence": "confirmed",
+      "summary": "The largest confirmed crater of the last million years. It has been described as large enough to have produced a nuclear-winter-like climate effect.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 14 km, 900 ± 100 ka"
+        },
+        {
+          "text": "Grieve 1990, Scientific American 262(4):66, on impact cratering on Earth"
+        }
+      ]
+    },
+    {
+      "id": "pantasma",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Pantasma",
+      "year_ce": -801974.0,
+      "date_label": "804 thousand years ago",
+      "place": "Jinotega, Nicaragua",
+      "size": "14 km crater",
+      "evidence": "confirmed",
+      "summary": "A large Pleistocene impact structure in Nicaragua, comparable in size to Zhamanshin.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 14 km, 804 ka"
+        }
+      ]
+    },
+    {
+      "id": "australasian-tektites",
+      "kind": "impact",
+      "subtype": "tektites",
+      "title": "Australasian tektite strewn field",
+      "year_ce": -777974.0,
+      "date_label": "about 780 thousand years ago",
+      "place": "Source crater undiscovered (likely Southeast Asia)",
+      "size": "strewn field; source crater not found",
+      "evidence": "debated",
+      "summary": "The largest known tektite strewn field, stretching from Southeast Asia to Australia and the Southern Ocean. The tektites record a large impact, but the source crater has not been identified.",
+      "citations": [
+        {
+          "text": "Wikipedia, List of impact structures on Earth, “10 ka to 1 Ma” section (2024 compilation)"
+        },
+        {
+          "text": "Glass & Pizzuto 1994, JGR 99:19075; Povenmire, Liu & Xianlin 1999, LPSC 30, #1072"
+        }
+      ]
+    },
+    {
+      "id": "montarqui",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Monturaqui",
+      "year_ce": -637974.0,
+      "date_label": "640 ± 140 thousand years ago",
+      "place": "Atacama Desert, Chile",
+      "size": "0.455 km crater",
+      "evidence": "confirmed",
+      "summary": "A small, well-preserved crater in the Atacama Desert.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.455 km, 640 ± 140 ka"
+        }
+      ]
+    },
+    {
+      "id": "lonar",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Lonar",
+      "year_ce": -573974.0,
+      "date_label": "576 ± 47 thousand years ago",
+      "place": "Maharashtra, India",
+      "size": "1.8 km crater",
+      "evidence": "confirmed",
+      "summary": "A lake-filled crater excavated in basalt of the Deccan Traps, important because most other well-studied craters formed in other rock types.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.8 km, 576 ± 47 ka"
+        }
+      ]
+    },
+    {
+      "id": "kalkkop",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Kalkkop",
+      "year_ce": -247974.0,
+      "date_label": "about 250 thousand years ago",
+      "place": "Eastern Cape, South Africa",
+      "size": "0.64 km crater",
+      "evidence": "confirmed",
+      "summary": "A small Pleistocene crater in South Africa.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.64 km, ~250 ka"
+        }
+      ]
+    },
+    {
+      "id": "tswaing",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Tswaing (Pretoria Saltpan)",
+      "year_ce": -217974.0,
+      "date_label": "220 thousand years ago",
+      "place": "near Pretoria, South Africa",
+      "size": "1.1 km crater",
+      "evidence": "confirmed",
+      "summary": "A well-dated, lake-filled Pleistocene crater north of Pretoria.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.1 km, 220 ka"
+        }
+      ]
+    },
+    {
+      "id": "wolfe-creek",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Wolfe Creek",
+      "year_ce": -117974.0,
+      "date_label": "less than 120 thousand years ago",
+      "place": "Western Australia, Australia",
+      "size": "0.9 km crater",
+      "evidence": "confirmed",
+      "summary": "A well-preserved iron-meteorite crater in the Australian desert. The listed age is an upper bound (<120 ka).",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.9 km, <120 ka"
+        }
+      ]
+    },
+    {
+      "id": "agoudal",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Agoudal",
+      "year_ce": -102974.0,
+      "date_label": "105 thousand years ago",
+      "place": "Atlas Mountains, Morocco",
+      "size": "3.0 km crater",
+      "evidence": "confirmed",
+      "summary": "A mid-sized crater in the Moroccan Atlas, associated with iron-meteorite finds.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 3.0 km, 105 ka"
+        }
+      ]
+    },
+    {
+      "id": "aorounga",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Aorounga Central",
+      "year_ce": -497974.0,
+      "date_label": "possibly ~500 thousand years ago",
+      "place": "Borkou, Chad",
+      "size": "16 km crater",
+      "evidence": "debated",
+      "summary": "A large, visually striking structure in Chad. The structure is confirmed as an impact; the age is only loosely given as possibly ~500 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 16 km, age “possibly 500 ka”"
+        }
+      ]
+    },
+    {
+      "id": "amguid",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Amguid",
+      "year_ce": -52974.0,
+      "date_label": "10–100 thousand years ago",
+      "place": "Tamanrasset, Algeria",
+      "size": "0.45 km crater",
+      "evidence": "confirmed",
+      "summary": "A small, sharp-rimmed crater in Algeria. The age is only constrained to the 10–100 ka window.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.45 km, 10–100 ka"
+        }
+      ]
+    },
+    {
+      "id": "hickman",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Hickman",
+      "year_ce": -52974.0,
+      "date_label": "10–100 thousand years ago",
+      "place": "Western Australia, Australia",
+      "size": "0.26 km crater",
+      "evidence": "confirmed",
+      "summary": "A small crater in Western Australia with an age only loosely bounded at 10–100 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.26 km, 10–100 ka"
+        }
+      ]
+    },
+    {
+      "id": "jeokjung",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Jeokjung–Chogye Basin",
+      "year_ce": -44474.0,
+      "date_label": "30–63 thousand years ago",
+      "place": "Gyeongsangnam, South Korea",
+      "size": "8 km structure",
+      "evidence": "confirmed",
+      "summary": "A sizable late-Pleistocene impact structure in South Korea, with the listed age spanning 30–63 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 8 km, 30–63 ka"
+        }
+      ]
+    },
+    {
+      "id": "xiuyan",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Xiuyan",
+      "year_ce": -47974.0,
+      "date_label": "50 thousand years ago",
+      "place": "Xiuyan, China",
+      "size": "1.8 km crater",
+      "evidence": "confirmed",
+      "summary": "A lake-filled crater in northeastern China, listed at about 50 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.8 km, 50 ka"
+        }
+      ]
+    },
+    {
+      "id": "yilan",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Yilan",
+      "year_ce": -46974.0,
+      "date_label": "49 thousand years ago",
+      "place": "Heilongjiang, China",
+      "size": "1.85 km crater",
+      "evidence": "confirmed",
+      "summary": "A recently recognized crater in northeastern China, listed at about the same age as Meteor Crater.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.85 km, 49 ka"
+        }
+      ]
+    },
+    {
+      "id": "meteor-crater",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Meteor Crater (Barringer)",
+      "year_ce": -46974.0,
+      "date_label": "49 thousand years ago",
+      "place": "Arizona, United States",
+      "size": "1.2 km crater",
+      "evidence": "confirmed",
+      "summary": "The classic, well-preserved iron-meteorite crater of the American Southwest, about 1.2 km across and about 49,000 years old. It is among the best-studied young impact sites on Earth.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.2 km, 49 ka"
+        }
+      ]
+    },
+    {
+      "id": "rio-cuarto",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Rio Cuarto crater field",
+      "year_ce": -7974.0,
+      "date_label": "listed as <10 ka or <100 ka",
+      "place": "Pampa, Argentina",
+      "size": "up to 4.5 km (elongate features)",
+      "evidence": "debated",
+      "summary": "Sometimes described as the largest structure of the last 100,000 years. The origin and age are uncertain: some papers argue for a recent grazing impact and tektite field, while the EID gives a broader <100 ka age, and the identification has been questioned.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation)"
+        },
+        {
+          "text": "Schultz & Lianza 1992, Nature 355:234; Bland et al. 2002, Science 296:1109"
+        }
+      ]
+    },
+    {
+      "id": "ydb",
+      "kind": "study",
+      "subtype": "verdict",
+      "title": "Younger Dryas boundary — impact trigger?",
+      "year_ce": -10873,
+      "date_label": "about 12,900 years ago (≈ 10,900 BC)",
+      "place": "global climate event; claimed North American impact",
+      "size": null,
+      "evidence": "debated",
+      "summary": "The Younger Dryas was a sudden Northern Hemisphere cold snap in the middle of the warming that ended the last ice age, not the end of the ice age itself. A proposed impact or airburst trigger (the Younger Dryas impact hypothesis, supported in public by Randall Carlson among others) is probably not the cause: our review puts confidence at about 85% against. There is no crater of the right age, the nanodiamond, platinum and melt-glass evidence is disputed, and our Taurid / Encke node-crossing test is neutral (nearest crossing 649 years away; a random date does as well, p ≈ 0.53). Meltwater from glacial Lake Agassiz weakening Atlantic overturning is the better-supported explanation. A small airburst cannot be completely ruled out.",
+      "citations": [
+        {
+          "text": "RealAether Monument–sky study (Impact Hypothesis, Part 3), 27 Nov 2026",
+          "url": "../impact/study/MonumentSky_Report.pdf"
+        },
+        {
+          "text": "Encke node-crossing test: nearest crossing 649 yr from the YDB, p(random date as close) = 0.54",
+          "url": "../impact/#ydih"
+        }
+      ]
+    },
+    {
+      "id": "encke--11783",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (inbound, descending)",
+      "year_ce": -11783,
+      "date_label": "11,783 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s descending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--11483",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (outbound, ascending)",
+      "year_ce": -11483,
+      "date_label": "11,483 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s ascending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--8953",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (inbound, ascending)",
+      "year_ce": -8953,
+      "date_label": "8,953 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s ascending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--8619",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (outbound, descending)",
+      "year_ce": -8619,
+      "date_label": "8,619 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s descending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--5759",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (inbound, descending)",
+      "year_ce": -5759,
+      "date_label": "5,759 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s descending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--5421",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (outbound, ascending)",
+      "year_ce": -5421,
+      "date_label": "5,421 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s ascending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--2927",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (inbound, ascending)",
+      "year_ce": -2927,
+      "date_label": "2,927 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s ascending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--2693",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (outbound, descending)",
+      "year_ce": -2693,
+      "date_label": "2,693 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s descending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke--59",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (inbound, descending)",
+      "year_ce": -59,
+      "date_label": "59 BC",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s descending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "encke-249",
+      "kind": "study",
+      "subtype": "node-crossing",
+      "title": "Encke node crossing (outbound, ascending)",
+      "year_ce": 249,
+      "date_label": "AD 249",
+      "place": "Earth–Taurid geometry (calculated)",
+      "size": null,
+      "evidence": "model",
+      "summary": "Calculated epoch when comet Encke’s ascending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).",
+      "citations": [
+        {
+          "text": "RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json",
+          "url": "../impact/study/ImpactStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "luna",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Luna",
+      "year_ce": -4874,
+      "date_label": "less than 6,900 years ago (< 5000 BC)",
+      "place": "Gujarat, India",
+      "size": "1.5–1.8 km crater",
+      "evidence": "confirmed",
+      "summary": "A Holocene crater in Gujarat, with only an upper bound on the age (<6.9 ka).",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.5–1.8 km, <6.9 ka"
+        }
+      ]
+    },
+    {
+      "id": "macha",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Macha crater field",
+      "year_ce": -5299,
+      "date_label": "about 5300 BC (7.3 ka)",
+      "place": "Sakha Republic, Russia",
+      "size": "0.3 km (largest of a field)",
+      "evidence": "confirmed",
+      "summary": "A small Holocene crater field in Yakutia, listed at 7.3 ka (about 5300 BC).",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.3 km, 7.3 ka / 5300 BC"
+        }
+      ]
+    },
+    {
+      "id": "boxhole",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Boxhole",
+      "year_ce": -3399,
+      "date_label": "about 3400 BC (5.4 ka)",
+      "place": "Northern Territory, Australia",
+      "size": "0.2 km crater",
+      "evidence": "confirmed",
+      "summary": "A small iron-meteorite crater in central Australia, listed at 5.4 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.2 km, 5.4 ka / 3400 BC"
+        }
+      ]
+    },
+    {
+      "id": "morasko",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Morasko",
+      "year_ce": -2999,
+      "date_label": "about 3000 BC (5.0 ka)",
+      "place": "Poznań, Poland",
+      "size": "0.1 km crater (largest of a field)",
+      "evidence": "confirmed",
+      "summary": "A small iron-meteorite crater field at the edge of Poznań, listed at about 5.0 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.1 km, 5.0 ka / 3000 BC"
+        },
+        {
+          "text": "Stankowski, Raukas, Bluszcz & Fedorowicz 2007, Geochronometria 28:25 (luminescence dating of Morasko, Kaali, Ilumetsa and Tsõõrikmäe)"
+        }
+      ]
+    },
+    {
+      "id": "henbury",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Henbury crater field",
+      "year_ce": -2699,
+      "date_label": "about 2700 BC (4.7 ka)",
+      "place": "Northern Territory, Australia",
+      "size": "0.2 km (largest of a field)",
+      "evidence": "confirmed",
+      "summary": "A small crater field from a fragmented iron meteorite. It has been linked to Aboriginal Australian oral traditions.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.2 km, 4.7 ka / 2700 BC"
+        },
+        {
+          "text": "Hamacher & Goldsmith 2013, J. Astronomical History and Heritage 16:295"
+        }
+      ]
+    },
+    {
+      "id": "campo",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Campo del Cielo",
+      "year_ce": -2499,
+      "date_label": "about 2500 BC (4.5 ka)",
+      "place": "Chaco, Argentina",
+      "size": "about 0.05–0.1 km (largest pit)",
+      "evidence": "confirmed",
+      "summary": "An iron-meteorite strewn field and small craters in northern Argentina, listed at about 4.5 ka. The EID size is about 50 m; other sources quote about 100 m. It has been discussed in connection with Native Argentine traditions.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): ~0.05–0.1 km, 4.5 ka / 2500 BC"
+        },
+        {
+          "text": "Bobrowsky & Rickman 2007, Comet/Asteroid Impacts and Human Society, pp. 30–31"
+        }
+      ]
+    },
+    {
+      "id": "kaali",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Kaali",
+      "year_ce": -1499,
+      "date_label": "about 1500 BC (3.5 ka)",
+      "place": "Saaremaa, Estonia",
+      "size": "0.1 km (main crater of a field)",
+      "evidence": "confirmed",
+      "summary": "A small crater field on the island of Saaremaa, listed at about 3.5 ka (1500 BC). It has been discussed as a possible influence on Estonian and Finnish mythology.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.1 km, 3.5 ka / 1500 BC"
+        },
+        {
+          "text": "Haas, Peekna & Walker 2003, Folklore 23; Stankowski et al. 2007, Geochronometria 28:25"
+        }
+      ]
+    },
+    {
+      "id": "dalgaranga",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Dalgaranga",
+      "year_ce": -974,
+      "date_label": "less than about 3,000 years ago?",
+      "place": "Western Australia, Australia",
+      "size": "24 m crater",
+      "evidence": "confirmed",
+      "summary": "A very small crater, under the usual 100 m cutoff used in the “10 ka or less” table, but listed there with a loosely constrained age (“less than 3?” ka).",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.024 km, age “less than 3? ka”"
+        }
+      ]
+    },
+    {
+      "id": "whitecourt",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Whitecourt",
+      "year_ce": 900,
+      "date_label": "about AD 900 (1.1 ka)",
+      "place": "Alberta, Canada",
+      "size": "40 m crater",
+      "evidence": "confirmed",
+      "summary": "A small, well-preserved iron-meteorite crater in the boreal forest of Alberta, listed at about 1.1 ka (around AD 900).",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.04 km, 1.1 ka / AD 900"
+        }
+      ]
+    },
+    {
+      "id": "jinlin",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Jinlin",
+      "year_ce": -2974,
+      "date_label": "less than 10,000 years ago",
+      "place": "Guangdong, China",
+      "size": "0.9 km crater",
+      "evidence": "confirmed",
+      "summary": "A Holocene crater in Guangdong Province, listed only with an age bound of <10 ka.",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.9 km, <10 ka"
+        }
+      ]
+    },
+    {
+      "id": "wabar",
+      "kind": "impact",
+      "subtype": "crater",
+      "title": "Wabar",
+      "year_ce": 1800,
+      "date_label": "about AD 1800 (0.2 ka)",
+      "place": "Rub’ al Khali, Saudi Arabia",
+      "size": "0.1 km (largest of a field)",
+      "evidence": "confirmed",
+      "summary": "A young crater field in the Empty Quarter, listed at about 200 years ago (~AD 1800).",
+      "citations": [
+        {
+          "text": "Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.1 km, 0.2 ka / ~AD 1800"
+        }
+      ]
+    },
+    {
+      "id": "miyake-12350bc",
+      "kind": "solar",
+      "subtype": "miyake",
+      "title": "Miyake-event candidate, ~12,350 BC",
+      "year_ce": -12349,
+      "date_label": "about 12,350 BC",
+      "place": "recorded in ¹⁴C / ¹⁰Be (global)",
+      "evidence": "debated",
+      "summary": "A candidate extreme solar-particle event older than the 9.4-kyr solar-activity reconstruction, so we could not test whether it fell at a typical activity level. It is not one of the five confirmed Holocene Miyake events.",
+      "citations": [
+        {
+          "text": "Bard et al. 2023 (as cited in our Part 2 study)"
+        },
+        {
+          "text": "RealAether cataclysm study (Impact Hypothesis, Part 2), 27 Nov 2026",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "miyake-7176bc",
+      "kind": "solar",
+      "subtype": "miyake",
+      "title": "Miyake event, 7176 BC",
+      "year_ce": -7175,
+      "date_label": "7176 BC",
+      "place": "recorded in ¹⁴C / ¹⁰Be (global)",
+      "evidence": "confirmed",
+      "summary": "A confirmed extreme solar-particle event: a sharp, nearly global spike in radiocarbon (¹⁴C) and beryllium-10 (¹⁰Be). Events like this do not burn the land; before the electrical age the main human effect would have been great auroras. They recur at ordinary solar-activity levels, with a lower-bound rate of about 2–10% per century.",
+      "citations": [
+        {
+          "text": "Confirmed Holocene Miyake events as compiled in RealAether cataclysm study (Part 2), 27 Nov 2026",
+          "url": "../impact/#solar"
+        },
+        {
+          "text": "Discovery and annual ¹⁴C / ¹⁰Be literature, including Miyake et al. 2012, Nature 486:240 (AD 774/5 prototype); later work extended the list to 7176 BC, 5259 BC and 664–663 BC"
+        }
+      ]
+    },
+    {
+      "id": "miyake-5259bc",
+      "kind": "solar",
+      "subtype": "miyake",
+      "title": "Miyake event, 5259 BC",
+      "year_ce": -5258,
+      "date_label": "5259 BC",
+      "place": "recorded in ¹⁴C / ¹⁰Be (global)",
+      "evidence": "confirmed",
+      "summary": "A confirmed extreme solar-particle event in annual radiocarbon and beryllium-10 records.",
+      "citations": [
+        {
+          "text": "RealAether cataclysm study (Impact Hypothesis, Part 2), 27 Nov 2026",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "miyake-663bc",
+      "kind": "solar",
+      "subtype": "miyake",
+      "title": "Miyake event, 664–663 BC",
+      "year_ce": -663,
+      "date_label": "664–663 BC",
+      "place": "recorded in ¹⁴C / ¹⁰Be (global)",
+      "evidence": "confirmed",
+      "summary": "A confirmed extreme solar-particle event near the end of the 7th century BC, recorded in annual ¹⁴C and ¹⁰Be.",
+      "citations": [
+        {
+          "text": "RealAether cataclysm study (Impact Hypothesis, Part 2), 27 Nov 2026",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "miyake-774",
+      "kind": "solar",
+      "subtype": "miyake",
+      "title": "Miyake event, AD 774/5",
+      "year_ce": 774,
+      "date_label": "AD 774/5",
+      "place": "recorded in ¹⁴C / ¹⁰Be (global)",
+      "evidence": "confirmed",
+      "summary": "The strongest confirmed Miyake event of the Holocene, first identified as a rapid ¹⁴C rise in Japanese cedar rings and later confirmed in ¹⁰Be ice-core records. Models find only modest ozone loss and no significant climate effect; the ground-level radiation dose was small. Chronicles of unusual auroras are the main human record.",
+      "citations": [
+        {
+          "text": "Miyake et al. 2012, Nature 486:240"
+        },
+        {
+          "text": "Mekhaldi et al. 2015, Nature Communications 6:8611 (¹⁰Be)"
+        },
+        {
+          "text": "Sukhodolov et al. 2017 (ozone and climate modelling), as cited in our Part 2 study",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "miyake-993",
+      "kind": "solar",
+      "subtype": "miyake",
+      "title": "Miyake event, AD 993/4",
+      "year_ce": 993,
+      "date_label": "AD 993/4",
+      "place": "recorded in ¹⁴C / ¹⁰Be (global)",
+      "evidence": "confirmed",
+      "summary": "The second well-known medieval Miyake event, confirmed in annual ¹⁴C and ¹⁰Be shortly after the AD 774/5 discovery.",
+      "citations": [
+        {
+          "text": "Miyake et al. 2013, Nature Communications 4:1748"
+        },
+        {
+          "text": "Mekhaldi et al. 2015, Nature Communications 6:8611 (¹⁰Be)"
+        },
+        {
+          "text": "RealAether cataclysm study (Part 2)",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "chingyang",
+      "kind": "impact",
+      "subtype": "airburst",
+      "title": "Ch’ing-yang stone shower",
+      "year_ce": 1490,
+      "date_label": "AD 1490",
+      "place": "Qingyang, China (as later described)",
+      "evidence": "unverified",
+      "summary": "Ming-era and later Chinese chronicles describe a shower of stones said to have killed thousands. The reports are often cited, but the event is not confirmed by a crater, meteorites in hand, or a modern critical study that would put it on the same footing as Tunguska or Chelyabinsk.",
+      "citations": [
+        {
+          "text": "Often cited from later compilations of Chinese historical meteor records (e.g. Yau, Weissman & Yeomans 1994, Meteoritics 29:864). Marked unverified on this page."
+        }
+      ]
+    },
+    {
+      "id": "tunguska",
+      "kind": "impact",
+      "subtype": "airburst",
+      "title": "Tunguska",
+      "year_ce": 1908.496,
+      "date_label": "30 June 1908",
+      "place": "Podkamennaya Tunguska, Siberia, Russia",
+      "size": "airburst, roughly 50–60 m object; ~2,150 km² of forest flattened",
+      "evidence": "confirmed",
+      "summary": "The largest impact event in recorded history: an object roughly 50–60 m across exploded in the air over a remote region of Siberia and flattened about 80 million trees across some 2,150 km². Few or no deaths were confirmed. There is no crater of that event.",
+      "citations": [
+        {
+          "text": "Classic surveys of the 1908 Tunguska airburst; energy and size in the commonly cited 50–60 m / multi-megaton range (see also NASEM 2022 context in our Part 2 study)",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "curuca",
+      "kind": "impact",
+      "subtype": "airburst",
+      "title": "Curuçá River (“Brazil’s Tunguska”)",
+      "year_ce": 1930.61,
+      "date_label": "13 August 1930 (reports)",
+      "place": "Curuçá River, Amazonas, Brazil",
+      "evidence": "debated",
+      "summary": "Newspaper and later accounts describe a possible airburst that scorched forest along the Curuçá River. Details are thin, and the event is much less well documented than Tunguska or Chelyabinsk.",
+      "citations": [
+        {
+          "text": "Later discussions of the 13 August 1930 Curuçá event (sometimes called “Brazil’s Tunguska”); documentation is sparse, so this page marks it debated"
+        }
+      ]
+    },
+    {
+      "id": "sikhote-alin",
+      "kind": "impact",
+      "subtype": "fall",
+      "title": "Sikhote-Alin",
+      "year_ce": 1947.115,
+      "date_label": "12 February 1947",
+      "place": "Sikhote-Alin mountains, Russia",
+      "size": "iron fall; more than 100 craters, the largest tens of metres",
+      "evidence": "confirmed",
+      "summary": "A witnessed iron-meteorite fall. The meteoroid broke up in the atmosphere and rained down tons of fragments, leaving more than 100 small craters. It is a fall, not a city-scale airburst.",
+      "citations": [
+        {
+          "text": "Classic documentation of the 12 February 1947 Sikhote-Alin iron meteorite shower and crater field"
+        }
+      ]
+    },
+    {
+      "id": "carancas",
+      "kind": "impact",
+      "subtype": "fall",
+      "title": "Carancas",
+      "year_ce": 2007.705,
+      "date_label": "15 September 2007",
+      "place": "near Carancas, Puno, Peru",
+      "size": "stony meteorite; ~13 m crater",
+      "evidence": "confirmed",
+      "summary": "A stony meteorite reached the ground and excavated a crater about 13 m across near a village. Some locals reported feeling sick afterward; a shock-heated, water-filled crater and arsenic-bearing sediments have been discussed as possible causes, rather than “meteorite poisoning.”",
+      "citations": [
+        {
+          "text": "Tancredi et al. and follow-up work on the 15 September 2007 Carancas crater, Peru (~13 m)"
+        }
+      ]
+    },
+    {
+      "id": "chelyabinsk",
+      "kind": "impact",
+      "subtype": "airburst",
+      "title": "Chelyabinsk",
+      "year_ce": 2013.126,
+      "date_label": "15 February 2013",
+      "place": "Chelyabinsk, Russia",
+      "size": "~20 m stony object; airburst ~440 kt TNT",
+      "evidence": "confirmed",
+      "summary": "A rock about 20 m across entered over the southern Urals and exploded in the air. NASA’s official energy estimate is about 440 kilotons of TNT (roughly 30 times the Hiroshima bomb). The shock wave blew out windows across thousands of buildings and injured about 1,500 people, mostly from flying glass. It was not seen coming in advance.",
+      "citations": [
+        {
+          "text": "NASA / CNEOS fireball record; Brown et al. 2013, Nature 503:238; Popova et al. 2013, Science 342:1069"
+        },
+        {
+          "text": "Our CNEOS window 1 Jan 2005–4 Oct 2026 includes Chelyabinsk; 81 fireballs ≥1 kt, 3.72 per year (RealAether Part 2)",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "neliota-2022",
+      "kind": "impact",
+      "subtype": "lunar",
+      "title": "Taurid lunar impact flashes",
+      "year_ce": 2022.83,
+      "date_label": "29–31 October 2022",
+      "place": "near side of the Moon (NELIOTA survey)",
+      "size": "meteoroids roughly 20–250 g",
+      "evidence": "confirmed",
+      "summary": "The NELIOTA lunar impact-flash survey recorded 16 flashes from Taurid meteoroids on 29–31 October 2022, a year predicted in advance as a Taurid resonant-swarm return. Across August 2019–August 2023, flashes per observed hour were 1.84 times higher in October–November than in other months (p = 0.0005). Sporadic flashes show no such excess (p = 0.40). This is the one clear positive in our Taurid tests.",
+      "citations": [
+        {
+          "text": "Liakos et al. 2024 (NELIOTA); RealAether Taurid study, 27 Nov 2026",
+          "url": "../impact/#tests"
+        }
+      ]
+    },
+    {
+      "id": "cneos-fireballs",
+      "kind": "impact",
+      "subtype": "fireball-stats",
+      "title": "CNEOS fireballs ≥1 kt",
+      "year_ce": 2015.75,
+      "date_label": "1 Jan 2005 – 4 Oct 2026 (survey window)",
+      "year_end_ce": 2026.76,
+      "place": "Earth (global bolide detections)",
+      "size": "81 events ≥1 kt; mean 3.72 per year",
+      "evidence": "confirmed",
+      "summary": "NASA CNEOS fireball data in our study window show 81 events of at least 1 kiloton, or 3.72 per year, with a power-law index of 0.98 (90% CI 0.82–1.20). That matches Brown et al. (2002) almost exactly (3.7 per year, index 0.90). The largest event in the window is about 441 kt (Chelyabinsk). This is a survey statistic, not a single impact.",
+      "citations": [
+        {
+          "text": "NASA CNEOS fireballs; RealAether cataclysm study (Part 2), future_risk.json, window 2005-01-01 to 2026-10-04",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        },
+        {
+          "text": "Brown et al. 2002, Nature 420:294"
+        }
+      ]
+    },
+    {
+      "id": "carrington",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "Carrington event",
+      "year_ce": 1859.67,
+      "date_label": "1–2 September 1859",
+      "place": "Earth (global auroras; telegraph systems)",
+      "metrics": {
+        "dst_nT": "about −850 to −1,760 (estimated)",
+        "kp": "pre-dates the Kp index"
+      },
+      "evidence": "confirmed",
+      "summary": "The benchmark extreme geomagnetic storm of the instrumental era, following a white-light solar flare observed by Richard Carrington and Richard Hodgson on 1 September 1859. Telegraph systems sparked and shocked operators. Estimated Dst ranges from about −850 nT (low-end) to −1,760 nT. From the two or three Carrington-class storms since 1859, we estimate about 11–16% probability per decade (90% CI 2–37%).",
+      "citations": [
+        {
+          "text": "Carrington 1859; later Dst reconstructions compiled in our Part 2 study (low-end about −850 nT; mid-range often about −1,200 nT)",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        },
+        {
+          "text": "Riley 2012, Space Weather 10:S02012 (about 12% per decade)"
+        }
+      ]
+    },
+    {
+      "id": "hayakawa-1872",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "February 1872 storm (probable Carrington-class)",
+      "year_ce": 1872.12,
+      "date_label": "February 1872",
+      "place": "Earth (global auroras; telegraph era)",
+      "evidence": "debated",
+      "summary": "A severe 19th-century storm, probably of Carrington class according to Hayakawa et al. (2023). Counting it with 1859 and 1921 is what raises the per-decade odds from about 11% (two events) to about 16% (three events) in our Part 2 study.",
+      "citations": [
+        {
+          "text": "Hayakawa et al. 2023, as cited in RealAether cataclysm study (Part 2)",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "may-1921",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "May 1921 storm",
+      "year_ce": 1921.37,
+      "date_label": "May 1921",
+      "place": "Earth (telegraph and railway fires, including New York)",
+      "metrics": {
+        "dst_nT": "−907 ± 132 (Love et al. 2019)",
+        "kp": "pre-dates a complete modern Kp record"
+      },
+      "evidence": "confirmed",
+      "summary": "A Carrington-class geomagnetic storm. Telegraph and railway infrastructure caught fire, including in New York. Love et al. (2019) estimate Dst at −907 ± 132 nT.",
+      "citations": [
+        {
+          "text": "Love et al. 2019, Space Weather (Dst −907 ± 132 nT)"
+        },
+        {
+          "text": "RealAether cataclysm study (Part 2)",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "quebec-1989",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "March 1989 Québec blackout",
+      "year_ce": 1989.197,
+      "date_label": "13–14 March 1989",
+      "place": "Québec, Canada, and the wider Earth system",
+      "metrics": {
+        "dst_nT": -589,
+        "kp": 9,
+        "dst_time": "1989-03-14 01:00 (OMNI2)"
+      },
+      "evidence": "confirmed",
+      "summary": "A severe geomagnetic storm that collapsed the Hydro-Québec grid, leaving about 6 million people without power for roughly nine hours. In the OMNI2 hourly Dst record we used (1963–2026), this is the strongest storm: Dst −589 nT on 14 March 1989 at 01:00. Kp reached 9.",
+      "citations": [
+        {
+          "text": "NASA OMNI2 hourly Dst (and Kyoto WDC Dst): −589 nT at 1989-03-14 01:00, from our Part 2 storm list",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        },
+        {
+          "text": "NOAA / Kp = 9; Hydro-Québec blackout accounts"
+        }
+      ]
+    },
+    {
+      "id": "halloween-2003",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "Halloween storms",
+      "year_ce": 2003.83,
+      "date_label": "28–30 October 2003",
+      "place": "Earth (including a Malmö, Sweden blackout and airline reroutes)",
+      "metrics": {
+        "dst_nT": -383,
+        "kp": 9,
+        "dst_time": "2003-10-30 22:00 (OMNI2)"
+      },
+      "evidence": "confirmed",
+      "summary": "A famous series of extreme solar eruptions near solar maximum of Cycle 23. Kp reached 9. In our OMNI2 record, Dst reached −383 nT on 30 October 2003 at 22:00. A Malmö blackout and airline reroutes are documented.",
+      "citations": [
+        {
+          "text": "NASA OMNI2 / Kyoto WDC Dst: −383 nT at 2003-10-30 22:00; NOAA Kp = 9",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nov20-2003",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "20 November 2003 superstorm",
+      "year_ce": 2003.887,
+      "date_label": "20 November 2003",
+      "place": "Earth",
+      "metrics": {
+        "dst_nT": -422,
+        "dst_time": "2003-11-20 20:00 (OMNI2)"
+      },
+      "evidence": "confirmed",
+      "summary": "A second extreme storm only weeks after the Halloween events, and the second-strongest in our 1963–2026 OMNI2 Dst list: −422 nT on 20 November 2003 at 20:00.",
+      "citations": [
+        {
+          "text": "NASA OMNI2 / Kyoto WDC Dst: −422 nT at 2003-11-20 20:00, RealAether Part 2 storm list",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "starlink-2022",
+      "kind": "solar",
+      "subtype": "cme",
+      "title": "February 2022 Starlink loss",
+      "year_ce": 2022.09,
+      "date_label": "3–4 February 2022",
+      "place": "low Earth orbit (Starlink launch cohort)",
+      "metrics": {
+        "dst_nT": "did not reach −100 nT in our OMNI2 ≤ −100 nT storm list",
+        "note": "modest storm, large operational effect"
+      },
+      "evidence": "confirmed",
+      "summary": "A relatively modest geomagnetic storm — it does not appear among OMNI2 storms of Dst ≤ −100 nT in the 1963–2026 list we used — still led to the loss of 38 newly launched Starlink satellites, which re-entered after atmospheric density rose at their unusually low deployment altitude. It is a reminder that space systems can fail in storms well below Carrington or even Québec 1989 strength.",
+      "citations": [
+        {
+          "text": "SpaceX and NOAA accounts of the 3–4 February 2022 Starlink losses (38 satellites)"
+        },
+        {
+          "text": "RealAether Part 2: the event is listed among documented technological harms; it is absent from our OMNI2 Dst ≤ −100 nT catalogue, so the storm was weaker than that threshold",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "gannon-2024",
+      "kind": "solar",
+      "subtype": "geomagnetic",
+      "title": "Gannon storm",
+      "year_ce": 2024.358,
+      "date_label": "10–12 May 2024",
+      "place": "Earth (G5 level; GPS disruption to farm equipment among the effects)",
+      "metrics": {
+        "dst_nT": -406,
+        "kp": 9,
+        "dst_time": "2024-05-11 02:00 (OMNI2)"
+      },
+      "evidence": "confirmed",
+      "summary": "The first G5 (extreme) geomagnetic storm of Solar Cycle 25, often called the Gannon storm. In our OMNI2 record, Dst reached −406 nT on 11 May 2024 at 02:00, the third-strongest storm in the 1963–2026 hourly list after March 1989 and 20 November 2003. Kp reached 9. Documented effects included GPS disruption to farm equipment. We found no deaths attributed to the storm.",
+      "citations": [
+        {
+          "text": "NASA OMNI2 / Kyoto WDC Dst: −406 nT at 2024-05-11 02:00; NOAA SWPC Kp = 9, G5",
+          "url": "../impact/study/CataclysmStudy_Report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cycle25-max",
+      "kind": "solar",
+      "subtype": "cycle",
+      "title": "Solar Cycle 25 maximum",
+      "year_ce": 2024.79,
+      "date_label": "October 2024 (smoothed sunspot-number peak)",
+      "place": "the Sun",
+      "metrics": {
+        "smoothed_sunspot_number": 160.9
+      },
+      "evidence": "confirmed",
+      "summary": "NASA, NOAA and the Solar Cycle Prediction Panel announced on 15 October 2024 that the Sun had entered the solar-maximum period of Cycle 25, noting that the exact peak month would be identified only later. SILSO later placed the 13-month smoothed sunspot-number maximum in October 2024 at 160.9 — stronger than the 2019 panel’s midpoint forecast of 115. By April 2026 the smoothed number had fallen to 88.6. NOAA SWPC has projected a minimum around December 2030.",
+      "citations": [
+        {
+          "text": "NASA/NOAA joint solar-maximum announcement, 15 October 2024",
+          "url": "https://www.spaceweather.gov/news/joint-solar-maximum-announcement-nasa-and-noaa"
+        },
+        {
+          "text": "SIDC/SILSO: smoothed monthly sunspot number peaked at 160.9 in October 2024; RealAether Part 2 (value 88.6 by April 2026)",
+          "url": "https://www.sidc.be/article/solar-cycle-25-reached-its-maximum-october-2024"
+        }
+      ]
+    }
+  ]
+}

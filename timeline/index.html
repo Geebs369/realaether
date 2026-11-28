@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impact &amp; Solar Timeline · RealAether</title>
+  <link rel="canonical" href="https://geebs369.github.io/realaether/timeline/">
+  <meta name="description" content="A data-backed timeline of confirmed meteor and comet impacts, airbursts, and extreme solar and CME events, each cited and marked confirmed, debated, or unverified. Built by Geebs &amp; 3TH3R3AL1 — RealAether.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RealAether">
+  <meta property="og:title" content="Impact &amp; Solar Timeline — RealAether">
+  <meta property="og:description" content="Dated meteor and comet impacts, airbursts, and extreme solar storms, cited and labelled by evidence strength.">
+  <meta property="og:url" content="https://geebs369.github.io/realaether/timeline/">
+  <meta property="og:image" content="https://geebs369.github.io/realaether/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Impact &amp; Solar Timeline — RealAether">
+  <meta name="twitter:description" content="Dated meteor and comet impacts, airbursts, and extreme solar storms, cited and labelled by evidence strength.">
+  <meta name="twitter:image" content="https://geebs369.github.io/realaether/og-image.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="ra-bg">
+  <header>
+    <h1>Impact &amp; Solar Timeline
+      <small>RealAether · Forged in the Aether · Data-backed impacts, airbursts, and extreme solar events · Architect: 3TH3R3AL1 · Builder: Geebs</small>
+    </h1>
+    <nav>
+      <a href="../">← AetherWeather</a>
+      <a href="../crrd/">Cosmic Ray Detector</a>
+      <a href="../impact/">Impact Hypothesis</a>
+      <a class="here" href="./">Timeline</a>
+      <a href="../logger/">Wind × Volcano &amp; Quake Log</a>
+      <a href="../precession/">Precession Clock</a>
+      <a href="../mission/">Mission &amp; Updates</a>
+      <a class="support-top" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="card span12 lead-card" id="intro">
+      <p class="kicker">Timeline · 27 November 2026</p>
+      <p>A single, cited timeline of <b>known meteor and comet impacts and airbursts</b> and <b>extreme solar and CME events</b>. Every entry is marked confirmed, debated, or unverified, and every entry has a source. The crater list for the last 100,000 years, plus a few famous older structures such as Chicxulub, Meteor Crater and Popigai, comes from the Earth Impact Database as compiled on Wikipedia, because the PASSC database site was down when this page was built. Historical airbursts, NASA CNEOS fireball statistics, the October 2022 Taurid lunar flashes, Encke node-crossing calculations, and the Younger Dryas verdict come from the public record and from our <a href="../impact/">Impact Hypothesis</a> studies. Solar-particle (Miyake) events and geomagnetic storms, with Dst and Kp where we have them, follow those same studies and NOAA / Kyoto WDC / SILSO records.</p>
+      <p>This is not a claim that one flood, one impact, or one flare explains the ancient world. It is a scoreboard of what is dated and how strong the evidence is. The companion flood-myths section lives on the Impact page.</p>
+      <nav class="jump" aria-label="Page sections">
+        <a href="#chart">Interactive timeline</a>
+        <a href="#events">Event list</a>
+        <a href="#methods">Methods &amp; sources</a>
+        <a href="events.json">Data (JSON)</a>
+        <a href="../impact/">Impact Hypothesis</a>
+        <a href="../impact/study/ImpactStudy_Report.pdf">Taurid report (PDF)</a>
+        <a href="../impact/study/CataclysmStudy_Report.pdf">Cataclysm report (PDF)</a>
+        <a href="../impact/study/MonumentSky_Report.pdf">Monument–sky report (PDF)</a>
+        <a href="../impact/study/LPC_Centaur_Report.pdf">LPC &amp; Centaur report (PDF)</a>
+      </nav>
+    </section>
+
+    <section class="card span12" id="chart">
+      <p class="kicker">Interactive timeline</p>
+      <h2>Impacts, airbursts, and solar extremes</h2>
+      <p class="note">The full span uses a logarithmic time axis, so recent decades are readable beside deep time. Choose an era for a linear scale. Filter by impacts, solar events, or our study results (Encke node crossings and the Younger Dryas verdict). Select a point or a list entry for details and citations.</p>
+
+      <div class="tl-toolbar" role="toolbar" aria-label="Timeline filters">
+        <div class="group" role="group" aria-label="Event type">
+          <span class="group-label">Show</span>
+          <button type="button" data-group="kind" data-value="all" aria-pressed="true">All</button>
+          <button type="button" data-group="kind" data-value="impact" aria-pressed="false">Impacts</button>
+          <button type="button" data-group="kind" data-value="solar" aria-pressed="false">Solar</button>
+          <button type="button" data-group="kind" data-value="study" aria-pressed="false">Our study</button>
+        </div>
+        <div class="group" role="group" aria-label="Time span">
+          <span class="group-label">Era</span>
+          <button type="button" data-group="era" data-value="all" aria-pressed="true">All time</button>
+          <button type="button" data-group="era" data-value="deep" aria-pressed="false">Deep time (&gt;100 ka)</button>
+          <button type="button" data-group="era" data-value="late" aria-pressed="false">100 ka to AD 1500</button>
+          <button type="button" data-group="era" data-value="historical" aria-pressed="false">AD 1500–1900</button>
+          <button type="button" data-group="era" data-value="modern" aria-pressed="false">1900–today</button>
+        </div>
+      </div>
+
+      <div class="tl-legend">
+        <span><i class="tl-swatch impact" aria-hidden="true"></i> Impacts, airbursts, falls, and fireballs</span>
+        <span><i class="tl-swatch solar" aria-hidden="true"></i> Solar-particle events, geomagnetic storms, and Cycle 25</span>
+        <span><i class="tl-swatch study" aria-hidden="true"></i> Our calculations and verdicts</span>
+      </div>
+
+      <svg id="tl-svg" viewBox="0 0 1100 220" role="img" aria-label="Interactive log-time or linear-era timeline of impacts and solar events"></svg>
+      <div class="tl-detail" id="tl-detail">
+        <p class="tl-placeholder">Select a point on the timeline, or an event in the list, to read the details and sources.</p>
+      </div>
+    </section>
+
+    <section class="card span12" id="events">
+      <p class="kicker">Event list · oldest first</p>
+      <h2>Every entry, with sources</h2>
+      <p id="tl-count" class="tl-count">73 events · 47 impact · 15 solar · 11 study</p>
+      <ol class="tl-list" id="event-list">
+      <li class="tl-item" id="vredefort" data-id="vredefort" data-kind="impact" data-evidence="confirmed">
+        <h3>Vredefort <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">2,023 ± 4 million years ago · Impact · crater · Free State, South Africa · 160 km crater</p>
+        <p>Earth’s largest confirmed impact structure, and one of the oldest. The original crater has been deeply eroded; the remaining dome is a UNESCO World Heritage site.</p>
+        <ul class="cites"><li><a href="https://en.wikipedia.org/wiki/List_of_impact_structures_on_Earth">Earth Impact Database, via Wikipedia, List of impact structures on Earth (compilation as of 2024)</a></li><li>Kamo et al. ages as compiled there (2,023 ± 4 Ma); diameter 160 km</li></ul>
+      </li>
+      <li class="tl-item" id="sudbury" data-id="sudbury" data-kind="impact" data-evidence="confirmed">
+        <h3>Sudbury Basin <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">1,849 million years ago · Impact · crater · Ontario, Canada · 130 km crater</p>
+        <p>One of the largest confirmed impact structures, later deformed by tectonics. The basin is a major nickel-copper mining district.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 130 km, 1,849 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="manicouagan" data-id="manicouagan" data-kind="impact" data-evidence="confirmed">
+        <h3>Manicouagan <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">215.56 ± 0.05 million years ago · Impact · crater · Quebec, Canada · 100 km crater</p>
+        <p>A large, well-preserved Late Triassic impact. A ring-shaped reservoir now fills the eroded inner basin. Links to a Late Triassic turnover have been proposed and remain less definitive than the K–Pg case.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 100 km, 215.56 ± 0.05 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="chicxulub" data-id="chicxulub" data-kind="impact" data-evidence="confirmed">
+        <h3>Chicxulub <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">66.051 ± 0.031 million years ago · Impact · crater · Yucatán, Mexico · 150 km crater</p>
+        <p>The impact most widely accepted as the cause of the Cretaceous–Paleogene mass extinction, including the non-avian dinosaurs. A roughly 10 km asteroid or comet struck shallow tropical seas and produced a global debris and fire-pulse layer.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 150 km, 66.051 ± 0.031 Ma</li><li>Alvarez et al. 1980, Science 208:1095; Schulte et al. 2010, Science 327:1214</li></ul>
+      </li>
+      <li class="tl-item" id="popigai" data-id="popigai" data-kind="impact" data-evidence="confirmed">
+        <h3>Popigai <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">35.7 ± 0.2 million years ago · Impact · crater · Siberia, Russia · 100 km crater</p>
+        <p>One of the largest Cenozoic impact structures, formed in the late Eocene. Suggested links to later extinction episodes have been questioned.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 100 km, 35.7 ± 0.2 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="chesapeake" data-id="chesapeake" data-kind="impact" data-evidence="confirmed">
+        <h3>Chesapeake Bay <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">34.86 ± 0.23 million years ago · Impact · crater · Virginia, United States · 40 km crater</p>
+        <p>A buried late-Eocene marine impact, discovered under Chesapeake Bay. It is close in age to Popigai; a causal link to Eocene extinctions is debated.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 40 km, 34.86 ± 0.23 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="ries" data-id="ries" data-kind="impact" data-evidence="confirmed">
+        <h3>Nördlinger Ries <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">14.808 ± 0.038 million years ago · Impact · crater · Bavaria, Germany · 24 km crater</p>
+        <p>A well-studied Miocene impact. The town of Nördlingen sits inside the crater. The smaller Steinheim basin nearby is usually treated as a companion impact.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 24 km, 14.808 ± 0.038 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="elgygytgyn" data-id="elgygytgyn" data-kind="impact" data-evidence="confirmed">
+        <h3>El’gygytgyn <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">3.5 million years ago · Impact · crater · Chukotka, Russia · 18 km crater</p>
+        <p>A well-preserved Pliocene crater now occupied by a deep Arctic lake, often used as a paleoclimate archive.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 18 km, 3.5 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="tenoumer" data-id="tenoumer" data-kind="impact" data-evidence="confirmed">
+        <h3>Tenoumer <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">1.6 ± 0.1 million years ago · Impact · crater · Sahara, Mauritania · 1.9 km crater</p>
+        <p>A sharp-rimmed crater in the Mauritanian Sahara. The age listed in the Wikipedia / EID compilation is 1.6 ± 0.1 Ma; earlier papers also discussed a much younger (~21 ka) age, so the dating has a history of revision.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation), in the 1–10 Ma table: 1.9 km, 1.6 ± 0.1 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="pingualuit" data-id="pingualuit" data-kind="impact" data-evidence="confirmed">
+        <h3>Pingualuit (New Quebec) <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">1.4 ± 0.1 million years ago · Impact · crater · Quebec, Canada · 3.4 km crater</p>
+        <p>A nearly circular, water-filled crater in northern Quebec, among the visually clearest youngish impact structures on Earth.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 3.4 km, 1.4 ± 0.1 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="bosumtwi" data-id="bosumtwi" data-kind="impact" data-evidence="confirmed">
+        <h3>Bosumtwi <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">1.1 million years ago · Impact · crater · Ashanti, Ghana · 10 km crater</p>
+        <p>A young, lake-filled crater and the source of the Ivory Coast tektites.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 10 km, 1.1 Ma</li></ul>
+      </li>
+      <li class="tl-item" id="zhamanshin" data-id="zhamanshin" data-kind="impact" data-evidence="confirmed">
+        <h3>Zhamanshin <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">900 ± 100 thousand years ago · Impact · crater · Kazakhstan · 14 km crater</p>
+        <p>The largest confirmed crater of the last million years. It has been described as large enough to have produced a nuclear-winter-like climate effect.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 14 km, 900 ± 100 ka</li><li>Grieve 1990, Scientific American 262(4):66, on impact cratering on Earth</li></ul>
+      </li>
+      <li class="tl-item" id="pantasma" data-id="pantasma" data-kind="impact" data-evidence="confirmed">
+        <h3>Pantasma <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">804 thousand years ago · Impact · crater · Jinotega, Nicaragua · 14 km crater</p>
+        <p>A large Pleistocene impact structure in Nicaragua, comparable in size to Zhamanshin.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 14 km, 804 ka</li></ul>
+      </li>
+      <li class="tl-item" id="australasian-tektites" data-id="australasian-tektites" data-kind="impact" data-evidence="debated">
+        <h3>Australasian tektite strewn field <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">about 780 thousand years ago · Impact · tektites · Source crater undiscovered (likely Southeast Asia) · strewn field; source crater not found</p>
+        <p>The largest known tektite strewn field, stretching from Southeast Asia to Australia and the Southern Ocean. The tektites record a large impact, but the source crater has not been identified.</p>
+        <ul class="cites"><li>Wikipedia, List of impact structures on Earth, “10 ka to 1 Ma” section (2024 compilation)</li><li>Glass &amp; Pizzuto 1994, JGR 99:19075; Povenmire, Liu &amp; Xianlin 1999, LPSC 30, #1072</li></ul>
+      </li>
+      <li class="tl-item" id="montarqui" data-id="montarqui" data-kind="impact" data-evidence="confirmed">
+        <h3>Monturaqui <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">640 ± 140 thousand years ago · Impact · crater · Atacama Desert, Chile · 0.455 km crater</p>
+        <p>A small, well-preserved crater in the Atacama Desert.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.455 km, 640 ± 140 ka</li></ul>
+      </li>
+      <li class="tl-item" id="lonar" data-id="lonar" data-kind="impact" data-evidence="confirmed">
+        <h3>Lonar <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">576 ± 47 thousand years ago · Impact · crater · Maharashtra, India · 1.8 km crater</p>
+        <p>A lake-filled crater excavated in basalt of the Deccan Traps, important because most other well-studied craters formed in other rock types.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.8 km, 576 ± 47 ka</li></ul>
+      </li>
+      <li class="tl-item" id="aorounga" data-id="aorounga" data-kind="impact" data-evidence="debated">
+        <h3>Aorounga Central <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">possibly ~500 thousand years ago · Impact · crater · Borkou, Chad · 16 km crater</p>
+        <p>A large, visually striking structure in Chad. The structure is confirmed as an impact; the age is only loosely given as possibly ~500 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 16 km, age “possibly 500 ka”</li></ul>
+      </li>
+      <li class="tl-item" id="kalkkop" data-id="kalkkop" data-kind="impact" data-evidence="confirmed">
+        <h3>Kalkkop <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 250 thousand years ago · Impact · crater · Eastern Cape, South Africa · 0.64 km crater</p>
+        <p>A small Pleistocene crater in South Africa.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.64 km, ~250 ka</li></ul>
+      </li>
+      <li class="tl-item" id="tswaing" data-id="tswaing" data-kind="impact" data-evidence="confirmed">
+        <h3>Tswaing (Pretoria Saltpan) <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">220 thousand years ago · Impact · crater · near Pretoria, South Africa · 1.1 km crater</p>
+        <p>A well-dated, lake-filled Pleistocene crater north of Pretoria.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.1 km, 220 ka</li></ul>
+      </li>
+      <li class="tl-item" id="wolfe-creek" data-id="wolfe-creek" data-kind="impact" data-evidence="confirmed">
+        <h3>Wolfe Creek <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">less than 120 thousand years ago · Impact · crater · Western Australia, Australia · 0.9 km crater</p>
+        <p>A well-preserved iron-meteorite crater in the Australian desert. The listed age is an upper bound (&lt;120 ka).</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.9 km, &lt;120 ka</li></ul>
+      </li>
+      <li class="tl-item" id="agoudal" data-id="agoudal" data-kind="impact" data-evidence="confirmed">
+        <h3>Agoudal <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">105 thousand years ago · Impact · crater · Atlas Mountains, Morocco · 3.0 km crater</p>
+        <p>A mid-sized crater in the Moroccan Atlas, associated with iron-meteorite finds.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 3.0 km, 105 ka</li></ul>
+      </li>
+      <li class="tl-item" id="amguid" data-id="amguid" data-kind="impact" data-evidence="confirmed">
+        <h3>Amguid <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">10–100 thousand years ago · Impact · crater · Tamanrasset, Algeria · 0.45 km crater</p>
+        <p>A small, sharp-rimmed crater in Algeria. The age is only constrained to the 10–100 ka window.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.45 km, 10–100 ka</li></ul>
+      </li>
+      <li class="tl-item" id="hickman" data-id="hickman" data-kind="impact" data-evidence="confirmed">
+        <h3>Hickman <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">10–100 thousand years ago · Impact · crater · Western Australia, Australia · 0.26 km crater</p>
+        <p>A small crater in Western Australia with an age only loosely bounded at 10–100 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.26 km, 10–100 ka</li></ul>
+      </li>
+      <li class="tl-item" id="xiuyan" data-id="xiuyan" data-kind="impact" data-evidence="confirmed">
+        <h3>Xiuyan <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">50 thousand years ago · Impact · crater · Xiuyan, China · 1.8 km crater</p>
+        <p>A lake-filled crater in northeastern China, listed at about 50 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.8 km, 50 ka</li></ul>
+      </li>
+      <li class="tl-item" id="meteor-crater" data-id="meteor-crater" data-kind="impact" data-evidence="confirmed">
+        <h3>Meteor Crater (Barringer) <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">49 thousand years ago · Impact · crater · Arizona, United States · 1.2 km crater</p>
+        <p>The classic, well-preserved iron-meteorite crater of the American Southwest, about 1.2 km across and about 49,000 years old. It is among the best-studied young impact sites on Earth.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.2 km, 49 ka</li></ul>
+      </li>
+      <li class="tl-item" id="yilan" data-id="yilan" data-kind="impact" data-evidence="confirmed">
+        <h3>Yilan <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">49 thousand years ago · Impact · crater · Heilongjiang, China · 1.85 km crater</p>
+        <p>A recently recognized crater in northeastern China, listed at about the same age as Meteor Crater.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.85 km, 49 ka</li></ul>
+      </li>
+      <li class="tl-item" id="jeokjung" data-id="jeokjung" data-kind="impact" data-evidence="confirmed">
+        <h3>Jeokjung–Chogye Basin <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">30–63 thousand years ago · Impact · crater · Gyeongsangnam, South Korea · 8 km structure</p>
+        <p>A sizable late-Pleistocene impact structure in South Korea, with the listed age spanning 30–63 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 8 km, 30–63 ka</li></ul>
+      </li>
+      <li class="tl-item" id="miyake-12350bc" data-id="miyake-12350bc" data-kind="solar" data-evidence="debated">
+        <h3>Miyake-event candidate, ~12,350 BC <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">about 12,350 BC · Solar · miyake · recorded in ¹⁴C / ¹⁰Be (global)</p>
+        <p>A candidate extreme solar-particle event older than the 9.4-kyr solar-activity reconstruction, so we could not test whether it fell at a typical activity level. It is not one of the five confirmed Holocene Miyake events.</p>
+        <ul class="cites"><li>Bard et al. 2023 (as cited in our Part 2 study)</li><li><a href="../impact/study/CataclysmStudy_Report.pdf">RealAether cataclysm study (Impact Hypothesis, Part 2), 27 Nov 2026</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke--11783" data-id="encke--11783" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (inbound, descending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">11,783 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s descending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke--11483" data-id="encke--11483" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (outbound, ascending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">11,483 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s ascending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="ydb" data-id="ydb" data-kind="study" data-evidence="debated">
+        <h3>Younger Dryas boundary — impact trigger? <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">about 12,900 years ago (≈ 10,900 BC) · Our study · verdict · global climate event; claimed North American impact</p>
+        <p>The Younger Dryas was a sudden Northern Hemisphere cold snap in the middle of the warming that ended the last ice age, not the end of the ice age itself. A proposed impact or airburst trigger (the Younger Dryas impact hypothesis, supported in public by Randall Carlson among others) is probably not the cause: our review puts confidence at about 85% against. There is no crater of the right age, the nanodiamond, platinum and melt-glass evidence is disputed, and our Taurid / Encke node-crossing test is neutral (nearest crossing 649 years away; a random date does as well, p ≈ 0.53). Meltwater from glacial Lake Agassiz weakening Atlantic overturning is the better-supported explanation. A small airburst cannot be completely ruled out.</p>
+        <ul class="cites"><li><a href="../impact/study/MonumentSky_Report.pdf">RealAether Monument–sky study (Impact Hypothesis, Part 3), 27 Nov 2026</a></li><li><a href="../impact/#ydih">Encke node-crossing test: nearest crossing 649 yr from the YDB, p(random date as close) = 0.54</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke--8953" data-id="encke--8953" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (inbound, ascending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">8,953 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s ascending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke--8619" data-id="encke--8619" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (outbound, descending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">8,619 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s descending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="rio-cuarto" data-id="rio-cuarto" data-kind="impact" data-evidence="debated">
+        <h3>Rio Cuarto crater field <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">listed as &lt;10 ka or &lt;100 ka · Impact · crater · Pampa, Argentina · up to 4.5 km (elongate features)</p>
+        <p>Sometimes described as the largest structure of the last 100,000 years. The origin and age are uncertain: some papers argue for a recent grazing impact and tektite field, while the EID gives a broader &lt;100 ka age, and the identification has been questioned.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation)</li><li>Schultz &amp; Lianza 1992, Nature 355:234; Bland et al. 2002, Science 296:1109</li></ul>
+      </li>
+      <li class="tl-item" id="miyake-7176bc" data-id="miyake-7176bc" data-kind="solar" data-evidence="confirmed">
+        <h3>Miyake event, 7176 BC <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">7176 BC · Solar · miyake · recorded in ¹⁴C / ¹⁰Be (global)</p>
+        <p>A confirmed extreme solar-particle event: a sharp, nearly global spike in radiocarbon (¹⁴C) and beryllium-10 (¹⁰Be). Events like this do not burn the land; before the electrical age the main human effect would have been great auroras. They recur at ordinary solar-activity levels, with a lower-bound rate of about 2–10% per century.</p>
+        <ul class="cites"><li><a href="../impact/#solar">Confirmed Holocene Miyake events as compiled in RealAether cataclysm study (Part 2), 27 Nov 2026</a></li><li>Discovery and annual ¹⁴C / ¹⁰Be literature, including Miyake et al. 2012, Nature 486:240 (AD 774/5 prototype); later work extended the list to 7176 BC, 5259 BC and 664–663 BC</li></ul>
+      </li>
+      <li class="tl-item" id="encke--5759" data-id="encke--5759" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (inbound, descending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">5,759 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s descending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke--5421" data-id="encke--5421" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (outbound, ascending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">5,421 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s ascending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="macha" data-id="macha" data-kind="impact" data-evidence="confirmed">
+        <h3>Macha crater field <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 5300 BC (7.3 ka) · Impact · crater · Sakha Republic, Russia · 0.3 km (largest of a field)</p>
+        <p>A small Holocene crater field in Yakutia, listed at 7.3 ka (about 5300 BC).</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.3 km, 7.3 ka / 5300 BC</li></ul>
+      </li>
+      <li class="tl-item" id="miyake-5259bc" data-id="miyake-5259bc" data-kind="solar" data-evidence="confirmed">
+        <h3>Miyake event, 5259 BC <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">5259 BC · Solar · miyake · recorded in ¹⁴C / ¹⁰Be (global)</p>
+        <p>A confirmed extreme solar-particle event in annual radiocarbon and beryllium-10 records.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">RealAether cataclysm study (Impact Hypothesis, Part 2), 27 Nov 2026</a></li></ul>
+      </li>
+      <li class="tl-item" id="luna" data-id="luna" data-kind="impact" data-evidence="confirmed">
+        <h3>Luna <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">less than 6,900 years ago (&lt; 5000 BC) · Impact · crater · Gujarat, India · 1.5–1.8 km crater</p>
+        <p>A Holocene crater in Gujarat, with only an upper bound on the age (&lt;6.9 ka).</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 1.5–1.8 km, &lt;6.9 ka</li></ul>
+      </li>
+      <li class="tl-item" id="boxhole" data-id="boxhole" data-kind="impact" data-evidence="confirmed">
+        <h3>Boxhole <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 3400 BC (5.4 ka) · Impact · crater · Northern Territory, Australia · 0.2 km crater</p>
+        <p>A small iron-meteorite crater in central Australia, listed at 5.4 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.2 km, 5.4 ka / 3400 BC</li></ul>
+      </li>
+      <li class="tl-item" id="morasko" data-id="morasko" data-kind="impact" data-evidence="confirmed">
+        <h3>Morasko <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 3000 BC (5.0 ka) · Impact · crater · Poznań, Poland · 0.1 km crater (largest of a field)</p>
+        <p>A small iron-meteorite crater field at the edge of Poznań, listed at about 5.0 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.1 km, 5.0 ka / 3000 BC</li><li>Stankowski, Raukas, Bluszcz &amp; Fedorowicz 2007, Geochronometria 28:25 (luminescence dating of Morasko, Kaali, Ilumetsa and Tsõõrikmäe)</li></ul>
+      </li>
+      <li class="tl-item" id="jinlin" data-id="jinlin" data-kind="impact" data-evidence="confirmed">
+        <h3>Jinlin <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">less than 10,000 years ago · Impact · crater · Guangdong, China · 0.9 km crater</p>
+        <p>A Holocene crater in Guangdong Province, listed only with an age bound of &lt;10 ka.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.9 km, &lt;10 ka</li></ul>
+      </li>
+      <li class="tl-item" id="encke--2927" data-id="encke--2927" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (inbound, ascending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">2,927 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s ascending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="henbury" data-id="henbury" data-kind="impact" data-evidence="confirmed">
+        <h3>Henbury crater field <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 2700 BC (4.7 ka) · Impact · crater · Northern Territory, Australia · 0.2 km (largest of a field)</p>
+        <p>A small crater field from a fragmented iron meteorite. It has been linked to Aboriginal Australian oral traditions.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.2 km, 4.7 ka / 2700 BC</li><li>Hamacher &amp; Goldsmith 2013, J. Astronomical History and Heritage 16:295</li></ul>
+      </li>
+      <li class="tl-item" id="encke--2693" data-id="encke--2693" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (outbound, descending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">2,693 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s descending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="campo" data-id="campo" data-kind="impact" data-evidence="confirmed">
+        <h3>Campo del Cielo <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 2500 BC (4.5 ka) · Impact · crater · Chaco, Argentina · about 0.05–0.1 km (largest pit)</p>
+        <p>An iron-meteorite strewn field and small craters in northern Argentina, listed at about 4.5 ka. The EID size is about 50 m; other sources quote about 100 m. It has been discussed in connection with Native Argentine traditions.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): ~0.05–0.1 km, 4.5 ka / 2500 BC</li><li>Bobrowsky &amp; Rickman 2007, Comet/Asteroid Impacts and Human Society, pp. 30–31</li></ul>
+      </li>
+      <li class="tl-item" id="kaali" data-id="kaali" data-kind="impact" data-evidence="confirmed">
+        <h3>Kaali <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about 1500 BC (3.5 ka) · Impact · crater · Saaremaa, Estonia · 0.1 km (main crater of a field)</p>
+        <p>A small crater field on the island of Saaremaa, listed at about 3.5 ka (1500 BC). It has been discussed as a possible influence on Estonian and Finnish mythology.</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.1 km, 3.5 ka / 1500 BC</li><li>Haas, Peekna &amp; Walker 2003, Folklore 23; Stankowski et al. 2007, Geochronometria 28:25</li></ul>
+      </li>
+      <li class="tl-item" id="dalgaranga" data-id="dalgaranga" data-kind="impact" data-evidence="confirmed">
+        <h3>Dalgaranga <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">less than about 3,000 years ago? · Impact · crater · Western Australia, Australia · 24 m crater</p>
+        <p>A very small crater, under the usual 100 m cutoff used in the “10 ka or less” table, but listed there with a loosely constrained age (“less than 3?” ka).</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.024 km, age “less than 3? ka”</li></ul>
+      </li>
+      <li class="tl-item" id="miyake-663bc" data-id="miyake-663bc" data-kind="solar" data-evidence="confirmed">
+        <h3>Miyake event, 664–663 BC <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">664–663 BC · Solar · miyake · recorded in ¹⁴C / ¹⁰Be (global)</p>
+        <p>A confirmed extreme solar-particle event near the end of the 7th century BC, recorded in annual ¹⁴C and ¹⁰Be.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">RealAether cataclysm study (Impact Hypothesis, Part 2), 27 Nov 2026</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke--59" data-id="encke--59" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (inbound, descending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">59 BC · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s descending node is Earth-crossing (inbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="encke-249" data-id="encke-249" data-kind="study" data-evidence="model">
+        <h3>Encke node crossing (outbound, ascending) <span class="badge badge-model">Model</span></h3>
+        <p class="meta">AD 249 · Our study · node crossing · Earth–Taurid geometry (calculated)</p>
+        <p>Calculated epoch when comet Encke’s ascending node is Earth-crossing (outbound). Our N-body backtrack finds 10 such crossings in the last ~14,000 years, coming in pairs about 300 years apart with a mean period of about 2,930 years. These are orbital-geometry results, not dated impacts. Clone-cloud spread grows for older crossings (centuries at the earliest pairs; decades for the most recent).</p>
+        <ul class="cites"><li><a href="../impact/study/ImpactStudy_Report.pdf">RealAether Taurid / Encke study (Impact Hypothesis, Phases 2–4), 27 Nov 2026; encke_node_crossings.json</a></li></ul>
+      </li>
+      <li class="tl-item" id="miyake-774" data-id="miyake-774" data-kind="solar" data-evidence="confirmed">
+        <h3>Miyake event, AD 774/5 <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">AD 774/5 · Solar · miyake · recorded in ¹⁴C / ¹⁰Be (global)</p>
+        <p>The strongest confirmed Miyake event of the Holocene, first identified as a rapid ¹⁴C rise in Japanese cedar rings and later confirmed in ¹⁰Be ice-core records. Models find only modest ozone loss and no significant climate effect; the ground-level radiation dose was small. Chronicles of unusual auroras are the main human record.</p>
+        <ul class="cites"><li>Miyake et al. 2012, Nature 486:240</li><li>Mekhaldi et al. 2015, Nature Communications 6:8611 (¹⁰Be)</li><li><a href="../impact/study/CataclysmStudy_Report.pdf">Sukhodolov et al. 2017 (ozone and climate modelling), as cited in our Part 2 study</a></li></ul>
+      </li>
+      <li class="tl-item" id="whitecourt" data-id="whitecourt" data-kind="impact" data-evidence="confirmed">
+        <h3>Whitecourt <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about AD 900 (1.1 ka) · Impact · crater · Alberta, Canada · 40 m crater</p>
+        <p>A small, well-preserved iron-meteorite crater in the boreal forest of Alberta, listed at about 1.1 ka (around AD 900).</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.04 km, 1.1 ka / AD 900</li></ul>
+      </li>
+      <li class="tl-item" id="miyake-993" data-id="miyake-993" data-kind="solar" data-evidence="confirmed">
+        <h3>Miyake event, AD 993/4 <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">AD 993/4 · Solar · miyake · recorded in ¹⁴C / ¹⁰Be (global)</p>
+        <p>The second well-known medieval Miyake event, confirmed in annual ¹⁴C and ¹⁰Be shortly after the AD 774/5 discovery.</p>
+        <ul class="cites"><li>Miyake et al. 2013, Nature Communications 4:1748</li><li>Mekhaldi et al. 2015, Nature Communications 6:8611 (¹⁰Be)</li><li><a href="../impact/study/CataclysmStudy_Report.pdf">RealAether cataclysm study (Part 2)</a></li></ul>
+      </li>
+      <li class="tl-item" id="chingyang" data-id="chingyang" data-kind="impact" data-evidence="unverified">
+        <h3>Ch’ing-yang stone shower <span class="badge badge-unverified">Unverified</span></h3>
+        <p class="meta">AD 1490 · Impact · airburst · Qingyang, China (as later described)</p>
+        <p>Ming-era and later Chinese chronicles describe a shower of stones said to have killed thousands. The reports are often cited, but the event is not confirmed by a crater, meteorites in hand, or a modern critical study that would put it on the same footing as Tunguska or Chelyabinsk.</p>
+        <ul class="cites"><li>Often cited from later compilations of Chinese historical meteor records (e.g. Yau, Weissman &amp; Yeomans 1994, Meteoritics 29:864). Marked unverified on this page.</li></ul>
+      </li>
+      <li class="tl-item" id="wabar" data-id="wabar" data-kind="impact" data-evidence="confirmed">
+        <h3>Wabar <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">about AD 1800 (0.2 ka) · Impact · crater · Rub’ al Khali, Saudi Arabia · 0.1 km (largest of a field)</p>
+        <p>A young crater field in the Empty Quarter, listed at about 200 years ago (~AD 1800).</p>
+        <ul class="cites"><li>Earth Impact Database, via Wikipedia, List of impact structures on Earth (2024 compilation): 0.1 km, 0.2 ka / ~AD 1800</li></ul>
+      </li>
+      <li class="tl-item" id="carrington" data-id="carrington" data-kind="solar" data-evidence="confirmed">
+        <h3>Carrington event <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">1–2 September 1859 · Solar · geomagnetic · Earth (global auroras; telegraph systems) · Dst about −850 to −1,760 (estimated) · Kp pre-dates the Kp index</p>
+        <p>The benchmark extreme geomagnetic storm of the instrumental era, following a white-light solar flare observed by Richard Carrington and Richard Hodgson on 1 September 1859. Telegraph systems sparked and shocked operators. Estimated Dst ranges from about −850 nT (low-end) to −1,760 nT. From the two or three Carrington-class storms since 1859, we estimate about 11–16% probability per decade (90% CI 2–37%).</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">Carrington 1859; later Dst reconstructions compiled in our Part 2 study (low-end about −850 nT; mid-range often about −1,200 nT)</a></li><li>Riley 2012, Space Weather 10:S02012 (about 12% per decade)</li></ul>
+      </li>
+      <li class="tl-item" id="hayakawa-1872" data-id="hayakawa-1872" data-kind="solar" data-evidence="debated">
+        <h3>February 1872 storm (probable Carrington-class) <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">February 1872 · Solar · geomagnetic · Earth (global auroras; telegraph era)</p>
+        <p>A severe 19th-century storm, probably of Carrington class according to Hayakawa et al. (2023). Counting it with 1859 and 1921 is what raises the per-decade odds from about 11% (two events) to about 16% (three events) in our Part 2 study.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">Hayakawa et al. 2023, as cited in RealAether cataclysm study (Part 2)</a></li></ul>
+      </li>
+      <li class="tl-item" id="tunguska" data-id="tunguska" data-kind="impact" data-evidence="confirmed">
+        <h3>Tunguska <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">30 June 1908 · Impact · airburst · Podkamennaya Tunguska, Siberia, Russia · airburst, roughly 50–60 m object; ~2,150 km² of forest flattened</p>
+        <p>The largest impact event in recorded history: an object roughly 50–60 m across exploded in the air over a remote region of Siberia and flattened about 80 million trees across some 2,150 km². Few or no deaths were confirmed. There is no crater of that event.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">Classic surveys of the 1908 Tunguska airburst; energy and size in the commonly cited 50–60 m / multi-megaton range (see also NASEM 2022 context in our Part 2 study)</a></li></ul>
+      </li>
+      <li class="tl-item" id="may-1921" data-id="may-1921" data-kind="solar" data-evidence="confirmed">
+        <h3>May 1921 storm <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">May 1921 · Solar · geomagnetic · Earth (telegraph and railway fires, including New York) · Dst −907 ± 132 (Love et al. 2019) · Kp pre-dates a complete modern Kp record</p>
+        <p>A Carrington-class geomagnetic storm. Telegraph and railway infrastructure caught fire, including in New York. Love et al. (2019) estimate Dst at −907 ± 132 nT.</p>
+        <ul class="cites"><li>Love et al. 2019, Space Weather (Dst −907 ± 132 nT)</li><li><a href="../impact/study/CataclysmStudy_Report.pdf">RealAether cataclysm study (Part 2)</a></li></ul>
+      </li>
+      <li class="tl-item" id="curuca" data-id="curuca" data-kind="impact" data-evidence="debated">
+        <h3>Curuçá River (“Brazil’s Tunguska”) <span class="badge badge-debated">Debated</span></h3>
+        <p class="meta">13 August 1930 (reports) · Impact · airburst · Curuçá River, Amazonas, Brazil</p>
+        <p>Newspaper and later accounts describe a possible airburst that scorched forest along the Curuçá River. Details are thin, and the event is much less well documented than Tunguska or Chelyabinsk.</p>
+        <ul class="cites"><li>Later discussions of the 13 August 1930 Curuçá event (sometimes called “Brazil’s Tunguska”); documentation is sparse, so this page marks it debated</li></ul>
+      </li>
+      <li class="tl-item" id="sikhote-alin" data-id="sikhote-alin" data-kind="impact" data-evidence="confirmed">
+        <h3>Sikhote-Alin <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">12 February 1947 · Impact · fall · Sikhote-Alin mountains, Russia · iron fall; more than 100 craters, the largest tens of metres</p>
+        <p>A witnessed iron-meteorite fall. The meteoroid broke up in the atmosphere and rained down tons of fragments, leaving more than 100 small craters. It is a fall, not a city-scale airburst.</p>
+        <ul class="cites"><li>Classic documentation of the 12 February 1947 Sikhote-Alin iron meteorite shower and crater field</li></ul>
+      </li>
+      <li class="tl-item" id="quebec-1989" data-id="quebec-1989" data-kind="solar" data-evidence="confirmed">
+        <h3>March 1989 Québec blackout <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">13–14 March 1989 · Solar · geomagnetic · Québec, Canada, and the wider Earth system · Dst -589 nT · Kp 9 · 1989-03-14 01:00 (OMNI2)</p>
+        <p>A severe geomagnetic storm that collapsed the Hydro-Québec grid, leaving about 6 million people without power for roughly nine hours. In the OMNI2 hourly Dst record we used (1963–2026), this is the strongest storm: Dst −589 nT on 14 March 1989 at 01:00. Kp reached 9.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">NASA OMNI2 hourly Dst (and Kyoto WDC Dst): −589 nT at 1989-03-14 01:00, from our Part 2 storm list</a></li><li>NOAA / Kp = 9; Hydro-Québec blackout accounts</li></ul>
+      </li>
+      <li class="tl-item" id="halloween-2003" data-id="halloween-2003" data-kind="solar" data-evidence="confirmed">
+        <h3>Halloween storms <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">28–30 October 2003 · Solar · geomagnetic · Earth (including a Malmö, Sweden blackout and airline reroutes) · Dst -383 nT · Kp 9 · 2003-10-30 22:00 (OMNI2)</p>
+        <p>A famous series of extreme solar eruptions near solar maximum of Cycle 23. Kp reached 9. In our OMNI2 record, Dst reached −383 nT on 30 October 2003 at 22:00. A Malmö blackout and airline reroutes are documented.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">NASA OMNI2 / Kyoto WDC Dst: −383 nT at 2003-10-30 22:00; NOAA Kp = 9</a></li></ul>
+      </li>
+      <li class="tl-item" id="nov20-2003" data-id="nov20-2003" data-kind="solar" data-evidence="confirmed">
+        <h3>20 November 2003 superstorm <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">20 November 2003 · Solar · geomagnetic · Earth · Dst -422 nT · 2003-11-20 20:00 (OMNI2)</p>
+        <p>A second extreme storm only weeks after the Halloween events, and the second-strongest in our 1963–2026 OMNI2 Dst list: −422 nT on 20 November 2003 at 20:00.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">NASA OMNI2 / Kyoto WDC Dst: −422 nT at 2003-11-20 20:00, RealAether Part 2 storm list</a></li></ul>
+      </li>
+      <li class="tl-item" id="carancas" data-id="carancas" data-kind="impact" data-evidence="confirmed">
+        <h3>Carancas <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">15 September 2007 · Impact · fall · near Carancas, Puno, Peru · stony meteorite; ~13 m crater</p>
+        <p>A stony meteorite reached the ground and excavated a crater about 13 m across near a village. Some locals reported feeling sick afterward; a shock-heated, water-filled crater and arsenic-bearing sediments have been discussed as possible causes, rather than “meteorite poisoning.”</p>
+        <ul class="cites"><li>Tancredi et al. and follow-up work on the 15 September 2007 Carancas crater, Peru (~13 m)</li></ul>
+      </li>
+      <li class="tl-item" id="chelyabinsk" data-id="chelyabinsk" data-kind="impact" data-evidence="confirmed">
+        <h3>Chelyabinsk <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">15 February 2013 · Impact · airburst · Chelyabinsk, Russia · ~20 m stony object; airburst ~440 kt TNT</p>
+        <p>A rock about 20 m across entered over the southern Urals and exploded in the air. NASA’s official energy estimate is about 440 kilotons of TNT (roughly 30 times the Hiroshima bomb). The shock wave blew out windows across thousands of buildings and injured about 1,500 people, mostly from flying glass. It was not seen coming in advance.</p>
+        <ul class="cites"><li>NASA / CNEOS fireball record; Brown et al. 2013, Nature 503:238; Popova et al. 2013, Science 342:1069</li><li><a href="../impact/study/CataclysmStudy_Report.pdf">Our CNEOS window 1 Jan 2005–4 Oct 2026 includes Chelyabinsk; 81 fireballs ≥1 kt, 3.72 per year (RealAether Part 2)</a></li></ul>
+      </li>
+      <li class="tl-item" id="cneos-fireballs" data-id="cneos-fireballs" data-kind="impact" data-evidence="confirmed">
+        <h3>CNEOS fireballs ≥1 kt <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">1 Jan 2005 – 4 Oct 2026 (survey window) · Impact · fireball stats · Earth (global bolide detections) · 81 events ≥1 kt; mean 3.72 per year</p>
+        <p>NASA CNEOS fireball data in our study window show 81 events of at least 1 kiloton, or 3.72 per year, with a power-law index of 0.98 (90% CI 0.82–1.20). That matches Brown et al. (2002) almost exactly (3.7 per year, index 0.90). The largest event in the window is about 441 kt (Chelyabinsk). This is a survey statistic, not a single impact.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">NASA CNEOS fireballs; RealAether cataclysm study (Part 2), future_risk.json, window 2005-01-01 to 2026-10-04</a></li><li>Brown et al. 2002, Nature 420:294</li></ul>
+      </li>
+      <li class="tl-item" id="starlink-2022" data-id="starlink-2022" data-kind="solar" data-evidence="confirmed">
+        <h3>February 2022 Starlink loss <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">3–4 February 2022 · Solar · cme · low Earth orbit (Starlink launch cohort) · Dst did not reach −100 nT in our OMNI2 ≤ −100 nT storm list · modest storm, large operational effect</p>
+        <p>A relatively modest geomagnetic storm — it does not appear among OMNI2 storms of Dst ≤ −100 nT in the 1963–2026 list we used — still led to the loss of 38 newly launched Starlink satellites, which re-entered after atmospheric density rose at their unusually low deployment altitude. It is a reminder that space systems can fail in storms well below Carrington or even Québec 1989 strength.</p>
+        <ul class="cites"><li>SpaceX and NOAA accounts of the 3–4 February 2022 Starlink losses (38 satellites)</li><li><a href="../impact/study/CataclysmStudy_Report.pdf">RealAether Part 2: the event is listed among documented technological harms; it is absent from our OMNI2 Dst ≤ −100 nT catalogue, so the storm was weaker than that threshold</a></li></ul>
+      </li>
+      <li class="tl-item" id="neliota-2022" data-id="neliota-2022" data-kind="impact" data-evidence="confirmed">
+        <h3>Taurid lunar impact flashes <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">29–31 October 2022 · Impact · lunar · near side of the Moon (NELIOTA survey) · meteoroids roughly 20–250 g</p>
+        <p>The NELIOTA lunar impact-flash survey recorded 16 flashes from Taurid meteoroids on 29–31 October 2022, a year predicted in advance as a Taurid resonant-swarm return. Across August 2019–August 2023, flashes per observed hour were 1.84 times higher in October–November than in other months (p = 0.0005). Sporadic flashes show no such excess (p = 0.40). This is the one clear positive in our Taurid tests.</p>
+        <ul class="cites"><li><a href="../impact/#tests">Liakos et al. 2024 (NELIOTA); RealAether Taurid study, 27 Nov 2026</a></li></ul>
+      </li>
+      <li class="tl-item" id="gannon-2024" data-id="gannon-2024" data-kind="solar" data-evidence="confirmed">
+        <h3>Gannon storm <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">10–12 May 2024 · Solar · geomagnetic · Earth (G5 level; GPS disruption to farm equipment among the effects) · Dst -406 nT · Kp 9 · 2024-05-11 02:00 (OMNI2)</p>
+        <p>The first G5 (extreme) geomagnetic storm of Solar Cycle 25, often called the Gannon storm. In our OMNI2 record, Dst reached −406 nT on 11 May 2024 at 02:00, the third-strongest storm in the 1963–2026 hourly list after March 1989 and 20 November 2003. Kp reached 9. Documented effects included GPS disruption to farm equipment. We found no deaths attributed to the storm.</p>
+        <ul class="cites"><li><a href="../impact/study/CataclysmStudy_Report.pdf">NASA OMNI2 / Kyoto WDC Dst: −406 nT at 2024-05-11 02:00; NOAA SWPC Kp = 9, G5</a></li></ul>
+      </li>
+      <li class="tl-item" id="cycle25-max" data-id="cycle25-max" data-kind="solar" data-evidence="confirmed">
+        <h3>Solar Cycle 25 maximum <span class="badge badge-confirmed">Confirmed</span></h3>
+        <p class="meta">October 2024 (smoothed sunspot-number peak) · Solar · cycle · the Sun · smoothed sunspot number 160.9</p>
+        <p>NASA, NOAA and the Solar Cycle Prediction Panel announced on 15 October 2024 that the Sun had entered the solar-maximum period of Cycle 25, noting that the exact peak month would be identified only later. SILSO later placed the 13-month smoothed sunspot-number maximum in October 2024 at 160.9 — stronger than the 2019 panel’s midpoint forecast of 115. By April 2026 the smoothed number had fallen to 88.6. NOAA SWPC has projected a minimum around December 2030.</p>
+        <ul class="cites"><li><a href="https://www.spaceweather.gov/news/joint-solar-maximum-announcement-nasa-and-noaa">NASA/NOAA joint solar-maximum announcement, 15 October 2024</a></li><li><a href="https://www.sidc.be/article/solar-cycle-25-reached-its-maximum-october-2024">SIDC/SILSO: smoothed monthly sunspot number peaked at 160.9 in October 2024; RealAether Part 2 (value 88.6 by April 2026)</a></li></ul>
+      </li>
+      </ol>
+    </section>
+
+    <section class="card span12" id="methods">
+      <p class="kicker">Methods</p>
+      <h2>How the list was built</h2>
+      <ul class="methods-list">
+        <li><b>Craters.</b> Confirmed impact structures of the last ~100,000 years, plus Vredefort, Sudbury, Manicouagan, Chicxulub, Popigai, Chesapeake Bay, Nördlinger Ries, El’gygytgyn, Tenoumer, Pingualuit and Bosumtwi, are taken from the <a href="https://en.wikipedia.org/wiki/List_of_impact_structures_on_Earth">Wikipedia list of impact structures on Earth</a>, which compiles the Earth Impact Database (EID) as of 2024. The EID’s usual host (passc.net / impact.uwo.ca) was unavailable when this page was assembled, so the Wikipedia compilation is the source we could actually open. Ages, diameters and coordinates follow that table. Rio Cuarto and Aorounga’s age, and the Australasian tektite field (source crater undiscovered), are marked debated where the compilation itself flags uncertainty. Tenoumer’s listed age is 1.6 ± 0.1 Ma; earlier papers also discussed a much younger date.</li>
+        <li><b>Historical impacts and airbursts.</b> Tunguska (1908), Curuçá (1930), Sikhote-Alin (1947), Carancas (2007) and Chelyabinsk (2013) are entered from the modern record. Curuçá is marked debated because the documentation is thin. The Ch’ing-yang (1490) stone shower is marked unverified: chronicles describe it, but there is no confirming crater or meteorite study on the same footing as the modern events.</li>
+        <li><b>Our studies.</b> The 29–31 October 2022 Taurid lunar flashes (NELIOTA; Liakos et al. 2024) and the October–November rate test are from the Taurid study. NASA CNEOS fireballs (≥1 kt, 1 Jan 2005–4 Oct 2026: 81 events, 3.72 per year) and the Miyake / geomagnetic analysis are from the cataclysm study (Part 2). Encke node-crossing years and the Younger Dryas verdict (probably not an impact trigger, about 85% confidence; nearest Encke crossing 649 years away, p ≈ 0.53 versus a random date) are from the Taurid and monument–sky studies. Node crossings are marked “model”: they are calculated orbital geometry, not dated impacts.</li>
+        <li><b>Solar events.</b> Confirmed Miyake events are 7176 BC, 5259 BC, 664–663 BC, AD 774/5 (the strongest of the Holocene) and AD 993/4, with ¹⁴C and ¹⁰Be records (Miyake et al. 2012, 2013; Mekhaldi et al. 2015; later annual-ring work). The ~12,350 BC event is a candidate (Bard et al. 2023) and is marked debated. Geomagnetic storms use NASA OMNI2 hourly Dst, which draws on the Kyoto World Data Center, for 1963–2026: March 1989 Dst −589 nT (Kp 9), 30 October 2003 Dst −383 nT (Kp 9), 20 November 2003 Dst −422 nT, and the May 2024 Gannon storm Dst −406 nT (Kp 9, NOAA SWPC G5). Carrington 1859 and May 1921 pre-date that Dst series; 1921 is given as Dst −907 ± 132 nT (Love et al. 2019). The February 2022 Starlink loss (38 satellites) followed a modest storm that did not reach Dst ≤ −100 nT in our catalogue. Solar Cycle 25’s 13-month smoothed sunspot-number peak is October 2024 at 160.9 (SIDC/SILSO), after NASA and NOAA announced the maximum period on 15 October 2024.</li>
+        <li><b>Evidence labels.</b> <span class="badge badge-confirmed">Confirmed</span> means a widely accepted structure or event with physical or instrumental records. <span class="badge badge-debated">Debated</span> means the event or structure is real, or seriously proposed, but the cause, age, or interpretation is disputed. <span class="badge badge-unverified">Unverified</span> means a historical claim without confirming physical evidence. <span class="badge badge-model">Model</span> means a calculated epoch, not a dated impact.</li>
+        <li><b>What this page is not.</b> It is not an impact-risk product — NASA Sentry is. It does not argue for a single global flood or a lost civilization. No home address or local network information is published here.</li>
+      </ul>
+      <p class="note">The machine-readable file behind this page is <a href="events.json">events.json</a>. Reports: <a href="../impact/study/ImpactStudy_Report.pdf">Taurid</a>, <a href="../impact/study/CataclysmStudy_Report.pdf">cataclysm</a>, <a href="../impact/study/MonumentSky_Report.pdf">monument–sky</a>, <a href="../impact/study/LPC_Centaur_Report.pdf">long-period comets and Centaurs</a>.</p>
+    </section>
+
+    <div class="support span12">
+      <a class="donate" href="https://ko-fi.com/realaether" target="_blank" rel="noopener">&#9733; Support the Research</a>
+      <p class="support-note">RealAether is self-funded citizen science. Donations cover hardware, electricity, internet, and computing time, and every purchase is posted publicly on <a href="../mission/">Mission &amp; Updates</a>. Donations are not tax-deductible.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="credit">Geebs &amp; 3TH3R3AL1 — RealAether</div>
+    Code MIT · Data &amp; charts CC BY 4.0, credit "RealAether (Geebs369)" ·
+    <a href="https://github.com/Geebs369/realaether">GitHub</a> ·
+    <a href="../">AetherWeather</a> · <a href="../crrd/">CRRD</a> · <a href="../impact/">Impact Hypothesis</a> · <a href="./">Timeline</a> · <a href="../logger/">Wind × Volcano &amp; Quake Log</a> · <a href="../precession/">Precession Clock</a> · <a href="../mission/">Mission &amp; Updates</a>
+  </footer>
+  <script src="timeline.js"></script>
+</body>
+</html>

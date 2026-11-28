@@ -1,0 +1,391 @@
+:root {
+  --bg: #05060c;
+  --panel: #0d1020;
+  --line: #262a44;
+  --gold: #d4af37;
+  --gold2: #f3d36b;
+  --txt: #e6e3d6;
+  --dim: #8d8aa0;
+  --cyan: #5ad1ff;
+  --red: #ff6b6b;
+  --green: #6bff9e;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--txt);
+  min-height: 100vh;
+}
+header, main, footer { position: relative; z-index: 1; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+  background: #000a;
+}
+h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+h1 small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--dim);
+  font-weight: 400;
+  margin-top: 4px;
+  text-transform: none;
+  letter-spacing: 1.5px;
+}
+a { color: var(--gold2); }
+nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+nav a {
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  padding: 6px 12px;
+  border-radius: 18px;
+  font-size: 13px;
+}
+nav a:hover { background: var(--gold); color: #000; }
+
+main {
+  padding: 18px 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(12, 1fr);
+}
+.card {
+  background: linear-gradient(180deg, #11152b, #0a0d1b);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 0 18px #0008;
+}
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.span12 { grid-column: span 12; }
+.span8 { grid-column: span 8; }
+.span6 { grid-column: span 6; }
+.span4 { grid-column: span 4; }
+@media (max-width: 1000px) {
+  .span8, .span6, .span4 { grid-column: span 12; }
+}
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.stat { background: #070915; border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+.stat b { display: block; font-size: 22px; color: var(--gold2); font-weight: 600; line-height: 1.2; }
+.stat span { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: 1px; }
+.stat b.big { font-size: 28px; }
+
+.note { font-size: 12px; color: var(--dim); line-height: 1.5; margin: 8px 0 0; }
+.hero-name { font-size: 20px; color: var(--gold2); margin: 0 0 8px; font-weight: 600; }
+.hero-name a { text-decoration: none; }
+.countdown { font-variant-numeric: tabular-nums; letter-spacing: 1px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; align-items: center; }
+.filters label { font-size: 12px; color: var(--dim); display: flex; align-items: center; gap: 6px; }
+input, select, button {
+  background: #070915;
+  color: var(--txt);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 8px;
+  font: inherit;
+}
+button, select { cursor: pointer; }
+button { border-color: var(--gold); color: var(--gold2); }
+button:hover { background: var(--gold); color: #000; }
+
+.table-wrap { max-height: 520px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { color: var(--gold); font-weight: 500; position: sticky; top: 0; background: #0c1022; cursor: pointer; user-select: none; }
+th:hover { color: var(--gold2); }
+th[aria-sort="asc"]::after { content: " \25B2"; font-size: 9px; }
+th[aria-sort="desc"]::after { content: " \25BC"; font-size: 9px; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr:hover td { background: #161b36; }
+tr.selected td { background: #1c2040; }
+tr.pha td { box-shadow: inset 2px 0 0 var(--gold); }
+.body-Moon { color: var(--dim); }
+.body-Mars { color: #e08a6a; }
+
+.ok { color: var(--green); }
+.warn { color: var(--gold2); }
+.bad { color: var(--red); }
+
+#orbit-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #05060c;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.legend { font-size: 11px; color: var(--dim); margin-top: 8px; display: flex; flex-wrap: wrap; gap: 10px 16px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+
+footer {
+  padding: 14px 24px 30px;
+  color: #8d8aa0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+footer a { text-decoration: none; }
+.credit { color: var(--gold2); }
+
+.err { color: var(--red); font-size: 14px; }
+
+.support { margin-top: 18px; text-align: center; }
+.donate { display: inline-block; padding: 10px 22px; border: 1px solid var(--gold); border-radius: 999px;
+  background: linear-gradient(180deg, var(--gold2), var(--gold)); color: #000 !important; font-weight: 700;
+  text-decoration: none; letter-spacing: .5px; box-shadow: 0 0 14px rgba(212,175,55,.35); }
+.donate:hover { filter: brightness(1.1); box-shadow: 0 0 22px rgba(212,175,55,.6); }
+.support-note { max-width: 560px; margin: 10px auto 0; font-size: 12px; opacity: .75; }
+
+nav a.support-top { background: linear-gradient(180deg, var(--gold2), var(--gold)); color: #000; font-weight: 700; }
+nav a.support-top:hover { filter: brightness(1.1); }
+
+
+/* RealAether shared background: "detector frame / simulation grid" (replaces the starfield and the galaxy screenshot).
+   body.ra-bg: dark sensor vignette + faint pixel grid.
+   ::before: receding wireframe "simulation grid" floor, NEO orbit arcs, cosmic-ray air showers and streaks,
+             layered solar-wind / sine / seismograph waves (gold with a cyan accent).
+   ::after:  single-pixel hits with a very slow glow (off under prefers-reduced-motion).
+   .ra-hero: the stronger version for the AetherWeather header banner.
+   Pure CSS + inline SVG (generated by src/gen.py), no image downloads. */
+body.ra-bg {
+  background-color: #05060c;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(20,26,58,.55) 0%, rgba(5,6,12,0) 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%),
+    linear-gradient(rgba(212,175,55,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,.045) 1px, transparent 1px),
+    linear-gradient(rgba(212,175,55,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,.018) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px, 8px 8px, 8px 8px;
+  background-attachment: fixed;
+}
+body.ra-bg::before, body.ra-bg::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+  background-repeat: no-repeat; background-position: center bottom; background-size: cover;
+}
+body.ra-bg::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 1000%22 preserveAspectRatio=%22xMidYMid slice%22%3E%3Cdefs%3E%3ClinearGradient id=%22t%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%23f3d36b%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23f3d36b%22 stop-opacity=%22.85%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fffbe6%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22tc%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%235ad1ff%22 stop-opacity=%220%22/%3E%3Cstop offset=%221%22 stop-color=%22%23bff0ff%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22fade%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23fff%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%221%22/%3E%3C/linearGradient%3E%3Cmask id=%22m%22%3E%3Crect x=%220%22 y=%220%22 width=%22100%25%22 height=%22100%25%22 fill=%22url(%23fade)%22/%3E%3C/mask%3E%3CradialGradient id=%22hz%22 cx=%22.5%22 cy=%22.5%22 r=%22.5%22%3E%3Cstop offset=%220%22 stop-color=%22%23d4af37%22 stop-opacity=%22.35%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d4af37%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3Cfilter id=%22g%22 x=%22-30%25%22 y=%22-30%25%22 width=%22160%25%22 height=%22160%25%22%3E%3CfeGaussianBlur stdDeviation=%221.6%22 result=%22b%22/%3E%3CfeMerge%3E%3CfeMergeNode in=%22b%22/%3E%3CfeMergeNode in=%22SourceGraphic%22/%3E%3C/feMerge%3E%3C/filter%3E%3Cfilter id=%22g2%22 x=%22-50%25%22 y=%22-50%25%22 width=%22200%25%22 height=%22200%25%22%3E%3CfeGaussianBlur stdDeviation=%223.5%22/%3E%3C/filter%3E%3C/defs%3E%3Cg mask=%22url(%23m)%22 transform=%22translate(0 720)%22%3E%3Cg fill=%22none%22 stroke=%22%23d4af37%22 stroke-width=%221.2%22 stroke-opacity=%220.27%22%3E%3Cline x1=%22644.0%22 y1=%220%22 x2=%22-2720.0%22 y2=%22280%22/%3E%3Cline x1=%22650.0%22 y1=%220%22 x2=%22-2584.6%22 y2=%22280%22/%3E%3Cline x1=%22656.0%22 y1=%220%22 x2=%22-2449.2%22 y2=%22280%22/%3E%3Cline x1=%22662.0%22 y1=%220%22 x2=%22-2313.8%22 y2=%22280%22/%3E%3Cline x1=%22668.0%22 y1=%220%22 x2=%22-2178.5%22 y2=%22280%22/%3E%3Cline x1=%22674.0%22 y1=%220%22 x2=%22-2043.1%22 y2=%22280%22/%3E%3Cline x1=%22680.0%22 y1=%220%22 x2=%22-1907.7%22 y2=%22280%22/%3E%3Cline x1=%22686.0%22 y1=%220%22 x2=%22-1772.3%22 y2=%22280%22/%3E%3Cline x1=%22692.0%22 y1=%220%22 x2=%22-1636.9%22 y2=%22280%22/%3E%3Cline x1=%22698.0%22 y1=%220%22 x2=%22-1501.5%22 y2=%22280%22/%3E%3Cline x1=%22704.0%22 y1=%220%22 x2=%22-1366.2%22 y2=%22280%22/%3E%3Cline x1=%22710.0%22 y1=%220%22 x2=%22-1230.8%22 y2=%22280%22/%3E%3Cline x1=%22716.0%22 y1=%220%22 x2=%22-1095.4%22 y2=%22280%22/%3E%3Cline x1=%22722.0%22 y1=%220%22 x2=%22-960.0%22 y2=%22280%22/%3E%3Cline x1=%22728.0%22 y1=%220%22 x2=%22-824.6%22 y2=%22280%22/%3E%3Cline x1=%22734.0%22 y1=%220%22 x2=%22-689.2%22 y2=%22280%22/%3E%3Cline x1=%22740.0%22 y1=%220%22 x2=%22-553.8%22 y2=%22280%22/%3E%3Cline x1=%22746.0%22 y1=%220%22 x2=%22-418.5%22 y2=%22280%22/%3E%3Cline x1=%22752.0%22 y1=%220%22 x2=%22-283.1%22 y2=%22280%22/%3E%3Cline x1=%22758.0%22 y1=%220%22 x2=%22-147.7%22 y2=%22280%22/%3E%3Cline x1=%22764.0%22 y1=%220%22 x2=%22-12.3%22 y2=%22280%22/%3E%3Cline x1=%22770.0%22 y1=%220%22 x2=%22123.1%22 y2=%22280%22/%3E%3Cline x1=%22776.0%22 y1=%220%22 x2=%22258.5%22 y2=%22280%22/%3E%3Cline x1=%22782.0%22 y1=%220%22 x2=%22393.8%22 y2=%22280%22/%3E%3Cline x1=%22788.0%22 y1=%220%22 x2=%22529.2%22 y2=%22280%22/%3E%3Cline x1=%22794.0%22 y1=%220%22 x2=%22664.6%22 y2=%22280%22/%3E%3Cline x1=%22800.0%22 y1=%220%22 x2=%22800.0%22 y2=%22280%22/%3E%3Cline x1=%22806.0%22 y1=%220%22 x2=%22935.4%22 y2=%22280%22/%3E%3Cline x1=%22812.0%22 y1=%220%22 x2=%221070.8%22 y2=%22280%22/%3E%3Cline x1=%22818.0%22 y1=%220%22 x2=%221206.2%22 y2=%22280%22/%3E%3Cline x1=%22824.0%22 y1=%220%22 x2=%221341.5%22 y2=%22280%22/%3E%3Cline x1=%22830.0%22 y1=%220%22 x2=%221476.9%22 y2=%22280%22/%3E%3Cline x1=%22836.0%22 y1=%220%22 x2=%221612.3%22 y2=%22280%22/%3E%3Cline x1=%22842.0%22 y1=%220%22 x2=%221747.7%22 y2=%22280%22/%3E%3Cline x1=%22848.0%22 y1=%220%22 x2=%221883.1%22 y2=%22280%22/%3E%3Cline x1=%22854.0%22 y1=%220%22 x2=%222018.5%22 y2=%22280%22/%3E%3Cline x1=%22860.0%22 y1=%220%22 x2=%222153.8%22 y2=%22280%22/%3E%3Cline x1=%22866.0%22 y1=%220%22 x2=%222289.2%22 y2=%22280%22/%3E%3Cline x1=%22872.0%22 y1=%220%22 x2=%222424.6%22 y2=%22280%22/%3E%3Cline x1=%22878.0%22 y1=%220%22 x2=%222560.0%22 y2=%22280%22/%3E%3Cline x1=%22884.0%22 y1=%220%22 x2=%222695.4%22 y2=%22280%22/%3E%3Cline x1=%22890.0%22 y1=%220%22 x2=%222830.8%22 y2=%22280%22/%3E%3Cline x1=%22896.0%22 y1=%220%22 x2=%222966.2%22 y2=%22280%22/%3E%3Cline x1=%22902.0%22 y1=%220%22 x2=%223101.5%22 y2=%22280%22/%3E%3Cline x1=%22908.0%22 y1=%220%22 x2=%223236.9%22 y2=%22280%22/%3E%3Cline x1=%22914.0%22 y1=%220%22 x2=%223372.3%22 y2=%22280%22/%3E%3Cline x1=%22920.0%22 y1=%220%22 x2=%223507.7%22 y2=%22280%22/%3E%3Cline x1=%22926.0%22 y1=%220%22 x2=%223643.1%22 y2=%22280%22/%3E%3Cline x1=%22932.0%22 y1=%220%22 x2=%223778.5%22 y2=%22280%22/%3E%3Cline x1=%22938.0%22 y1=%220%22 x2=%223913.8%22 y2=%22280%22/%3E%3Cline x1=%22944.0%22 y1=%220%22 x2=%224049.2%22 y2=%22280%22/%3E%3Cline x1=%22950.0%22 y1=%220%22 x2=%224184.6%22 y2=%22280%22/%3E%3Cline x1=%22956.0%22 y1=%220%22 x2=%224320.0%22 y2=%22280%22/%3E%3Cline x1=%220%22 y1=%220.8%22 x2=%221600%22 y2=%220.8%22/%3E%3Cline x1=%220%22 y1=%223.9%22 x2=%221600%22 y2=%223.9%22/%3E%3Cline x1=%220%22 y1=%229.4%22 x2=%221600%22 y2=%229.4%22/%3E%3Cline x1=%220%22 y1=%2217.8%22 x2=%221600%22 y2=%2217.8%22/%3E%3Cline x1=%220%22 y1=%2229.1%22 x2=%221600%22 y2=%2229.1%22/%3E%3Cline x1=%220%22 y1=%2243.4%22 x2=%221600%22 y2=%2243.4%22/%3E%3Cline x1=%220%22 y1=%2260.9%22 x2=%221600%22 y2=%2260.9%22/%3E%3Cline x1=%220%22 y1=%2281.7%22 x2=%221600%22 y2=%2281.7%22/%3E%3Cline x1=%220%22 y1=%22105.9%22 x2=%221600%22 y2=%22105.9%22/%3E%3Cline x1=%220%22 y1=%22133.6%22 x2=%221600%22 y2=%22133.6%22/%3E%3Cline x1=%220%22 y1=%22164.7%22 x2=%221600%22 y2=%22164.7%22/%3E%3Cline x1=%220%22 y1=%22199.5%22 x2=%221600%22 y2=%22199.5%22/%3E%3Cline x1=%220%22 y1=%22237.9%22 x2=%221600%22 y2=%22237.9%22/%3E%3Cline x1=%220%22 y1=%22280.0%22 x2=%221600%22 y2=%22280.0%22/%3E%3C/g%3E%3C/g%3E%3Cellipse cx=%22800.0%22 cy=%22720%22 rx=%22768%22 ry=%2262%22 fill=%22url(%23hz)%22/%3E%3Cline x1=%220%22 y1=%22720%22 x2=%221600%22 y2=%22720%22 stroke=%22%23f3d36b%22 stroke-opacity=%220.20%22 stroke-width=%221.2%22 filter=%22url(%23g)%22/%3E%3Cellipse cx=%221450%22 cy=%22-60%22 rx=%22980%22 ry=%22560%22 fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.08%22 stroke-width=%221.2%22 transform=%22rotate(0 1450 -60)%22 /%3E%3Cellipse cx=%221450%22 cy=%22-60%22 rx=%22720%22 ry=%22400%22 fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.06%22 stroke-width=%221.2%22 transform=%22rotate(0 1450 -60)%22 stroke-dasharray=%223 9%22/%3E%3Cg filter=%22url(%23g)%22 stroke-linecap=%22round%22 fill=%22none%22%3E%3Cline x1=%22577%22 y1=%229%22 x2=%22667%22 y2=%22162%22 stroke=%22url(%23tc)%22 stroke-width=%221.44%22 stroke-opacity=%220.47%22/%3E%3Cline x1=%22581%22 y1=%2249%22 x2=%22624%22 y2=%22194%22 stroke=%22url(%23t)%22 stroke-width=%221.17%22 stroke-opacity=%220.39%22/%3E%3Cline x1=%22589%22 y1=%2229%22 x2=%22712%22 y2=%22237%22 stroke=%22url(%23t)%22 stroke-width=%221.44%22 stroke-opacity=%220.47%22/%3E%3Cline x1=%22568%22 y1=%2211%22 x2=%22594%22 y2=%22110%22 stroke=%22url(%23t)%22 stroke-width=%221.44%22 stroke-opacity=%220.44%22/%3E%3Cline x1=%22576%22 y1=%22-1%22 x2=%22723%22 y2=%22178%22 stroke=%22url(%23t)%22 stroke-width=%221.44%22 stroke-opacity=%220.31%22/%3E%3Cline x1=%22565%22 y1=%2214%22 x2=%22601%22 y2=%22242%22 stroke=%22url(%23tc)%22 stroke-width=%221.44%22 stroke-opacity=%220.55%22/%3E%3Cline x1=%22567%22 y1=%2259%22 x2=%22581%22 y2=%22223%22 stroke=%22url(%23t)%22 stroke-width=%221.17%22 stroke-opacity=%220.55%22/%3E%3Cline x1=%22568%22 y1=%225%22 x2=%22645%22 y2=%22260%22 stroke=%22url(%23t)%22 stroke-width=%221.17%22 stroke-opacity=%220.33%22/%3E%3Cline x1=%22588%22 y1=%2221%22 x2=%22644%22 y2=%22101%22 stroke=%22url(%23t)%22 stroke-width=%221.17%22 stroke-opacity=%220.57%22/%3E%3Cline x1=%22566%22 y1=%2236%22 x2=%22579%22 y2=%22166%22 stroke=%22url(%23t)%22 stroke-width=%221.44%22 stroke-opacity=%220.42%22/%3E%3Cline x1=%22580%22 y1=%2247%22 x2=%22623%22 y2=%22190%22 stroke=%22url(%23tc)%22 stroke-width=%221.44%22 stroke-opacity=%220.62%22/%3E%3C/g%3E%3Cg filter=%22url(%23g)%22 stroke-linecap=%22round%22 fill=%22none%22%3E%3Cline x1=%221236%22 y1=%22-11%22 x2=%221217%22 y2=%2284%22 stroke=%22url(%23tc)%22 stroke-width=%220.90%22 stroke-opacity=%220.33%22/%3E%3Cline x1=%221239%22 y1=%22-3%22 x2=%221230%22 y2=%22168%22 stroke=%22url(%23t)%22 stroke-width=%220.90%22 stroke-opacity=%220.38%22/%3E%3Cline x1=%221234%22 y1=%22-16%22 x2=%221181%22 y2=%22106%22 stroke=%22url(%23t)%22 stroke-width=%220.90%22 stroke-opacity=%220.39%22/%3E%3Cline x1=%221224%22 y1=%22-11%22 x2=%221174%22 y2=%2249%22 stroke=%22url(%23t)%22 stroke-width=%221.17%22 stroke-opacity=%220.58%22/%3E%3Cline x1=%221234%22 y1=%226%22 x2=%221214%22 y2=%22122%22 stroke=%22url(%23t)%22 stroke-width=%221.44%22 stroke-opacity=%220.64%22/%3E%3Cline x1=%221210%22 y1=%2211%22 x2=%221143%22 y2=%22104%22 stroke=%22url(%23tc)%22 stroke-width=%221.17%22 stroke-opacity=%220.54%22/%3E%3Cline x1=%221231%22 y1=%22-7%22 x2=%221191%22 y2=%2291%22 stroke=%22url(%23t)%22 stroke-width=%220.90%22 stroke-opacity=%220.63%22/%3E%3Cline x1=%221194%22 y1=%2237%22 x2=%221087%22 y2=%22192%22 stroke=%22url(%23t)%22 stroke-width=%220.90%22 stroke-opacity=%220.62%22/%3E%3Cline x1=%221207%22 y1=%2241%22 x2=%221131%22 y2=%22205%22 stroke=%22url(%23t)%22 stroke-width=%221.44%22 stroke-opacity=%220.37%22/%3E%3Cline x1=%221231%22 y1=%22-4%22 x2=%221191%22 y2=%22112%22 stroke=%22url(%23t)%22 stroke-width=%220.90%22 stroke-opacity=%220.41%22/%3E%3Cline x1=%221236%22 y1=%22-24%22 x2=%221180%22 y2=%2257%22 stroke=%22url(%23tc)%22 stroke-width=%221.44%22 stroke-opacity=%220.65%22/%3E%3C/g%3E%3Cg filter=%22url(%23g)%22 stroke-linecap=%22round%22 fill=%22none%22%3E%3Cline x1=%22723.8%22 y1=%22358.3%22 x2=%22608.7%22 y2=%22483.4%22 stroke=%22url(%23tc)%22 stroke-width=%221.60%22 stroke-opacity=%220.36%22/%3E%3Cline x1=%221286.2%22 y1=%22304.5%22 x2=%221393.9%22 y2=%22357.4%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.34%22/%3E%3Cline x1=%22861.9%22 y1=%22569.8%22 x2=%22937.9%22 y2=%22662.7%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.50%22/%3E%3Cline x1=%22984.9%22 y1=%22100.8%22 x2=%221005.5%22 y2=%22122.6%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.36%22/%3E%3Cline x1=%22387.1%22 y1=%2219.3%22 x2=%22424.6%22 y2=%2252.3%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.37%22/%3E%3Cline x1=%22470.6%22 y1=%222.9%22 x2=%22540.7%22 y2=%22100.4%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.60%22/%3E%3C/g%3E%3Cpath d=%22M1380 560 q11 8 22 7 q12 14 14 -1 q14 5 23 -6 q10 -8 19 1 q6 -9 17 7 q12 -11 22 -6%22 fill=%22none%22 stroke=%22%23f3d36b%22 stroke-opacity=%22.55%22 stroke-width=%221.6%22 stroke-linecap=%22round%22 filter=%22url(%23g)%22/%3E%3Cpolyline fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.18%22 stroke-width=%221.2%22 stroke-linejoin=%22round%22 points=%220,660 16,664 32,668 48,671 64,672 80,672 96,671 112,670 128,668 144,668 160,668 176,668 192,669 208,669 224,669 240,667 256,664 272,660 288,656 304,652 320,648 336,646 352,646 368,646 384,648 400,650 416,652 432,654 448,655 464,655 480,655 496,655 512,655 528,657 544,660 560,663 576,667 592,671 608,674 624,676 640,676 656,674 672,672 688,669 704,666 720,664 736,662 752,662 768,662 784,661 800,661 816,659 832,657 848,654 864,650 880,647 896,645 912,644 928,645 944,647 960,650 976,653 992,657 1008,660 1024,661 1040,662 1056,663 1072,663 1088,663 1104,664 1120,666 1136,669 1152,671 1168,674 1184,675 1200,675 1216,674 1232,671 1248,667 1264,663 1280,659 1296,656 1312,654 1328,654 1344,654 1360,654 1376,654 1392,653 1408,652 1424,650 1440,648 1456,647 1472,646 1488,647 1504,649 1520,652 1536,656 1552,661 1568,665 1584,668 1600,669%22/%3E%3Cpolyline fill=%22none%22 stroke=%22%235ad1ff%22 stroke-opacity=%220.14%22 stroke-width=%221.0%22 stroke-linejoin=%22round%22 points=%220,680 16,678 32,676 48,675 64,675 80,675 96,674 112,671 128,667 144,663 160,661 176,660 192,661 208,664 224,667 240,670 256,671 272,672 288,672 304,673 320,675 336,678 352,681 368,684 384,684 400,682 416,679 432,675 448,672 464,670 480,669 496,669 512,669 528,667 544,665 560,663 576,661 592,661 608,663 624,667 640,671 656,675 672,677 688,678 704,677 720,677 736,678 752,679 768,681 784,682 800,681 816,679 832,675 848,670 864,667 880,664 896,664 912,665 928,666 944,666 960,666 976,665 992,664 1008,665 1024,667 1040,671 1056,676 1072,680 1088,682 1104,682 1120,681 1136,679 1152,677 1168,677 1184,677 1200,677 1216,677 1232,674 1248,671 1264,666 1280,663 1296,661 1312,661 1328,663 1344,665 1360,668 1376,669 1392,669 1408,670 1424,670 1440,672 1456,675 1472,679 1488,683 1504,684 1520,683 1536,681 1552,678 1568,674 1584,672 1600,672%22/%3E%3Cpolyline fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.16%22 stroke-width=%221.1%22 stroke-linejoin=%22round%22 points=%220,689 16,691 32,690 48,687 64,687 80,688 96,690 112,688 128,691 144,690 160,693 176,692 192,688 208,689 224,688 240,691 256,690 272,687 288,691 304,689 320,690 336,692 352,689 368,690 384,691 400,693 416,690 432,688 448,687 464,692 480,692 496,691 512,690 528,692 544,690 560,690 576,702 592,684 608,697 624,686 640,679 656,690 672,687 688,690 704,688 720,690 736,692 752,689 768,689 784,693 800,688 816,688 832,691 848,687 864,689 880,693 896,690 912,691 928,692 944,692 960,689 976,688 992,686 1008,685 1024,679 1040,674 1056,682 1072,702 1088,682 1104,687 1120,688 1136,692 1152,690 1168,688 1184,689 1200,692 1216,687 1232,690 1248,690 1264,692 1280,694 1296,685 1312,698 1328,703 1344,678 1360,703 1376,695 1392,693 1408,688 1424,689 1440,687 1456,689 1472,693 1488,693 1504,693 1520,688 1536,688 1552,691 1568,692 1584,691 1600,688%22/%3E%3C/svg%3E"); opacity: .6; animation: ra-drift 90s ease-in-out infinite alternate; }
+body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 1000%22 preserveAspectRatio=%22xMidYMid slice%22%3E%3Cdefs%3E%3ClinearGradient id=%22t%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%23f3d36b%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23f3d36b%22 stop-opacity=%22.85%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fffbe6%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22tc%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%235ad1ff%22 stop-opacity=%220%22/%3E%3Cstop offset=%221%22 stop-color=%22%23bff0ff%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22fade%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23fff%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%221%22/%3E%3C/linearGradient%3E%3Cmask id=%22m%22%3E%3Crect x=%220%22 y=%220%22 width=%22100%25%22 height=%22100%25%22 fill=%22url(%23fade)%22/%3E%3C/mask%3E%3CradialGradient id=%22hz%22 cx=%22.5%22 cy=%22.5%22 r=%22.5%22%3E%3Cstop offset=%220%22 stop-color=%22%23d4af37%22 stop-opacity=%22.35%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d4af37%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3Cfilter id=%22g%22 x=%22-30%25%22 y=%22-30%25%22 width=%22160%25%22 height=%22160%25%22%3E%3CfeGaussianBlur stdDeviation=%221.6%22 result=%22b%22/%3E%3CfeMerge%3E%3CfeMergeNode in=%22b%22/%3E%3CfeMergeNode in=%22SourceGraphic%22/%3E%3C/feMerge%3E%3C/filter%3E%3Cfilter id=%22g2%22 x=%22-50%25%22 y=%22-50%25%22 width=%22200%25%22 height=%22200%25%22%3E%3CfeGaussianBlur stdDeviation=%223.5%22/%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx=%22264%22 cy=%22469%22 r=%228.0%22 fill=%22%235ad1ff%22 fill-opacity=%22.25%22 filter=%22url(%23g2)%22/%3E%3Crect x=%22264%22 y=%22469%22 width=%225%22 height=%225%22 fill=%22%235ad1ff%22 fill-opacity=%220.41%22/%3E%3Crect x=%221349%22 y=%22673%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.62%22/%3E%3Crect x=%22820%22 y=%22343%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.62%22/%3E%3Crect x=%2223%22 y=%22634%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.33%22/%3E%3Crect x=%221270%22 y=%22158%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.58%22/%3E%3Crect x=%22699%22 y=%22677%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.55%22/%3E%3Crect x=%2255%22 y=%22224%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.58%22/%3E%3Crect x=%221038%22 y=%22638%22 width=%222%22 height=%222%22 fill=%22%235ad1ff%22 fill-opacity=%220.36%22/%3E%3Crect x=%221308%22 y=%2285%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.48%22/%3E%3Crect x=%22883%22 y=%22233%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.36%22/%3E%3Crect x=%221064%22 y=%22320%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.33%22/%3E%3Ccircle cx=%22316%22 cy=%22458%22 r=%228.0%22 fill=%22%23f3d36b%22 fill-opacity=%22.25%22 filter=%22url(%23g2)%22/%3E%3Crect x=%22316%22 y=%22458%22 width=%225%22 height=%225%22 fill=%22%23f3d36b%22 fill-opacity=%220.60%22/%3E%3Ccircle cx=%221220%22 cy=%22395%22 r=%228.0%22 fill=%22%23f3d36b%22 fill-opacity=%22.25%22 filter=%22url(%23g2)%22/%3E%3Crect x=%221220%22 y=%22395%22 width=%225%22 height=%225%22 fill=%22%23f3d36b%22 fill-opacity=%220.33%22/%3E%3Crect x=%22896%22 y=%22380%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.38%22/%3E%3Crect x=%221477%22 y=%22604%22 width=%223%22 height=%223%22 fill=%22%235ad1ff%22 fill-opacity=%220.42%22/%3E%3Crect x=%221527%22 y=%22341%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.70%22/%3E%3Crect x=%22619%22 y=%2218%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.36%22/%3E%3Crect x=%221146%22 y=%22668%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.50%22/%3E%3Crect x=%22881%22 y=%22509%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.53%22/%3E%3Crect x=%22510%22 y=%22666%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.37%22/%3E%3Crect x=%22272%22 y=%22237%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.44%22/%3E%3Crect x=%22956%22 y=%22208%22 width=%222%22 height=%222%22 fill=%22%235ad1ff%22 fill-opacity=%220.37%22/%3E%3C/svg%3E"); opacity: .5; animation: ra-glow 24s ease-in-out infinite alternate; }
+@keyframes ra-glow { from { opacity: .3; } to { opacity: .65; } }
+@keyframes ra-drift { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+@media (prefers-reduced-motion: reduce) { body.ra-bg::before, body.ra-bg::after { animation: none; } }
+/* small screens: quieter background so card numbers stay crisp */
+@media (max-width: 640px) {
+  body.ra-bg { background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px, 0 0, 0 0; }
+  body.ra-bg::before { opacity: .32; }
+  body.ra-bg::after { opacity: .25; animation: none; }
+}
+/* header banner (AetherWeather) */
+.ra-hero { position: absolute; inset: 0; background:
+    url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1600 320%22 preserveAspectRatio=%22xMidYMid slice%22%3E%3Cdefs%3E%3ClinearGradient id=%22t%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%23f3d36b%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.7%22 stop-color=%22%23f3d36b%22 stop-opacity=%22.85%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fffbe6%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22tc%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%235ad1ff%22 stop-opacity=%220%22/%3E%3Cstop offset=%221%22 stop-color=%22%23bff0ff%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22fade%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22 stop-opacity=%220%22/%3E%3Cstop offset=%22.35%22 stop-color=%22%23fff%22 stop-opacity=%22.55%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%221%22/%3E%3C/linearGradient%3E%3Cmask id=%22m%22%3E%3Crect x=%220%22 y=%220%22 width=%22100%25%22 height=%22100%25%22 fill=%22url(%23fade)%22/%3E%3C/mask%3E%3CradialGradient id=%22hz%22 cx=%22.5%22 cy=%22.5%22 r=%22.5%22%3E%3Cstop offset=%220%22 stop-color=%22%23d4af37%22 stop-opacity=%22.35%22/%3E%3Cstop offset=%221%22 stop-color=%22%23d4af37%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E%3Cfilter id=%22g%22 x=%22-30%25%22 y=%22-30%25%22 width=%22160%25%22 height=%22160%25%22%3E%3CfeGaussianBlur stdDeviation=%221.6%22 result=%22b%22/%3E%3CfeMerge%3E%3CfeMergeNode in=%22b%22/%3E%3CfeMergeNode in=%22SourceGraphic%22/%3E%3C/feMerge%3E%3C/filter%3E%3Cfilter id=%22g2%22 x=%22-50%25%22 y=%22-50%25%22 width=%22200%25%22 height=%22200%25%22%3E%3CfeGaussianBlur stdDeviation=%223.5%22/%3E%3C/filter%3E%3C/defs%3E%3Cg mask=%22url(%23m)%22 transform=%22translate(0 175)%22%3E%3Cg fill=%22none%22 stroke=%22%23d4af37%22 stroke-width=%221.2%22 stroke-opacity=%220.60%22%3E%3Cline x1=%22620.0%22 y1=%220%22 x2=%22-2720.0%22 y2=%22145%22/%3E%3Cline x1=%22626.0%22 y1=%220%22 x2=%22-2602.7%22 y2=%22145%22/%3E%3Cline x1=%22632.0%22 y1=%220%22 x2=%22-2485.3%22 y2=%22145%22/%3E%3Cline x1=%22638.0%22 y1=%220%22 x2=%22-2368.0%22 y2=%22145%22/%3E%3Cline x1=%22644.0%22 y1=%220%22 x2=%22-2250.7%22 y2=%22145%22/%3E%3Cline x1=%22650.0%22 y1=%220%22 x2=%22-2133.3%22 y2=%22145%22/%3E%3Cline x1=%22656.0%22 y1=%220%22 x2=%22-2016.0%22 y2=%22145%22/%3E%3Cline x1=%22662.0%22 y1=%220%22 x2=%22-1898.7%22 y2=%22145%22/%3E%3Cline x1=%22668.0%22 y1=%220%22 x2=%22-1781.3%22 y2=%22145%22/%3E%3Cline x1=%22674.0%22 y1=%220%22 x2=%22-1664.0%22 y2=%22145%22/%3E%3Cline x1=%22680.0%22 y1=%220%22 x2=%22-1546.7%22 y2=%22145%22/%3E%3Cline x1=%22686.0%22 y1=%220%22 x2=%22-1429.3%22 y2=%22145%22/%3E%3Cline x1=%22692.0%22 y1=%220%22 x2=%22-1312.0%22 y2=%22145%22/%3E%3Cline x1=%22698.0%22 y1=%220%22 x2=%22-1194.7%22 y2=%22145%22/%3E%3Cline x1=%22704.0%22 y1=%220%22 x2=%22-1077.3%22 y2=%22145%22/%3E%3Cline x1=%22710.0%22 y1=%220%22 x2=%22-960.0%22 y2=%22145%22/%3E%3Cline x1=%22716.0%22 y1=%220%22 x2=%22-842.7%22 y2=%22145%22/%3E%3Cline x1=%22722.0%22 y1=%220%22 x2=%22-725.3%22 y2=%22145%22/%3E%3Cline x1=%22728.0%22 y1=%220%22 x2=%22-608.0%22 y2=%22145%22/%3E%3Cline x1=%22734.0%22 y1=%220%22 x2=%22-490.7%22 y2=%22145%22/%3E%3Cline x1=%22740.0%22 y1=%220%22 x2=%22-373.3%22 y2=%22145%22/%3E%3Cline x1=%22746.0%22 y1=%220%22 x2=%22-256.0%22 y2=%22145%22/%3E%3Cline x1=%22752.0%22 y1=%220%22 x2=%22-138.7%22 y2=%22145%22/%3E%3Cline x1=%22758.0%22 y1=%220%22 x2=%22-21.3%22 y2=%22145%22/%3E%3Cline x1=%22764.0%22 y1=%220%22 x2=%2296.0%22 y2=%22145%22/%3E%3Cline x1=%22770.0%22 y1=%220%22 x2=%22213.3%22 y2=%22145%22/%3E%3Cline x1=%22776.0%22 y1=%220%22 x2=%22330.7%22 y2=%22145%22/%3E%3Cline x1=%22782.0%22 y1=%220%22 x2=%22448.0%22 y2=%22145%22/%3E%3Cline x1=%22788.0%22 y1=%220%22 x2=%22565.3%22 y2=%22145%22/%3E%3Cline x1=%22794.0%22 y1=%220%22 x2=%22682.7%22 y2=%22145%22/%3E%3Cline x1=%22800.0%22 y1=%220%22 x2=%22800.0%22 y2=%22145%22/%3E%3Cline x1=%22806.0%22 y1=%220%22 x2=%22917.3%22 y2=%22145%22/%3E%3Cline x1=%22812.0%22 y1=%220%22 x2=%221034.7%22 y2=%22145%22/%3E%3Cline x1=%22818.0%22 y1=%220%22 x2=%221152.0%22 y2=%22145%22/%3E%3Cline x1=%22824.0%22 y1=%220%22 x2=%221269.3%22 y2=%22145%22/%3E%3Cline x1=%22830.0%22 y1=%220%22 x2=%221386.7%22 y2=%22145%22/%3E%3Cline x1=%22836.0%22 y1=%220%22 x2=%221504.0%22 y2=%22145%22/%3E%3Cline x1=%22842.0%22 y1=%220%22 x2=%221621.3%22 y2=%22145%22/%3E%3Cline x1=%22848.0%22 y1=%220%22 x2=%221738.7%22 y2=%22145%22/%3E%3Cline x1=%22854.0%22 y1=%220%22 x2=%221856.0%22 y2=%22145%22/%3E%3Cline x1=%22860.0%22 y1=%220%22 x2=%221973.3%22 y2=%22145%22/%3E%3Cline x1=%22866.0%22 y1=%220%22 x2=%222090.7%22 y2=%22145%22/%3E%3Cline x1=%22872.0%22 y1=%220%22 x2=%222208.0%22 y2=%22145%22/%3E%3Cline x1=%22878.0%22 y1=%220%22 x2=%222325.3%22 y2=%22145%22/%3E%3Cline x1=%22884.0%22 y1=%220%22 x2=%222442.7%22 y2=%22145%22/%3E%3Cline x1=%22890.0%22 y1=%220%22 x2=%222560.0%22 y2=%22145%22/%3E%3Cline x1=%22896.0%22 y1=%220%22 x2=%222677.3%22 y2=%22145%22/%3E%3Cline x1=%22902.0%22 y1=%220%22 x2=%222794.7%22 y2=%22145%22/%3E%3Cline x1=%22908.0%22 y1=%220%22 x2=%222912.0%22 y2=%22145%22/%3E%3Cline x1=%22914.0%22 y1=%220%22 x2=%223029.3%22 y2=%22145%22/%3E%3Cline x1=%22920.0%22 y1=%220%22 x2=%223146.7%22 y2=%22145%22/%3E%3Cline x1=%22926.0%22 y1=%220%22 x2=%223264.0%22 y2=%22145%22/%3E%3Cline x1=%22932.0%22 y1=%220%22 x2=%223381.3%22 y2=%22145%22/%3E%3Cline x1=%22938.0%22 y1=%220%22 x2=%223498.7%22 y2=%22145%22/%3E%3Cline x1=%22944.0%22 y1=%220%22 x2=%223616.0%22 y2=%22145%22/%3E%3Cline x1=%22950.0%22 y1=%220%22 x2=%223733.3%22 y2=%22145%22/%3E%3Cline x1=%22956.0%22 y1=%220%22 x2=%223850.7%22 y2=%22145%22/%3E%3Cline x1=%22962.0%22 y1=%220%22 x2=%223968.0%22 y2=%22145%22/%3E%3Cline x1=%22968.0%22 y1=%220%22 x2=%224085.3%22 y2=%22145%22/%3E%3Cline x1=%22974.0%22 y1=%220%22 x2=%224202.7%22 y2=%22145%22/%3E%3Cline x1=%22980.0%22 y1=%220%22 x2=%224320.0%22 y2=%22145%22/%3E%3Cline x1=%220%22 y1=%220.6%22 x2=%221600%22 y2=%220.6%22/%3E%3Cline x1=%220%22 y1=%222.8%22 x2=%221600%22 y2=%222.8%22/%3E%3Cline x1=%220%22 y1=%226.9%22 x2=%221600%22 y2=%226.9%22/%3E%3Cline x1=%220%22 y1=%2212.9%22 x2=%221600%22 y2=%2212.9%22/%3E%3Cline x1=%220%22 y1=%2221.1%22 x2=%221600%22 y2=%2221.1%22/%3E%3Cline x1=%220%22 y1=%2231.6%22 x2=%221600%22 y2=%2231.6%22/%3E%3Cline x1=%220%22 y1=%2244.3%22 x2=%221600%22 y2=%2244.3%22/%3E%3Cline x1=%220%22 y1=%2259.4%22 x2=%221600%22 y2=%2259.4%22/%3E%3Cline x1=%220%22 y1=%2277.0%22 x2=%221600%22 y2=%2277.0%22/%3E%3Cline x1=%220%22 y1=%2297.1%22 x2=%221600%22 y2=%2297.1%22/%3E%3Cline x1=%220%22 y1=%22119.7%22 x2=%221600%22 y2=%22119.7%22/%3E%3Cline x1=%220%22 y1=%22145.0%22 x2=%221600%22 y2=%22145.0%22/%3E%3C/g%3E%3C/g%3E%3Cellipse cx=%22800.0%22 cy=%22175%22 rx=%22768%22 ry=%2232%22 fill=%22url(%23hz)%22/%3E%3Cline x1=%220%22 y1=%22175%22 x2=%221600%22 y2=%22175%22 stroke=%22%23f3d36b%22 stroke-opacity=%220.45%22 stroke-width=%221.2%22 filter=%22url(%23g)%22/%3E%3Cellipse cx=%221056.0%22 cy=%2296.25000000000001%22 rx=%22480.0%22 ry=%2235.2%22 fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.16%22 stroke-width=%221.2%22 transform=%22rotate(-6 1056.0 96.25000000000001)%22 /%3E%3Cellipse cx=%221056.0%22 cy=%2296.25000000000001%22 rx=%22304.0%22 ry=%2222.400000000000002%22 fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.1%22 stroke-width=%221.2%22 transform=%22rotate(-6 1056.0 96.25000000000001)%22 stroke-dasharray=%223 8%22/%3E%3Ccircle cx=%221056%22 cy=%2296%22 r=%227%22 fill=%22%23f3d36b%22 fill-opacity=%22.40%22 filter=%22url(%23g)%22/%3E%3Cg filter=%22url(%23g)%22 stroke-linecap=%22round%22 fill=%22none%22%3E%3Cline x1=%22493%22 y1=%226%22 x2=%22563%22 y2=%22140%22 stroke=%22url(%23tc)%22 stroke-width=%221.60%22 stroke-opacity=%220.47%22/%3E%3Cline x1=%22496%22 y1=%2239%22 x2=%22530%22 y2=%22164%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.39%22/%3E%3Cline x1=%22503%22 y1=%2223%22 x2=%22598%22 y2=%22206%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.47%22/%3E%3Cline x1=%22486%22 y1=%227%22 x2=%22506%22 y2=%2292%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.44%22/%3E%3Cline x1=%22492%22 y1=%22-3%22 x2=%22607%22 y2=%22158%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.31%22/%3E%3Cline x1=%22484%22 y1=%229%22 x2=%22511%22 y2=%22204%22 stroke=%22url(%23tc)%22 stroke-width=%221.60%22 stroke-opacity=%220.55%22/%3E%3Cline x1=%22485%22 y1=%2248%22 x2=%22496%22 y2=%22188%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.55%22/%3E%3Cline x1=%22486%22 y1=%222%22 x2=%22546%22 y2=%22221%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.33%22/%3E%3Cline x1=%22502%22 y1=%2217%22 x2=%22545%22 y2=%2288%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.57%22/%3E%3Cline x1=%22484%22 y1=%2228%22 x2=%22495%22 y2=%22139%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.42%22/%3E%3Cline x1=%22495%22 y1=%2238%22 x2=%22528%22 y2=%22161%22 stroke=%22url(%23tc)%22 stroke-width=%221.60%22 stroke-opacity=%220.62%22/%3E%3Cline x1=%22498%22 y1=%226%22 x2=%22558%22 y2=%2292%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.36%22/%3E%3Cline x1=%22487%22 y1=%2260%22 x2=%22502%22 y2=%22229%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.34%22/%3E%3Cline x1=%22495%22 y1=%2246%22 x2=%22522%22 y2=%22170%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.40%22/%3E%3C/g%3E%3Cg filter=%22url(%23g)%22 stroke-linecap=%22round%22 fill=%22none%22%3E%3Cline x1=%221277%22 y1=%22-1%22 x2=%221263%22 y2=%2292%22 stroke=%22url(%23tc)%22 stroke-width=%221.00%22 stroke-opacity=%220.33%22/%3E%3Cline x1=%221280%22 y1=%226%22 x2=%221278%22 y2=%22172%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.38%22/%3E%3Cline x1=%221275%22 y1=%22-6%22 x2=%221232%22 y2=%22116%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.39%22/%3E%3Cline x1=%221267%22 y1=%220%22 x2=%221224%22 y2=%2263%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.58%22/%3E%3Cline x1=%221276%22 y1=%2215%22 x2=%221262%22 y2=%22129%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.64%22/%3E%3Cline x1=%221255%22 y1=%2222%22 x2=%221198%22 y2=%22119%22 stroke=%22url(%23tc)%22 stroke-width=%221.30%22 stroke-opacity=%220.54%22/%3E%3Cline x1=%221272%22 y1=%223%22 x2=%221240%22 y2=%22100%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.63%22/%3E%3Cline x1=%221241%22 y1=%2249%22 x2=%221151%22 y2=%22208%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.62%22/%3E%3Cline x1=%221253%22 y1=%2252%22 x2=%221192%22 y2=%22215%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.37%22/%3E%3Cline x1=%221273%22 y1=%226%22 x2=%221242%22 y2=%22121%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.41%22/%3E%3Cline x1=%221277%22 y1=%22-14%22 x2=%221230%22 y2=%2270%22 stroke=%22url(%23tc)%22 stroke-width=%221.60%22 stroke-opacity=%220.65%22/%3E%3Cline x1=%221263%22 y1=%2232%22 x2=%221213%22 y2=%22179%22 stroke=%22url(%23t)%22 stroke-width=%221.00%22 stroke-opacity=%220.65%22/%3E%3Cline x1=%221278%22 y1=%22-2%22 x2=%221259%22 y2=%22147%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.45%22/%3E%3Cline x1=%221276%22 y1=%2219%22 x2=%221260%22 y2=%22151%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.50%22/%3E%3C/g%3E%3Cg filter=%22url(%23g)%22 stroke-linecap=%22round%22 fill=%22none%22%3E%3Cline x1=%221269.3%22 y1=%22143.8%22 x2=%221295.1%22 y2=%22159.2%22 stroke=%22url(%23tc)%22 stroke-width=%221.00%22 stroke-opacity=%220.50%22/%3E%3Cline x1=%22752.4%22 y1=%22133.0%22 x2=%22790.9%22 y2=%22203.1%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.54%22/%3E%3Cline x1=%221167.7%22 y1=%2272.5%22 x2=%221195.7%22 y2=%22113.9%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.47%22/%3E%3Cline x1=%221288.2%22 y1=%2246.5%22 x2=%221186.4%22 y2=%22110.1%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.60%22/%3E%3Cline x1=%22579.4%22 y1=%2271.7%22 x2=%22606.7%22 y2=%22113.7%22 stroke=%22url(%23t)%22 stroke-width=%221.60%22 stroke-opacity=%220.49%22/%3E%3Cline x1=%22465.9%22 y1=%22166.5%22 x2=%22537.1%22 y2=%22202.9%22 stroke=%22url(%23t)%22 stroke-width=%221.30%22 stroke-opacity=%220.58%22/%3E%3Cline x1=%221455.2%22 y1=%2290.1%22 x2=%221548.1%22 y2=%22232.4%22 stroke=%22url(%23tc)%22 stroke-width=%221.00%22 stroke-opacity=%220.49%22/%3E%3C/g%3E%3Cpath d=%22M1440.0 108.5 q10 -4 15 6 q6 0 23 -7 q10 4 14 -2 q12 -2 21 -5 q8 -12 19 7 q11 9 18 4%22 fill=%22none%22 stroke=%22%23f3d36b%22 stroke-opacity=%22.55%22 stroke-width=%221.6%22 stroke-linecap=%22round%22 filter=%22url(%23g)%22/%3E%3Crect x=%22914%22 y=%2275%22 width=%224%22 height=%224%22 fill=%22%235ad1ff%22 fill-opacity=%220.31%22/%3E%3Crect x=%22740%22 y=%2286%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.56%22/%3E%3Crect x=%22256%22 y=%2291%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.33%22/%3E%3Crect x=%221524%22 y=%22130%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.32%22/%3E%3Crect x=%221376%22 y=%22106%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.47%22/%3E%3Crect x=%221323%22 y=%2246%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.57%22/%3E%3Crect x=%221059%22 y=%2223%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.69%22/%3E%3Crect x=%22981%22 y=%228%22 width=%222%22 height=%222%22 fill=%22%235ad1ff%22 fill-opacity=%220.39%22/%3E%3Crect x=%22312%22 y=%22159%22 width=%224%22 height=%224%22 fill=%22%23f3d36b%22 fill-opacity=%220.45%22/%3E%3Crect x=%221437%22 y=%2255%22 width=%224%22 height=%224%22 fill=%22%23f3d36b%22 fill-opacity=%220.48%22/%3E%3Crect x=%22752%22 y=%22114%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.64%22/%3E%3Crect x=%22250%22 y=%2239%22 width=%223%22 height=%223%22 fill=%22%23f3d36b%22 fill-opacity=%220.40%22/%3E%3Crect x=%2251%22 y=%2253%22 width=%224%22 height=%224%22 fill=%22%23f3d36b%22 fill-opacity=%220.56%22/%3E%3Crect x=%22854%22 y=%22150%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.45%22/%3E%3Crect x=%221513%22 y=%22160%22 width=%222%22 height=%222%22 fill=%22%235ad1ff%22 fill-opacity=%220.35%22/%3E%3Crect x=%221241%22 y=%2217%22 width=%222%22 height=%222%22 fill=%22%23f3d36b%22 fill-opacity=%220.69%22/%3E%3Cpolyline fill=%22none%22 stroke=%22%23d4af37%22 stroke-opacity=%220.4%22 stroke-width=%221.3%22 stroke-linejoin=%22round%22 points=%220,161 16,164 32,167 48,169 64,170 80,170 96,169 112,168 128,167 144,167 160,167 176,167 192,168 208,168 224,167 240,166 256,164 272,161 288,157 304,154 320,151 336,149 352,149 368,150 384,151 400,153 416,155 432,156 448,156 464,156 480,156 496,156 512,157 528,159 544,161 560,164 576,167 592,170 608,172 624,173 640,173 656,171 672,169 688,167 704,165 720,163 736,162 752,162 768,162 784,162 800,161 816,159 832,157 848,154 864,152 880,149 896,148 912,148 928,149 944,151 960,154 976,157 992,159 1008,161 1024,162 1040,163 1056,163 1072,163 1088,163 1104,165 1120,166 1136,169 1152,171 1168,172 1184,173 1200,172 1216,171 1232,168 1248,165 1264,161 1280,159 1296,157 1312,156 1328,155 1344,156 1360,156 1376,156 1392,155 1408,153 1424,152 1440,150 1456,150 1472,150 1488,151 1504,153 1520,157 1536,160 1552,163 1568,166 1584,168 1600,169%22/%3E%3Cpolyline fill=%22none%22 stroke=%22%235ad1ff%22 stroke-opacity=%220.32%22 stroke-width=%221.1%22 stroke-linejoin=%22round%22 points=%220,171 16,169 32,168 48,168 64,168 80,167 96,165 112,162 128,159 144,157 160,156 176,157 192,159 208,162 224,164 240,165 256,166 272,166 288,166 304,168 320,170 336,173 352,175 368,175 384,173 400,170 416,167 432,165 448,163 464,163 480,163 496,162 512,161 528,159 544,158 560,157 576,157 592,160 608,163 624,166 640,169 656,170 672,170 688,170 704,170 720,170 736,172 752,173 768,173 784,172 800,169 816,165 832,162 848,160 864,159 880,159 896,160 912,161 928,161 944,160 960,160 976,160 992,162 1008,165 1024,168 1040,172 1056,173 1072,173 1088,172 1104,171 1120,169 1136,169 1152,169 1168,169 1184,168 1200,166 1216,163 1232,160 1248,157 1264,156 1280,157 1296,159 1312,161 1328,163 1344,164 1360,164 1376,164 1392,165 1408,167 1424,170 1440,173 1456,175 1472,175 1488,173 1504,171 1520,168 1536,166 1552,165 1568,165 1584,164 1600,164%22/%3E%3Cpolyline fill=%22none%22 stroke=%22%23f3d36b%22 stroke-opacity=%220.3%22 stroke-width=%221.1%22 stroke-linejoin=%22round%22 points=%220,153 16,154 32,154 48,150 64,155 80,154 96,152 112,153 128,150 144,152 160,154 176,154 192,153 208,150 224,151 240,155 256,152 272,153 288,151 304,153 320,154 336,152 352,151 368,152 384,150 400,152 416,154 432,152 448,154 464,155 480,154 496,150 512,152 528,150 544,152 560,153 576,163 592,147 608,163 624,158 640,161 656,154 672,150 688,153 704,152 720,153 736,152 752,151 768,153 784,151 800,155 816,152 832,153 848,152 864,151 880,150 896,154 912,154 928,153 944,151 960,151 976,152 992,156 1008,154 1024,157 1040,146 1056,139 1072,167 1088,157 1104,151 1120,150 1136,154 1152,152 1168,154 1184,153 1200,152 1216,152 1232,154 1248,152 1264,154 1280,151 1296,155 1312,162 1328,164 1344,156 1360,160 1376,155 1392,155 1408,155 1424,153 1440,151 1456,155 1472,153 1488,154 1504,154 1520,153 1536,153 1552,153 1568,150 1584,152 1600,151%22/%3E%3C/svg%3E") center bottom/cover no-repeat,
+    radial-gradient(ellipse at 74% 40%, rgba(212,175,55,.14), transparent 60%),
+    radial-gradient(ellipse at 15% 0%, rgba(90,209,255,.08), transparent 55%),
+    linear-gradient(180deg, #070a1a 0%, #05060c 70%); }
+
+/* ---- Impact Hypothesis study (Phases 2–4), Nov 2026 ---- */
+.jump {
+  grid-column: span 12;
+  display: flex; flex-wrap: wrap; gap: 8px 14px;
+  font-size: 13px; color: var(--dim);
+}
+.jump a { text-decoration: none; border-bottom: 1px dotted var(--gold); }
+.lead-card {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, #16110a, #0a0d1b);
+}
+.lead-card p { margin: 0 0 8px; font-size: 15px; line-height: 1.55; }
+.lead-card p:last-child { margin-bottom: 0; }
+.kicker { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+
+.scorecard { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+@media (max-width: 1100px) { .scorecard { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .scorecard { grid-template-columns: 1fr; } }
+.score {
+  background: #070915; border: 1px solid var(--line); border-radius: 10px; padding: 12px 12px 10px;
+  display: flex; flex-direction: column; gap: 6px; min-height: 100%;
+}
+.score h3 { margin: 0; font-size: 15px; color: var(--gold2); font-weight: 600; }
+.score p { margin: 0; font-size: 12px; color: var(--dim); line-height: 1.45; }
+.badge {
+  display: inline-block; align-self: flex-start;
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px; border: 1px solid; font-weight: 600;
+}
+.badge-sig { color: var(--green); border-color: var(--green); }
+.badge-null { color: var(--dim); border-color: #555872; }
+.badge-inc { color: var(--gold2); border-color: var(--gold); }
+.score .pval { font-variant-numeric: tabular-nums; color: var(--txt); font-size: 12px; }
+
+.figure { margin: 12px 0 4px; }
+.figure img {
+  width: 100%; height: auto; display: block;
+  background: #05060c; border: 1px solid var(--line); border-radius: 8px;
+}
+.figure figcaption { font-size: 11px; color: var(--dim); margin-top: 6px; line-height: 1.45; }
+
+.hypo {
+  border-color: #5a4a20;
+  background: linear-gradient(180deg, #161208, #0a0d1b);
+}
+.hypo .kicker { color: var(--gold2); }
+
+#study-timeline { width: 100%; height: auto; display: block; background: #05060c; border: 1px solid var(--line); border-radius: 8px; }
+.tl-hint { font-size: 12px; color: var(--dim); min-height: 1.4em; margin: 8px 0 0; }
+.cite-list { font-size: 12px; color: var(--dim); line-height: 1.55; padding-left: 18px; margin: 8px 0 0; }
+.cite-list li { margin: 4px 0; }
+.dl-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; align-items: center; }
+.dl-row a.btn {
+  display: inline-block; padding: 8px 16px; border: 1px solid var(--gold); border-radius: 18px;
+  text-decoration: none; color: var(--gold2); font-size: 13px;
+}
+.dl-row a.btn:hover { background: var(--gold); color: #000; }
+
+/* Part 2: Streams, Myths, Sun & the Next Big One */
+.odds th, .odds td { white-space: normal; vertical-align: top; }
+.odds th { color: var(--gold2); font-weight: 600; }
+.odds td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scorecard.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1100px) { .scorecard.cols-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .scorecard.cols-3 { grid-template-columns: 1fr; } }
+.part-banner { border-color: #3a3a1a; }
+.cite-note { font-size: 12px; color: var(--dim); }
+
+/* ---- Timeline page additions ---- */
+nav a.here { background: var(--gold); color: #000; }
+.tl-intro { font-size: 15px; line-height: 1.55; }
+.tl-intro p { margin: 0 0 8px; }
+.tl-intro p:last-child { margin-bottom: 0; }
+
+.tl-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+  margin: 0 0 12px;
+}
+.tl-toolbar .group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.tl-toolbar .group-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-right: 4px;
+}
+.tl-toolbar button {
+  border-radius: 18px;
+  padding: 5px 12px;
+  font-size: 13px;
+}
+.tl-toolbar button[aria-pressed="true"],
+.tl-toolbar button.active {
+  background: var(--gold);
+  color: #000;
+  border-color: var(--gold);
+}
+
+.tl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-size: 12px;
+  color: var(--dim);
+  margin: 0 0 10px;
+}
+.tl-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.tl-swatch {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block; box-shadow: 0 0 0 2px #0008;
+}
+.tl-swatch.impact { background: var(--gold2); }
+.tl-swatch.solar { background: var(--cyan); }
+.tl-swatch.study { background: var(--green); }
+
+#tl-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #070915;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+#tl-svg .axis-line { stroke: var(--line); stroke-width: 1; }
+#tl-svg .tick-line { stroke: var(--line); stroke-width: 1; }
+#tl-svg .tick-label { fill: var(--dim); font-size: 11px; font-family: inherit; }
+#tl-svg .tl-dot { cursor: pointer; stroke: #05060c; stroke-width: 1; }
+#tl-svg .tl-dot.impact { fill: var(--gold2); }
+#tl-svg .tl-dot.solar { fill: var(--cyan); }
+#tl-svg .tl-dot.study { fill: var(--green); }
+#tl-svg .tl-dot.is-selected { stroke: #fff; stroke-width: 2; }
+#tl-svg .tl-dot.is-dim { opacity: 0.18; }
+#tl-svg .lane-label { fill: var(--dim); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+
+.tl-detail {
+  min-height: 8em;
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #070915;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.tl-detail h3 { margin: 0 0 6px; color: var(--gold2); font-size: 18px; }
+.tl-detail .meta { font-size: 12px; color: var(--dim); margin: 0 0 8px; }
+.tl-detail p { margin: 0 0 8px; font-size: 14px; line-height: 1.55; }
+.tl-detail ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--dim); }
+.tl-detail li { margin: 0 0 4px; }
+.tl-placeholder { color: var(--dim); font-size: 14px; margin: 0; }
+
+.badge-confirmed { color: var(--green); border-color: var(--green); }
+.badge-debated { color: var(--gold2); border-color: var(--gold); }
+.badge-unverified { color: var(--red); border-color: var(--red); }
+.badge-model { color: var(--cyan); border-color: #2a6a80; }
+
+.tl-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.tl-item {
+  background: #070915;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.tl-item.is-hidden { display: none; }
+.tl-item.is-selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+.tl-item h3 { margin: 0 0 4px; font-size: 16px; color: var(--gold2); font-weight: 600; }
+.tl-item .meta { font-size: 12px; color: var(--dim); margin: 0 0 6px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.tl-item p { margin: 0; font-size: 14px; line-height: 1.5; }
+.tl-item .cites { margin: 8px 0 0; padding-left: 18px; font-size: 12px; color: var(--dim); }
+.tl-item .cites li { margin: 0 0 3px; }
+
+.tl-count { font-size: 12px; color: var(--dim); margin: 0 0 10px; }
+
+.methods-list { font-size: 14px; line-height: 1.55; }
+.methods-list li { margin: 0 0 8px; }
+
+@media (max-width: 700px) {
+  #tl-svg { min-height: 200px; }
+}
