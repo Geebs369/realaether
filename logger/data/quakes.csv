@@ -121,3 +121,5 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-27T11:02:25Z,1795777345,4.8,mb,35.5,51.393,159.366,"183 km SSE of Vilyuchinsk, Russia",us6000udw4,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udw4
 2026-11-27T12:48:16Z,1795783696,4.5,mb,271.6,-18.329,-175.18,"131 km WNW of Neiafu, Tonga",us6000udwh,https://earthquake.usgs.gov/earthquakes/eventpage/us6000udwh
 2026-11-27T21:47:28Z,1795816048,4.5,mb,10.0,31.152,140.331,"Izu Islands, Japan region",us6000ue0a,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue0a
+2026-11-28T01:08:45Z,1795828125,4.8,mb,10.0,-36.093,178.379,"167 km N of Hicks Bay, New Zealand",us6000ue1a,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue1a
+2026-11-28T01:17:42Z,1795828662,5.1,mww,10.0,22.255,101.746,"73 km NNW of Phôngsali, Laos",us6000ue1b,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue1b

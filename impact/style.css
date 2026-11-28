@@ -261,3 +261,13 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
   text-decoration: none; color: var(--gold2); font-size: 13px;
 }
 .dl-row a.btn:hover { background: var(--gold); color: #000; }
+
+/* Part 2: Streams, Myths, Sun & the Next Big One */
+.odds th, .odds td { white-space: normal; vertical-align: top; }
+.odds th { color: var(--gold2); font-weight: 600; }
+.odds td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scorecard.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1100px) { .scorecard.cols-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .scorecard.cols-3 { grid-template-columns: 1fr; } }
+.part-banner { border-color: #3a3a1a; }
+.cite-note { font-size: 12px; color: var(--dim); }
