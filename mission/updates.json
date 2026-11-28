@@ -3,6 +3,12 @@
   "updates": [
     {
       "date": "2026-11-27",
+      "tag": "project",
+      "title": "Later-commemoration note added to Part 3",
+      "text": "A short note on the Impact page now asks whether later monuments could commemorate a much older event. The general idea is left open: oral traditions can preserve deep-time memories, and Egyptians already looked back to a First Time (Zep Tepi). The specific claim that the Sphinx or the Giza pyramids encode Ice Age star positions on purpose still has no supporting evidence."
+    },
+    {
+      "date": "2026-11-27",
       "tag": "site",
       "title": "Search listings tidied up",
       "text": "Sky Companion now has a canonical URL and a RealAether title, the detector page's hit crops have alt text, and the publish step tells Bing's IndexNow when a page actually changes, without pinging on the 15-minute data snapshots."
