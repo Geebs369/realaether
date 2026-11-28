@@ -1,6 +1,6 @@
 {
-  "generated_et": "2026-11-27T07:22:06-05:00",
-  "generated_et_label": "2026-11-27 07:22:06 EST",
+  "generated_et": "2026-11-28T07:23:06-05:00",
+  "generated_et_label": "2026-11-28 07:23:06 EST",
   "method": {
     "elements": "JPL SBDB Query API osculating heliocentric elements, full precision",
     "integrator": "REBOUND IAS15, first-order GR via REBOUNDx when available",
@@ -17849,39 +17849,39 @@
     {
       "cd_tdb": "2029-Nov-26 03:33",
       "cneos": {
-        "dist_au": 0.0495658686920599,
-        "dist_km": 7414948.415727954,
-        "jd_tdb": 2462466.647740199,
-        "orbit_id": "227",
-        "v_rel_kms": 8.49872260747266
+        "dist_au": 0.0495658687202447,
+        "dist_km": 7414948.419944341,
+        "jd_tdb": 2462466.647740494,
+        "orbit_id": "228",
+        "v_rel_kms": 8.49872261304822
       },
       "condition_code": 0,
-      "data_arc_days": 10227.0,
+      "data_arc_days": 10229.0,
       "datetime_et": "2029-11-25 22:32",
       "des": "33342",
       "error": null,
       "fullname": "33342 (1998 WT24)",
       "iso_et": "2029-11-25T22:31:35-05:00",
       "predicted": {
-        "dist_au": 0.04956589345984732,
+        "dist_au": 0.0495658934856449,
         "epoch_jd": 2461200.5,
         "gr": "enabled reboundx force 'gr' with c=173.144632674 AU/day",
         "grid_seconds": 51.83999240398407,
-        "jd_tdb": 2462466.647740199,
-        "v_rel_kms": 8.498721940966261
+        "jd_tdb": 2462466.647740494,
+        "v_rel_kms": 8.498721946443116
       },
       "reasons": [
         "condition_code_0"
       ],
       "residual": {
-        "ddist_au": 2.476778741822283e-08,
-        "ddist_km": 3.7052082597163856,
+        "ddist_au": 2.47654001958586e-08,
+        "ddist_km": 3.7048511363338092,
         "dt_days": 0.0,
         "dt_minutes": 0.0,
         "dt_seconds": 0.0,
-        "dv_kms": -6.665063985167308e-07
+        "dv_kms": -6.666051035608689e-07
       },
-      "sbdb_orbit_id": "JPL 227",
+      "sbdb_orbit_id": "JPL 228",
       "status": "ok"
     },
     {
@@ -18082,7 +18082,7 @@
     "close_au": 0.01,
     "include_condition_code_0": true,
     "n_closest": 200,
-    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43397 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
+    "why_not_all_neos": "JPL CNEOS already computes close approaches for the entire NEO catalog (43403 objects in this refresh). Re-integrating all of them with N-body every day would not change the public list and would be a poor use of a low-priority Pi 5. We instead re-integrate every upcoming Earth approach within 0.01 au, the 200 closest, and every condition-code-0 upcoming Earth approach — the encounters visitors will look at first, plus the best-constrained orbits."
   },
   "summary": {
     "abs_ddist_au_max": 1.2071944193866105e-05,
