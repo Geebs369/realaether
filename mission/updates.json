@@ -3,6 +3,12 @@
   "updates": [
     {
       "date": "2026-11-27",
+      "tag": "site",
+      "title": "Search listings tidied up",
+      "text": "Sky Companion now has a canonical URL and a RealAether title, the detector page's hit crops have alt text, and the publish step tells Bing's IndexNow when a page actually changes, without pinging on the 15-minute data snapshots."
+    },
+    {
+      "date": "2026-11-27",
       "tag": "project",
       "title": "Impact and solar timeline published",
       "text": "A new Timeline page gathers dated meteor and comet impacts, airbursts, and extreme solar and CME events in one place. Each entry is marked confirmed, debated, or unverified, and each one is cited. It covers confirmed impact structures from the Earth Impact Database (via the Wikipedia compilation, because the PASSC site was down), modern events from Tunguska to Chelyabinsk, the October 2022 Taurid lunar flashes, CNEOS fireball statistics, Encke node-crossing calculations and the Younger Dryas verdict from our studies, Miyake events in the radiocarbon and beryllium-10 records, and geomagnetic storms from Carrington through the May 2024 Gannon storm and the Cycle 25 maximum. The page is interactive, with filters for impacts versus solar events and a JSON data file. Architect: 3TH3R3AL1. Builder: Geebs."
