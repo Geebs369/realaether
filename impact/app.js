@@ -483,3 +483,94 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
   else boot();
 })();
+
+(function () {
+  /* Lightweight Taurid-study timeline. Loads study/timeline.json; fails quietly if missing. */
+  var svg = document.getElementById("study-timeline");
+  var hint = document.getElementById("tl-hint");
+  if (!svg) return;
+
+  function yearLabel(y) {
+    y = Math.round(y);
+    if (y < 0) return (1 - y).toLocaleString("en-US") + " BC";
+    if (y === 0) return "1 BC";
+    return "AD " + y.toLocaleString("en-US");
+  }
+  function fmt(y1, y2) {
+    if (y2 == null || y1 === y2) return yearLabel(y1);
+    return yearLabel(y1) + " – " + yearLabel(y2);
+  }
+
+  fetch("study/timeline.json")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(draw)
+    .catch(function (err) {
+      if (hint) hint.textContent = "Timeline data could not be loaded.";
+    });
+
+  function draw(data) {
+    var W = 1100, H = 280, padL = 54, padR = 16, padT = 36, padB = 36;
+    var x0 = -14000, x1 = 1600;
+    var ys = data.years, vs = data.earth_crossing_pct;
+    var vmax = 0;
+    for (var i = 0; i < vs.length; i++) if (ys[i] <= 1500 && vs[i] > vmax) vmax = vs[i];
+    vmax = Math.max(4, Math.ceil(vmax + 0.5));
+    function X(y) { return padL + (y - x0) / (x1 - x0) * (W - padL - padR); }
+    function Y(v) { return padT + (1 - v / vmax) * (H - padT - padB); }
+
+    var ns = "http://www.w3.org/2000/svg";
+    function el(name, attrs, text) {
+      var n = document.createElementNS(ns, name);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      if (text != null) n.textContent = text;
+      return n;
+    }
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+
+    // year ticks
+    var ticks = [-14000, -12000, -10000, -8000, -6000, -4000, -2000, 0, 1500];
+    ticks.forEach(function (y) {
+      svg.appendChild(el("line", { x1: X(y), x2: X(y), y1: padT, y2: H - padB, stroke: "#262a44", "stroke-width": "1" }));
+      svg.appendChild(el("text", { x: X(y), y: H - 12, fill: "#8d8aa0", "font-size": "11", "text-anchor": "middle" }, yearLabel(y)));
+    });
+    for (var gv = 0; gv <= vmax; gv++) {
+      svg.appendChild(el("line", { x1: padL, x2: W - padR, y1: Y(gv), y2: Y(gv), stroke: "#1a1e33", "stroke-width": "1" }));
+      svg.appendChild(el("text", { x: padL - 8, y: Y(gv) + 3, fill: "#8d8aa0", "font-size": "10", "text-anchor": "end" }, String(gv)));
+    }
+    svg.appendChild(el("text", { x: 12, y: 18, fill: "#8d8aa0", "font-size": "10" }, "% of model meteoroids crossing Earth"));
+
+    var colors = { monument: "rgba(80,160,90,.35)", crater: "rgba(140,90,50,.4)", ydb: "rgba(130,80,180,.45)", claim: "rgba(230,160,50,.35)" };
+    var strokeC = { monument: "#6bff9e", crater: "#c48a55", ydb: "#b388ff", claim: "#f3d36b" };
+
+    data.events.forEach(function (e) {
+      var x = X(e.start), w = Math.max(3, X(e.end) - X(e.start));
+      var r = el("rect", { x: x, y: padT, width: w, height: H - padT - padB, fill: colors[e.kind] || "#444", "data-tip": e.name + " · " + fmt(e.start, e.end) });
+      r.style.cursor = "pointer";
+      svg.appendChild(r);
+    });
+
+    var pts = [];
+    for (i = 0; i < ys.length; i++) {
+      if (ys[i] < x0 || ys[i] > x1) continue;
+      pts.push(X(ys[i]).toFixed(1) + "," + Y(vs[i]).toFixed(1));
+    }
+    svg.appendChild(el("polyline", { points: pts.join(" "), fill: "none", stroke: "#ff6b6b", "stroke-width": "1.6", "stroke-linejoin": "round" }));
+
+    data.encke_crossings.forEach(function (c) {
+      if (c.year < x0 || c.year > x1) return;
+      var unc = c.std_years ? " ±" + Math.round(c.std_years) + " yr (clones)" : "";
+      var tip = "Encke " + c.branch + " node " + c.direction + " · " + yearLabel(c.year) + unc + " — hypothesis for a pre-registered follow-up, not a finding.";
+      var line = el("line", { x1: X(c.year), x2: X(c.year), y1: padT - 4, y2: H - padB, stroke: "#f3d36b", "stroke-width": "1.5", "stroke-dasharray": "3 3", "data-tip": tip });
+      svg.appendChild(line);
+      svg.appendChild(el("polygon", { points: (X(c.year) - 4) + ",22 " + (X(c.year) + 4) + ",22 " + X(c.year) + ",30", fill: "#f3d36b", "data-tip": tip }));
+    });
+
+    function show(ev) {
+      var t = ev.target && ev.target.getAttribute("data-tip");
+      if (t && hint) hint.textContent = t;
+    }
+    svg.addEventListener("mousemove", show);
+    svg.addEventListener("click", show);
+  }
+})();

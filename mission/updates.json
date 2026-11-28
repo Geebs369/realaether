@@ -2,6 +2,12 @@
  "_how_to_add": "Add a new object at the TOP of 'updates' (newest first) or of 'equipment_changes', then run: python3 build_updates.py index.html. Dates are YYYY-MM-DD (US Eastern). 'when' is optional display text, e.g. 'Nov 18-19'. tag is one of: crrd, tracker, log, ai, site, support, privacy, hardware, project. Real events only.",
  "updates": [
   {
+   "date": "2026-11-27",
+   "tag": "project",
+   "title": "Taurid stream tests published (Impact Hypothesis Phases 2–4)",
+   "text": "We tested the Taurid / Encke meteor stream against dated impacts on Earth, the Moon and Mars, and against the construction and sky alignments of Göbekli Tepe, Giza, Stonehenge, Newgrange and Nabta Playa, each with a random-date or random-orientation control. The one clear signal is on the Moon: NELIOTA recorded 16 Taurid impact flashes on 29–31 October 2022, a predicted swarm year, and the October–November flash rate was 1.84 times higher than in other months (p = 0.0005). Earth fireballs, Holocene craters, fresh Martian craters, monument-to-radiant alignments, the Vulture Stone “date stamp,” and the Younger Dryas boundary all came out null or inconclusive. The findings, charts and a PDF report are on the Impact page. Architect: 3TH3R3AL1. Builder: Geebs."
+  },
+  {
    "date": "2026-11-23",
    "tag": "log",
    "title": "Solar-wind lulls added to the log, and a 20-year downtick test",

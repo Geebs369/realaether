@@ -203,3 +203,61 @@ body.ra-bg::after  { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22h
     radial-gradient(ellipse at 74% 40%, rgba(212,175,55,.14), transparent 60%),
     radial-gradient(ellipse at 15% 0%, rgba(90,209,255,.08), transparent 55%),
     linear-gradient(180deg, #070a1a 0%, #05060c 70%); }
+
+/* ---- Impact Hypothesis study (Phases 2–4), Nov 2026 ---- */
+.jump {
+  grid-column: span 12;
+  display: flex; flex-wrap: wrap; gap: 8px 14px;
+  font-size: 13px; color: var(--dim);
+}
+.jump a { text-decoration: none; border-bottom: 1px dotted var(--gold); }
+.lead-card {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, #16110a, #0a0d1b);
+}
+.lead-card p { margin: 0 0 8px; font-size: 15px; line-height: 1.55; }
+.lead-card p:last-child { margin-bottom: 0; }
+.kicker { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+
+.scorecard { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+@media (max-width: 1100px) { .scorecard { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .scorecard { grid-template-columns: 1fr; } }
+.score {
+  background: #070915; border: 1px solid var(--line); border-radius: 10px; padding: 12px 12px 10px;
+  display: flex; flex-direction: column; gap: 6px; min-height: 100%;
+}
+.score h3 { margin: 0; font-size: 15px; color: var(--gold2); font-weight: 600; }
+.score p { margin: 0; font-size: 12px; color: var(--dim); line-height: 1.45; }
+.badge {
+  display: inline-block; align-self: flex-start;
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px; border: 1px solid; font-weight: 600;
+}
+.badge-sig { color: var(--green); border-color: var(--green); }
+.badge-null { color: var(--dim); border-color: #555872; }
+.badge-inc { color: var(--gold2); border-color: var(--gold); }
+.score .pval { font-variant-numeric: tabular-nums; color: var(--txt); font-size: 12px; }
+
+.figure { margin: 12px 0 4px; }
+.figure img {
+  width: 100%; height: auto; display: block;
+  background: #05060c; border: 1px solid var(--line); border-radius: 8px;
+}
+.figure figcaption { font-size: 11px; color: var(--dim); margin-top: 6px; line-height: 1.45; }
+
+.hypo {
+  border-color: #5a4a20;
+  background: linear-gradient(180deg, #161208, #0a0d1b);
+}
+.hypo .kicker { color: var(--gold2); }
+
+#study-timeline { width: 100%; height: auto; display: block; background: #05060c; border: 1px solid var(--line); border-radius: 8px; }
+.tl-hint { font-size: 12px; color: var(--dim); min-height: 1.4em; margin: 8px 0 0; }
+.cite-list { font-size: 12px; color: var(--dim); line-height: 1.55; padding-left: 18px; margin: 8px 0 0; }
+.cite-list li { margin: 4px 0; }
+.dl-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 0; align-items: center; }
+.dl-row a.btn {
+  display: inline-block; padding: 8px 16px; border: 1px solid var(--gold); border-radius: 18px;
+  text-decoration: none; color: var(--gold2); font-size: 13px;
+}
+.dl-row a.btn:hover { background: var(--gold); color: #000; }
