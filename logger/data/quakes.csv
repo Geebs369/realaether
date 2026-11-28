@@ -123,3 +123,4 @@ time_utc,time_unix,mag,mag_type,depth_km,lat,lon,place,id,url
 2026-11-27T21:47:28Z,1795816048,4.5,mb,10.0,31.152,140.331,"Izu Islands, Japan region",us6000ue0a,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue0a
 2026-11-28T01:08:45Z,1795828125,4.8,mb,10.0,-36.093,178.379,"167 km N of Hicks Bay, New Zealand",us6000ue1a,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue1a
 2026-11-28T01:17:42Z,1795828662,5.1,mww,10.0,22.255,101.746,"73 km NNW of Phôngsali, Laos",us6000ue1b,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue1b
+2026-11-28T01:36:46Z,1795829806,4.7,mb,55.2,2.267,125.967,"130 km NE of Bitung, Indonesia",us6000ue1d,https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue1d

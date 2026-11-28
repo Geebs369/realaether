@@ -1,122 +1,128 @@
 {
- "_how_to_add": "Add a new object at the TOP of 'updates' (newest first) or of 'equipment_changes', then run: python3 build_updates.py index.html. Dates are YYYY-MM-DD (US Eastern). 'when' is optional display text, e.g. 'Nov 18-19'. tag is one of: crrd, tracker, log, ai, site, support, privacy, hardware, project. Real events only.",
- "updates": [
-  {
-   "date": "2026-11-27",
-   "tag": "project",
-   "title": "Monument–sky tests published (Impact Hypothesis, Part 3)",
-   "text": "A side study asked whether major ancient monuments were laid out as copies of constellations — Giza and Orion's Belt, Angkor and Draco, the Sphinx and Leo, plus Thornborough and Teotihuacan — and whether a comet or meteor impact triggered the Younger Dryas onset around 12,900 years ago. The shape of Giza's three pyramids does match Orion's Belt, but so do many other pyramid and star triples, and the match is almost the same in every era, so it does not pick out 10,450–10,500 BC. The belt's tilt at meridian transit is closest to the pyramid diagonal around 12,000 BC, not 10,500 BC. The Angkor–Draco fit has no preferred epoch, and many other temple selections fit as well or better. The Sphinx did face Leo on the equinox morning of about 10,500 BC, but the same test fits other stars at other dates, so it does not date the monument. A comet or meteor impact as the primary trigger of the Younger Dryas is not supported by our Taurid/Encke backtrack or by the published physical evidence; the leading account remains a weakening of the Atlantic circulation from meltwater. The findings, charts and a PDF report are on the Impact page as Part 3. Architect: 3TH3R3AL1. Builder: Geebs."
-  },
-  {
-   "date": "2026-11-27",
-   "tag": "project",
-   "title": "Cataclysm study published (Impact Hypothesis, Part 2)",
-   "text": "A follow-on to the Taurid tests asked whether other meteor streams, ancient religious and mythic texts, monument alignments, or solar extremes line up with catastrophes, and what the data say about the odds of the next big event. Ten shower-parent bodies were tracked from 18,000 BC to AD 7000; the model reproduces all 29 recorded returns of Halley’s Comet back to 240 BC to within one year. Text scoring rules were fixed in advance. The stream, text and monument tests came back null or inconclusive. The one clear shower signal remains the Moon in October (flash rate 1.92 times other months, p = 0.0006). A claimed airburst at Tall el-Hammam, sometimes linked to Sodom, was retracted by Scientific Reports on 24 April 2025. Extreme solar-particle events recur at least once every 1,000–5,000 years; a Carrington-class geomagnetic storm has about an 11–16% chance per decade. No known object threatens Earth this century. A ≥10 km impact could cause a global fire pulse, but only about once per 100 million years; a solar flare cannot set the world on fire. The findings, charts and a PDF report are on the Impact page. Architect: 3TH3R3AL1. Builder: Geebs."
-  },
-  {
-   "date": "2026-11-27",
-   "tag": "project",
-   "title": "Taurid stream tests published (Impact Hypothesis Phases 2–4)",
-   "text": "We tested the Taurid / Encke meteor stream against dated impacts on Earth, the Moon and Mars, and against the construction and sky alignments of Göbekli Tepe, Giza, Stonehenge, Newgrange and Nabta Playa, each with a random-date or random-orientation control. The one clear signal is on the Moon: NELIOTA recorded 16 Taurid impact flashes on 29–31 October 2022, a predicted swarm year, and the October–November flash rate was 1.84 times higher than in other months (p = 0.0005). Earth fireballs, Holocene craters, fresh Martian craters, monument-to-radiant alignments, the Vulture Stone “date stamp,” and the Younger Dryas boundary all came out null or inconclusive. The findings, charts and a PDF report are on the Impact page. Architect: 3TH3R3AL1. Builder: Geebs."
-  },
-  {
-   "date": "2026-11-23",
-   "tag": "log",
-   "title": "Solar-wind lulls added to the log, and a 20-year downtick test",
-   "text": "We asked whether a drop in the solar wind, or the quiet after a geomagnetic storm, comes before more earthquakes — the way a charged sky can break into a storm when the heat lets up. Over 20 years, none of the eight pre-set tests passed the multiple-test bar: after sharp speed drops there were 12.52 declustered M4.5+ quakes in 48 hours versus 12.47 at random times (p = 0.38). The log now also records those lulls and flags when a quake cluster, an M6+, or a raised volcano alert follows in the same windows. The volcano record is still too short for a 20-year test."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "log",
-   "title": "Earthquakes added to the Solar Wind × Volcano log",
-   "text": "The log now records every M4.5+ earthquake worldwide from the USGS catalog (M6+ highlighted) and counts quakes in the 48 hours after each solar wind spike, with aftershocks removed by the standard Gardner–Knopoff method. A 20-year test on public archives (about 1,800 spikes and 155,000 quakes) found no sign that spikes come before more earthquakes: 12.35 declustered quakes per 48 hours after a spike versus 12.47 at random times (p = 0.85). Storm and magnetic-field side tests showed nothing that passes the multiple-test bar. Plain statistics; the Hailo AI hat isn't used for this."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "project",
-   "title": "New page: The Precession Clock",
-   "text": "An interactive clock of Earth's 25,770-year wobble: which star marks the north pole in any year from 13,000 BC to AD 15,000, the five great pole stars, how far the equinox has drifted, the pre-dawn equinox sky at Giza, Stonehenge and Göbekli Tepe, and Earth's magnetic field strength and day length in each era. Every number is computed from a published long-term precession model and a star catalogue."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "site",
-   "title": "Mission page became Mission & Updates",
-   "text": "The Mission page now also carries this dated updates log, the equipment and software we run, and a public record of every equipment purchase. The menu link on every page was renamed to match."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "privacy",
-   "title": "Map coordinates removed from the public site",
-   "text": "Only the town name is shown now. The location the page uses for sunrise, sunset and the ISS is rounded to whole degrees, which moves sunrise and sunset by less than a minute."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "crrd",
-   "title": "Detector self-mask shrunk to 16×16 blocks",
-   "text": "Blocks of pixels that keep repeating are now blanked in 16×16 patches instead of 32×32. The masked share of the sensor dropped from 10.3% to 2.84%, so more of the sensor counts real hits."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "ai",
-   "title": "Hailo AI classifier running, with a public panel",
-   "text": "A stock image model on the Hailo-10H fingerprints every hit image every 15 minutes, sorts hits into look-alike groups and flags the 1% least like the rest. The panel on the detector page shows the groups and the latest flagged hits. It isn't trained on our data, and flagged doesn't mean exotic."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "tracker",
-   "title": "NEO close-approach tracker live (Impact Hypothesis Phase 1)",
-   "text": "Upcoming near-Earth object flybys from NASA/JPL CNEOS, with 470 close or well-observed approaches re-checked by our own N-body run. It updates daily."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "log",
-   "title": "Solar wind × volcano log live",
-   "text": "Solar wind speed spikes and U.S. volcano alert-level changes are logged every 30 minutes against rules fixed in advance and compared with chance."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "site",
-   "title": "New site design and the Mission page",
-   "text": "A shared look across all pages (pixel grid, particle showers, solar-wind waves), new social preview images, a methods page for the log, and a Mission page explaining what we do and how we test."
-  },
-  {
-   "date": "2026-11-22",
-   "tag": "support",
-   "title": "Ko-fi support opened",
-   "text": "Donations cover hardware, electricity, internet and computing time. Every donation-funded purchase is posted below under Equipment changes. Donations are not tax-deductible."
-  },
-  {
-   "date": "2026-11-21",
-   "tag": "project",
-   "title": "Impact Hypothesis Project started",
-   "text": "Planned the phases (NEO tracker, Taurid stream, Moon and Mars, monuments and sky) and prepared the full NEO data run and the tracker page."
-  },
-  {
-   "date": "2026-11-19",
-   "when": "Nov 18–19",
-   "tag": "site",
-   "title": "Public site launched",
-   "text": "AetherWeather became the public front page, with read-only detector snapshots published every 15 minutes. Code is MIT-licensed and data is CC BY 4.0."
-  },
-  {
-   "date": "2026-11-19",
-   "tag": "crrd",
-   "title": "Detector recalibrated after a power outage",
-   "text": "The hot-pixel map was rebuilt at the warmer working temperature. The detector also recalibrates itself every 12 hours."
-  },
-  {
-   "date": "2026-11-18",
-   "tag": "crrd",
-   "title": "Cosmic Ray Randomness Detector switched on",
-   "text": "A light-sealed Pi camera began taking one-second dark exposures around the clock, logging particle hits and harvesting sensor noise as random bits. No new hardware was bought."
-  }
- ],
- "equipment_changes": [
-  {
-   "date": "2026-11-22",
-   "funded": "none",
-   "title": "Baseline recorded",
-   "text": "Everything listed above was already owned before the project started. No donation-funded purchases yet."
-  }
- ]
+  "_how_to_add": "Add a new object at the TOP of 'updates' (newest first) or of 'equipment_changes', then run: python3 build_updates.py index.html. Dates are YYYY-MM-DD (US Eastern). 'when' is optional display text, e.g. 'Nov 18-19'. tag is one of: crrd, tracker, log, ai, site, support, privacy, hardware, project. Real events only.",
+  "updates": [
+    {
+      "date": "2026-11-27",
+      "tag": "project",
+      "title": "Long-period comet, interstellar-object and Centaur study published (Impact Hypothesis, Part 4)",
+      "text": "A follow-on study asked how much warning long-period comets give, what share of Earth's impact risk they represent, whether interstellar objects such as 3I/ATLAS are a hazard, and how often known Centaurs become Earth-approaching comets. For Earth-approaching long-period comets first seen since 2010, the median time from first sighting to perihelion is about four months, and most are found less than six months out. They make up about 1% of the total impact risk (NASA NEO Science Definition Team, 2017); a ≥1 km long-period comet impact is roughly a once-in-30-to-100-million-year event. Interstellar objects are a negligible hazard. A 100,000-year integration of 1,114 known Centaurs finds that about 12.5% reach Earth-approaching orbits, and about 34% become Jupiter-family comets, within that span; Chiron, Chariklo and Pholus stay well out, while 29P/Schwassmann-Wachmann 1 often becomes a Jupiter-family comet (62% of clones within 100,000 years). Expected Earth impacts from the known Centaurs over 100,000 years are about 6×10⁻⁴. A giant comet entering the inner system is dynamically plausible, but a recent Taurid-progenitor breakup remains unproven. The findings, charts and a PDF report are on the Impact page as Part 4. Architect: 3TH3R3AL1. Builder: Geebs."
+    },
+    {
+      "date": "2026-11-27",
+      "tag": "project",
+      "title": "Monument–sky tests published (Impact Hypothesis, Part 3)",
+      "text": "A side study asked whether major ancient monuments were laid out as copies of constellations — Giza and Orion's Belt, Angkor and Draco, the Sphinx and Leo, plus Thornborough and Teotihuacan — and whether a comet or meteor impact triggered the Younger Dryas onset around 12,900 years ago. The shape of Giza's three pyramids does match Orion's Belt, but so do many other pyramid and star triples, and the match is almost the same in every era, so it does not pick out 10,450–10,500 BC. The belt's tilt at meridian transit is closest to the pyramid diagonal around 12,000 BC, not 10,500 BC. The Angkor–Draco fit has no preferred epoch, and many other temple selections fit as well or better. The Sphinx did face Leo on the equinox morning of about 10,500 BC, but the same test fits other stars at other dates, so it does not date the monument. A comet or meteor impact as the primary trigger of the Younger Dryas is not supported by our Taurid/Encke backtrack or by the published physical evidence; the leading account remains a weakening of the Atlantic circulation from meltwater. The findings, charts and a PDF report are on the Impact page as Part 3. Architect: 3TH3R3AL1. Builder: Geebs."
+    },
+    {
+      "date": "2026-11-27",
+      "tag": "project",
+      "title": "Cataclysm study published (Impact Hypothesis, Part 2)",
+      "text": "A follow-on to the Taurid tests asked whether other meteor streams, ancient religious and mythic texts, monument alignments, or solar extremes line up with catastrophes, and what the data say about the odds of the next big event. Ten shower-parent bodies were tracked from 18,000 BC to AD 7000; the model reproduces all 29 recorded returns of Halley’s Comet back to 240 BC to within one year. Text scoring rules were fixed in advance. The stream, text and monument tests came back null or inconclusive. The one clear shower signal remains the Moon in October (flash rate 1.92 times other months, p = 0.0006). A claimed airburst at Tall el-Hammam, sometimes linked to Sodom, was retracted by Scientific Reports on 24 April 2025. Extreme solar-particle events recur at least once every 1,000–5,000 years; a Carrington-class geomagnetic storm has about an 11–16% chance per decade. No known object threatens Earth this century. A ≥10 km impact could cause a global fire pulse, but only about once per 100 million years; a solar flare cannot set the world on fire. The findings, charts and a PDF report are on the Impact page. Architect: 3TH3R3AL1. Builder: Geebs."
+    },
+    {
+      "date": "2026-11-27",
+      "tag": "project",
+      "title": "Taurid stream tests published (Impact Hypothesis Phases 2–4)",
+      "text": "We tested the Taurid / Encke meteor stream against dated impacts on Earth, the Moon and Mars, and against the construction and sky alignments of Göbekli Tepe, Giza, Stonehenge, Newgrange and Nabta Playa, each with a random-date or random-orientation control. The one clear signal is on the Moon: NELIOTA recorded 16 Taurid impact flashes on 29–31 October 2022, a predicted swarm year, and the October–November flash rate was 1.84 times higher than in other months (p = 0.0005). Earth fireballs, Holocene craters, fresh Martian craters, monument-to-radiant alignments, the Vulture Stone “date stamp,” and the Younger Dryas boundary all came out null or inconclusive. The findings, charts and a PDF report are on the Impact page. Architect: 3TH3R3AL1. Builder: Geebs."
+    },
+    {
+      "date": "2026-11-23",
+      "tag": "log",
+      "title": "Solar-wind lulls added to the log, and a 20-year downtick test",
+      "text": "We asked whether a drop in the solar wind, or the quiet after a geomagnetic storm, comes before more earthquakes — the way a charged sky can break into a storm when the heat lets up. Over 20 years, none of the eight pre-set tests passed the multiple-test bar: after sharp speed drops there were 12.52 declustered M4.5+ quakes in 48 hours versus 12.47 at random times (p = 0.38). The log now also records those lulls and flags when a quake cluster, an M6+, or a raised volcano alert follows in the same windows. The volcano record is still too short for a 20-year test."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "log",
+      "title": "Earthquakes added to the Solar Wind × Volcano log",
+      "text": "The log now records every M4.5+ earthquake worldwide from the USGS catalog (M6+ highlighted) and counts quakes in the 48 hours after each solar wind spike, with aftershocks removed by the standard Gardner–Knopoff method. A 20-year test on public archives (about 1,800 spikes and 155,000 quakes) found no sign that spikes come before more earthquakes: 12.35 declustered quakes per 48 hours after a spike versus 12.47 at random times (p = 0.85). Storm and magnetic-field side tests showed nothing that passes the multiple-test bar. Plain statistics; the Hailo AI hat isn't used for this."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "project",
+      "title": "New page: The Precession Clock",
+      "text": "An interactive clock of Earth's 25,770-year wobble: which star marks the north pole in any year from 13,000 BC to AD 15,000, the five great pole stars, how far the equinox has drifted, the pre-dawn equinox sky at Giza, Stonehenge and Göbekli Tepe, and Earth's magnetic field strength and day length in each era. Every number is computed from a published long-term precession model and a star catalogue."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "site",
+      "title": "Mission page became Mission & Updates",
+      "text": "The Mission page now also carries this dated updates log, the equipment and software we run, and a public record of every equipment purchase. The menu link on every page was renamed to match."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "privacy",
+      "title": "Map coordinates removed from the public site",
+      "text": "Only the town name is shown now. The location the page uses for sunrise, sunset and the ISS is rounded to whole degrees, which moves sunrise and sunset by less than a minute."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "crrd",
+      "title": "Detector self-mask shrunk to 16×16 blocks",
+      "text": "Blocks of pixels that keep repeating are now blanked in 16×16 patches instead of 32×32. The masked share of the sensor dropped from 10.3% to 2.84%, so more of the sensor counts real hits."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "ai",
+      "title": "Hailo AI classifier running, with a public panel",
+      "text": "A stock image model on the Hailo-10H fingerprints every hit image every 15 minutes, sorts hits into look-alike groups and flags the 1% least like the rest. The panel on the detector page shows the groups and the latest flagged hits. It isn't trained on our data, and flagged doesn't mean exotic."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "tracker",
+      "title": "NEO close-approach tracker live (Impact Hypothesis Phase 1)",
+      "text": "Upcoming near-Earth object flybys from NASA/JPL CNEOS, with 470 close or well-observed approaches re-checked by our own N-body run. It updates daily."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "log",
+      "title": "Solar wind × volcano log live",
+      "text": "Solar wind speed spikes and U.S. volcano alert-level changes are logged every 30 minutes against rules fixed in advance and compared with chance."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "site",
+      "title": "New site design and the Mission page",
+      "text": "A shared look across all pages (pixel grid, particle showers, solar-wind waves), new social preview images, a methods page for the log, and a Mission page explaining what we do and how we test."
+    },
+    {
+      "date": "2026-11-22",
+      "tag": "support",
+      "title": "Ko-fi support opened",
+      "text": "Donations cover hardware, electricity, internet and computing time. Every donation-funded purchase is posted below under Equipment changes. Donations are not tax-deductible."
+    },
+    {
+      "date": "2026-11-21",
+      "tag": "project",
+      "title": "Impact Hypothesis Project started",
+      "text": "Planned the phases (NEO tracker, Taurid stream, Moon and Mars, monuments and sky) and prepared the full NEO data run and the tracker page."
+    },
+    {
+      "date": "2026-11-19",
+      "when": "Nov 18–19",
+      "tag": "site",
+      "title": "Public site launched",
+      "text": "AetherWeather became the public front page, with read-only detector snapshots published every 15 minutes. Code is MIT-licensed and data is CC BY 4.0."
+    },
+    {
+      "date": "2026-11-19",
+      "tag": "crrd",
+      "title": "Detector recalibrated after a power outage",
+      "text": "The hot-pixel map was rebuilt at the warmer working temperature. The detector also recalibrates itself every 12 hours."
+    },
+    {
+      "date": "2026-11-18",
+      "tag": "crrd",
+      "title": "Cosmic Ray Randomness Detector switched on",
+      "text": "A light-sealed Pi camera began taking one-second dark exposures around the clock, logging particle hits and harvesting sensor noise as random bits. No new hardware was bought."
+    }
+  ],
+  "equipment_changes": [
+    {
+      "date": "2026-11-22",
+      "funded": "none",
+      "title": "Baseline recorded",
+      "text": "Everything listed above was already owned before the project started. No donation-funded purchases yet."
+    }
+  ]
 }
